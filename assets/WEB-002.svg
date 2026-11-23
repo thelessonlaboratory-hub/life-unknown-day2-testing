@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" role="img" aria-label="Food web WEB-002">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#5de1e6"/></marker></defs>
+<rect width="480" height="250" rx="14" fill="#101f35"/>
+<line x1="125" y1="107" x2="205" y2="53" stroke="#5de1e6" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="355" y1="107" x2="275" y2="53" stroke="#5de1e6" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="205" y1="199" x2="125" y2="145" stroke="#5de1e6" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="275" y1="199" x2="355" y2="145" stroke="#5de1e6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="190.0" y="17" width="100" height="36" rx="7" fill="#203b56" stroke="#9de8ec" stroke-width="1.5"/><text x="240" y="40" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Fish</text>
+<rect x="75.0" y="107" width="100" height="36" rx="7" fill="#203b56" stroke="#9de8ec" stroke-width="1.5"/><text x="125" y="130" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Snail</text>
+<rect x="300.0" y="107" width="110" height="36" rx="7" fill="#203b56" stroke="#9de8ec" stroke-width="1.5"/><text x="355" y="130" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Tadpole</text>
+<rect x="190.0" y="199" width="100" height="36" rx="7" fill="#203b56" stroke="#9de8ec" stroke-width="1.5"/><text x="240" y="222" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Algae</text>
+</svg>

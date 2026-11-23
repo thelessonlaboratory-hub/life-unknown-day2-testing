@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-labelledby="title desc">
+<title id="title">WEB-006: Incomplete forest food web</title>
+<desc id="desc">Oak tree points to caterpillar and mouse. Caterpillar points to songbird. Songbird points to hawk. The mouse to hawk connection is deliberately missing.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#65e5e3"/></marker></defs>
+<rect width="480" height="270" rx="14" fill="#102432"/>
+<g fill="none" stroke="#65e5e3" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)">
+<path d="M240 224 L118 170"/>
+<path d="M240 224 L364 170"/>
+<path d="M110 139 L110 91"/>
+<path d="M168 64 L312 64"/>
+</g>
+<g fill="#e1f5f3" stroke="#65e5e3" stroke-width="2">
+<rect x="182" y="218" width="116" height="38" rx="7"/>
+<rect x="50" y="132" width="120" height="38" rx="7"/>
+<rect x="316" y="132" width="96" height="38" rx="7"/>
+<rect x="50" y="45" width="118" height="38" rx="7"/>
+<rect x="312" y="45" width="100" height="38" rx="7"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#163843" text-anchor="middle" dominant-baseline="middle">
+<text x="240" y="237">Oak tree</text>
+<text x="110" y="151">Caterpillar</text>
+<text x="364" y="151">Mouse</text>
+<text x="109" y="64">Songbird</text>
+<text x="362" y="64">Hawk</text>
+</g>
+</svg>
