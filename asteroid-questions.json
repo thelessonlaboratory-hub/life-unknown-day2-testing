@@ -1,0 +1,1727 @@
+{
+  "questions": [
+    {
+      "id": "R01-S01",
+      "record": "01",
+      "difficulty": "standard",
+      "question": "A newly discovered organism absorbs sunlight and uses carbon dioxide to produce sugars. How should scientists classify it?",
+      "answers": [
+        "Heterotroph",
+        "Autotroph",
+        "Herbivore",
+        "Decomposer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An autotroph produces organic molecules from inorganic substances using an energy source such as sunlight."
+    },
+    {
+      "id": "R01-S02",
+      "record": "01",
+      "difficulty": "standard",
+      "question": "Which observation provides the strongest evidence that an organism is a heterotroph?",
+      "answers": [
+        "It moves toward sunlight.",
+        "It lives in an aquatic ecosystem.",
+        "It obtains organic molecules by consuming other organisms.",
+        "It releases oxygen during cellular respiration."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Heterotrophs obtain organic matter from other organisms rather than producing it from inorganic carbon sources."
+    },
+    {
+      "id": "R01-S03",
+      "record": "01",
+      "difficulty": "standard",
+      "question": "A mushroom grows on a fallen log and absorbs nutrients as it breaks down dead wood. Which classification best describes the mushroom?",
+      "answers": [
+        "Autotroph, because it produces nutrients",
+        "Heterotroph, because it obtains organic matter from another organism",
+        "Autotroph, because it does not hunt",
+        "Producer, because it recycles matter"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fungi are heterotrophs. They obtain organic matter through absorption, often after decomposing dead material."
+    },
+    {
+      "id": "R01-S04",
+      "record": "01",
+      "difficulty": "standard",
+      "question": "Two organisms live in the same pond. Organism X uses sunlight to produce sugars from carbon dioxide. Organism Y consumes microscopic algae. What is the correct comparison?",
+      "answers": [
+        "Both are autotrophs.",
+        "Both are heterotrophs.",
+        "X is an autotroph; Y is a heterotroph.",
+        "X is a heterotroph; Y is an autotroph."
+      ],
+      "correctAnswer": 2,
+      "explanation": "X produces organic molecules from inorganic carbon, while Y obtains organic matter by consuming algae."
+    },
+    {
+      "id": "R01-A01",
+      "record": "01",
+      "difficulty": "advanced",
+      "question": "A scientist discovers a bacterium living deep underground without sunlight. It uses energy from chemical reactions to produce organic molecules from carbon dioxide. Which conclusion is best supported?",
+      "answers": [
+        "It must be a heterotroph because sunlight is unavailable.",
+        "It is an autotroph because it produces organic molecules from inorganic carbon.",
+        "It is a carnivore because it uses chemical energy.",
+        "It cannot survive without consuming other organisms."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Some autotrophs use chemical energy rather than sunlight. This process is called chemosynthesis."
+    },
+{
+  "id": "R01-S05",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A biologist observes a caterpillar eating leaves from several different plants. How should the caterpillar be classified based on its diet?",
+  "answers": [
+    "Carnivore",
+    "Herbivore",
+    "Omnivore",
+    "Autotroph"
+  ],
+  "correctAnswer": 1,
+  "explanation": "A herbivore obtains organic matter by consuming producers, such as plants."
+},
+{
+  "id": "R01-S06",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A black bear eats fish, insects, berries, and fallen fruit. Which classification best describes its diet?",
+  "answers": [
+    "Herbivore, because it eats fruit",
+    "Carnivore, because it hunts fish",
+    "Omnivore, because it consumes both plants and animals",
+    "Autotroph, because it obtains energy from several sources"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Omnivores consume both producers and other consumers. A black bear eating fruit and animals is an omnivore."
+},
+{
+  "id": "R01-S07",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Researchers discover an animal whose stomach contains insects, seeds, and pieces of fruit. What conclusion is best supported by this evidence?",
+  "answers": [
+    "The animal is an omnivore.",
+    "The animal is a carnivore.",
+    "The animal is an autotroph.",
+    "The animal is a herbivore."
+  ],
+  "correctAnswer": 0,
+  "explanation": "The stomach contains evidence of both plant material and animals, supporting classification as an omnivore."
+},
+{
+  "id": "R01-S08",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A snake eats mice, frogs, and small birds. Which characteristic makes it a carnivore?",
+  "answers": [
+    "It can occupy more than one trophic level.",
+    "It obtains organic matter by consuming animals.",
+    "It lives in a terrestrial ecosystem.",
+    "It competes with other predators for food."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Carnivores obtain organic matter by consuming animals. Their classification is based on diet, not habitat or competition."
+},
+{
+  "id": "R01-S09",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A student claims that a bear must be a carnivore because it has sharp teeth and can hunt animals. Which evidence would best challenge this claim?",
+  "answers": [
+    "The bear sometimes sleeps through winter.",
+    "The bear can travel long distances.",
+    "The bear also eats berries, roots, and other plant material.",
+    "The bear is larger than most of its prey."
+  ],
+  "correctAnswer": 2,
+  "explanation": "An organism's feeding classification depends on what it eats. A bear consuming both plants and animals is an omnivore."
+},
+
+{
+  "id": "R01-S10",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A grasshopper eats grass, while a frog eats the grasshopper. Which organism is the primary consumer?",
+  "answers": [
+    "Grass",
+    "Grasshopper",
+    "Frog",
+    "Both the grasshopper and the frog"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Primary consumers obtain organic matter by eating producers."
+},
+{
+  "id": "R01-S11",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Consider this food chain: Algae → Zooplankton → Small fish → Large fish. Which organism is the secondary consumer?",
+  "answers": [
+    "Algae",
+    "Zooplankton",
+    "Small fish",
+    "Large fish"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Secondary consumers eat primary consumers. The small fish eats zooplankton, which consumes algae."
+},
+{
+  "id": "R01-S12",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "In a meadow, grass is eaten by rabbits, rabbits are eaten by snakes, and snakes are eaten by hawks. What trophic level does the hawk occupy in this food chain?",
+  "answers": [
+    "Producer",
+    "Primary consumer",
+    "Secondary consumer",
+    "Tertiary consumer"
+  ],
+  "correctAnswer": 3,
+  "explanation": "Tertiary consumers eat secondary consumers. The hawk eats the snake, which eats the rabbit."
+},
+{
+  "id": "R01-S13",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Scientists observe a lizard eating insects that feed exclusively on leaves. Based on this information, which trophic level does the lizard occupy?",
+  "answers": [
+    "Producer",
+    "Primary consumer",
+    "Secondary consumer",
+    "Tertiary consumer"
+  ],
+  "correctAnswer": 2,
+  "explanation": "The insects are primary consumers because they eat leaves. The lizard is a secondary consumer because it eats those insects."
+},
+{
+  "id": "R01-S14",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A student claims that every carnivore must be a tertiary consumer. Which example best disputes this claim?",
+  "answers": [
+    "A rabbit eating grass",
+    "A frog eating a grasshopper that feeds on plants",
+    "A hawk eating a snake that feeds on mice",
+    "An oak tree producing sugars through photosynthesis"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Carnivores can occupy different trophic levels. A frog eating a plant-eating grasshopper is a secondary consumer, not a tertiary consumer."
+    },
+
+{
+  "id": "R01-S15",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A songbird eats both seeds and caterpillars that feed on leaves. Which statement best describes the songbird's trophic levels?",
+  "answers": [
+    "It is always a primary consumer.",
+    "It is always a secondary consumer.",
+    "It can be a primary or secondary consumer.",
+    "It is a tertiary consumer because it eats animals."
+  ],
+  "correctAnswer": 2,
+  "explanation": "An organism can occupy more than one trophic level."
+},
+{
+  "id": "R01-S16",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A hawk eats both mice that feed on seeds and snakes that eat those mice. Which conclusion is best supported?",
+  "answers": [
+    "The hawk is always a secondary consumer.",
+    "The hawk can be a secondary or tertiary consumer.",
+    "The hawk is a primary consumer when it eats mice.",
+    "The hawk must be an omnivore because it eats different animals."
+  ],
+  "correctAnswer": 1,
+  "explanation": "An organism's trophic level may change depending on the food chain being examined."
+},
+{
+  "id": "R01-S17",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A student identifies a raccoon as a primary consumer because it eats berries. Another student identifies it as a secondary consumer because it eats insects that feed on plants. Which conclusion is most accurate?",
+  "answers": [
+    "Only the first student is correct.",
+    "Only the second student is correct.",
+    "Both students are correct.",
+    "Neither student is correct because raccoons are carnivores."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Both classifications are supported by the feeding evidence."
+},
+{
+  "id": "R01-S18",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A fox eats only animals, including rabbits that feed on grass and snakes that eat those rabbits. Which statement correctly describes the fox?",
+  "answers": [
+    "It is an omnivore that occupies only one trophic level.",
+    "It is a carnivore that can occupy more than one trophic level.",
+    "It is a herbivore because some of its prey eat plants.",
+    "It is a tertiary consumer in every feeding relationship."
+  ],
+  "correctAnswer": 1,
+  "explanation": "The fox is a carnivore because it eats animals. It is a secondary consumer when eating rabbits and a tertiary consumer when eating snakes that consume rabbits."
+},
+
+{
+  "id": "R01-A02",
+  "record": "01",
+  "difficulty": "advanced",
+  "question": "Scientists discover a microscopic organism in a pond. Which observation would provide the strongest evidence that it is an autotroph?",
+  "answers": [
+    "It moves toward areas with more sunlight.",
+    "It produces organic molecules using carbon dioxide and sunlight.",
+    "It absorbs dissolved organic molecules from its surroundings.",
+    "It consumes other microscopic organisms."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Autotrophs produce organic molecules from inorganic substances using an energy source such as sunlight."
+},
+{
+  "id": "R01-S20",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A marine biologist observes a sea turtle eating jellyfish and small crustaceans but no plant material. Based on these observations, how should the turtle's diet be classified?",
+  "answers": [
+    "Herbivore",
+    "Carnivore",
+    "Omnivore",
+    "Autotroph"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Carnivores obtain organic matter by consuming animals."
+},
+{
+  "id": "R01-S21",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A student identifies a mushroom as a producer because it grows in soil and does not move. Which observation would best demonstrate that this classification is incorrect?",
+  "answers": [
+    "The mushroom produces spores.",
+    "The mushroom grows in a shaded forest.",
+    "The mushroom absorbs organic molecules from decomposing material.",
+    "The mushroom grows larger after rainfall."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Fungi are heterotrophs because they obtain organic matter from other organisms rather than producing it from inorganic carbon."
+},
+{
+  "id": "R01-S23",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Researchers examine the stomach contents of an unfamiliar animal and find grass seeds, beetles that feed on plants, and fragments of small predatory spiders. Which conclusion is best supported by this evidence?",
+  "answers": [
+    "The animal is an herbivore and a primary consumer only.",
+    "The animal is a carnivore and a tertiary consumer only.",
+    "The animal is an omnivore that can occupy several trophic levels.",
+    "The animal is an autotroph because it consumes producers."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Omnivores consume both producers and consumers. Depending on their food sources, they may occupy multiple trophic levels."
+},
+
+{
+  "id": "R01-S19",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Scientists discover an unfamiliar animal that feeds exclusively on algae. Which classification is best supported by this observation?",
+  "answers": [
+    "Autotroph and producer",
+    "Heterotroph and primary consumer",
+    "Heterotroph and secondary consumer",
+    "Autotroph and primary consumer"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Organisms that consume producers are heterotrophs and primary consumers."
+},
+{
+  "id": "R01-S22",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "A student claims that all heterotrophs are carnivores. Which observation best disputes this claim?",
+  "answers": [
+    "A hawk eating a snake",
+    "A rabbit eating grass",
+    "A snake eating a mouse",
+    "A spider eating an insect"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Heterotrophs obtain organic matter from other organisms and may be herbivores, carnivores, or omnivores."
+},
+{
+  "id": "R01-S24",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Consider these two food chains: Grass → Mouse → Snake; Grass → Grasshopper → Frog → Snake. What conclusion can scientists draw about the snake?",
+  "answers": [
+    "It is a primary consumer in both chains.",
+    "It is a secondary consumer in both chains.",
+    "It is a secondary consumer in the first chain and a tertiary consumer in the second.",
+    "It is a tertiary consumer in the first chain and a secondary consumer in the second."
+  ],
+  "correctAnswer": 2,
+  "explanation": "An organism's trophic level depends on its position in the food chain being examined."
+},
+{
+  "id": "R01-S25",
+  "record": "01",
+  "difficulty": "standard",
+  "question": "Scientists discover an organism that consumes both plants and animals. Which two classifications must apply to this organism?",
+  "answers": [
+    "Autotroph and omnivore",
+    "Heterotroph and omnivore",
+    "Producer and primary consumer",
+    "Carnivore and autotroph"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Omnivores are heterotrophs that obtain organic matter by consuming both producers and other consumers."
+},
+{
+  "id": "R01-A03",
+  "record": "01",
+  "difficulty": "advanced",
+  "question": "Frogs were once considered to be exclusively carnivores, but in 1989, scientists studying the Brazilian tree frog Xenohyla truncata documented individuals consuming both insects and fruit. Based on this evidence, which conclusion is best supported?",
+  "answers": [
+    "The frog must be an autotroph because it consumes fruit.",
+    "The frog is an omnivore that can function as a primary consumer and potentially as a secondary consumer.",
+    "The frog is a carnivore because all amphibians consume animals.",
+    "The frog must be a tertiary consumer because it consumes insects."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Feeding classifications depend on evidence of an organism's diet. Consuming both plant and animal material supports classification as an omnivore."
+},
+
+{
+  "id": "R01-A04",
+  "record": "01",
+  "difficulty": "advanced",
+  "question": "A scientist studies a Venus flytrap, a plant that performs photosynthesis but also captures and digests insects. The insects provide mineral nutrients, including nitrogen, while the plant produces sugars through photosynthesis. Which conclusion is best supported?",
+  "answers": [
+    "The Venus flytrap is a heterotroph because it digests animals.",
+    "The Venus flytrap is an autotroph because it produces organic molecules from inorganic carbon.",
+    "The Venus flytrap is a carnivore that cannot function as a producer.",
+    "The Venus flytrap changes from an autotroph to a heterotroph whenever it captures an insect."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Obtaining mineral nutrients from prey does not change an organism's classification as an autotroph."
+},
+{
+  "id": "R01-A05",
+  "record": "01",
+  "difficulty": "advanced",
+  "question": "Giant tube worms live near deep-sea hydrothermal vents. They lack a functional digestive tract as adults and depend on bacteria living inside their bodies. These bacteria use chemical energy to produce organic molecules from carbon dioxide, which provide nutrients to the worms. How should scientists classify the bacteria and the tube worms?",
+  "answers": [
+    "Both are autotrophs because neither depends on sunlight.",
+    "The bacteria are heterotrophs, while the worms are autotrophs.",
+    "The bacteria are autotrophs, while the worms are heterotrophs.",
+    "Both are heterotrophs because they live together."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Autotrophs produce organic molecules from inorganic carbon, while heterotrophs obtain organic matter from other organisms."
+},
+{
+  "id": "R01-A06",
+  "record": "01",
+  "difficulty": "advanced",
+  "question": "Scientists discover a flowering plant called Hydnora that lacks chlorophyll and cannot perform photosynthesis. Instead, it obtains organic molecules from the roots of a host plant. How should scientists classify Hydnora?",
+  "answers": [
+    "An autotroph, because all plants are producers.",
+    "A heterotroph, because it obtains organic matter from another organism.",
+    "An autotroph, because it absorbs nutrients through its roots.",
+    "A producer, because it belongs to the plant kingdom."
+  ],
+  "correctAnswer": 1,
+  "explanation": "An organism's nutritional classification depends on how it obtains organic matter, not its taxonomic classification."
+},
+
+{
+  "id": "R02-S01",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "In a food chain, what does an arrow pointing from a grasshopper to a frog represent?",
+  "answers": [
+    "The grasshopper consumes the frog.",
+    "Energy is transferred from the grasshopper to the frog.",
+    "The frog transfers energy to the grasshopper.",
+    "The grasshopper and frog compete for food."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Arrows in food chains show the direction of energy transfer from one organism to another."
+},
+{
+  "id": "R02-S02",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "A student draws this food chain: Hawk → Mouse → Grass. The mouse eats grass, and the hawk eats the mouse. What correction should the student make?",
+  "answers": [
+    "Reverse both arrows to show energy flowing from grass to mouse to hawk.",
+    "Remove the mouse because it is not a producer.",
+    "Reverse only the arrow between the hawk and mouse.",
+    "Leave the food chain unchanged because arrows point toward prey."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Energy-transfer arrows point from the organism being consumed toward the organism consuming it."
+},
+{
+  "id": "R02-S03",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "In a desert ecosystem, a kangaroo rat eats seeds, a rattlesnake eats the kangaroo rat, and a hawk eats the rattlesnake. Which food chain correctly represents the direction of energy transfer?",
+  "answers": [
+    "Hawk → Rattlesnake → Kangaroo rat → Seeds",
+    "Kangaroo rat → Seeds → Rattlesnake → Hawk",
+    "Seeds → Kangaroo rat → Rattlesnake → Hawk",
+    "Seeds → Rattlesnake → Kangaroo rat → Hawk"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Energy moves through a food chain from producers to the consumers that obtain organic matter from them."
+},
+{
+  "id": "R02-S04",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "In a marine ecosystem, phytoplankton are consumed by krill, and krill are consumed by baleen whales. Which statement correctly describes the direction of energy transfer?",
+  "answers": [
+    "Energy moves from whales to krill to phytoplankton.",
+    "Energy moves from phytoplankton to krill to whales.",
+    "Energy moves directly from phytoplankton to whales, bypassing krill.",
+    "Energy moves equally in both directions between all three organisms."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Energy is transferred from producers to primary consumers and then to higher-level consumers."
+},
+{
+  "id": "R02-S05",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "A food chain contains the following sequence: Grass → Rabbit → Fox. Which statement is supported by the arrows?",
+  "answers": [
+    "Grass obtains energy by consuming rabbits.",
+    "Rabbits transfer energy directly to grass.",
+    "Foxes transfer energy to rabbits when hunting.",
+    "Energy is transferred from rabbits to foxes when foxes consume rabbits."
+  ],
+  "correctAnswer": 3,
+  "explanation": "Arrows indicate the direction of energy transfer, not the direction an organism moves to find food."
+},
+
+{
+  "id": "R02-S06",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists studying a desert ecosystem record these feeding relationships: Grasshoppers eat desert grasses. Lizards eat grasshoppers. Roadrunners eat lizards. Which food chain correctly represents these relationships?",
+  "answers": [
+    "Roadrunner → Lizard → Grasshopper → Desert grasses",
+    "Desert grasses → Lizard → Grasshopper → Roadrunner",
+    "Desert grasses → Grasshopper → Lizard → Roadrunner",
+    "Grasshopper → Desert grasses → Lizard → Roadrunner"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Food chains follow the direction of energy transfer from producers through successive consumers."
+},
+{
+  "id": "R02-S07",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Researchers document the following feeding relationships in a coastal ecosystem: Phytoplankton are consumed by zooplankton. Small fish consume zooplankton. Seabirds consume small fish. Which organism belongs in the missing position? Phytoplankton → ? → Small fish → Seabirds",
+  "answers": [
+    "Zooplankton",
+    "Kelp",
+    "Large predatory fish",
+    "Another seabird"
+  ],
+  "correctAnswer": 0,
+  "explanation": "The missing organism must consume phytoplankton and transfer energy to the small fish."
+},
+{
+  "id": "R02-S08",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Two students construct food chains using the same organisms. Student A: Oak tree → Caterpillar → Songbird. Student B: Songbird → Caterpillar → Oak tree. Which observation would best support Student A's model?",
+  "answers": [
+    "The songbird builds its nest in the oak tree.",
+    "The caterpillar eats oak leaves, and the songbird eats caterpillars.",
+    "The caterpillar and songbird are found in the same forest.",
+    "The oak tree provides shade for both animals."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Food-chain models must be supported by evidence of feeding relationships and energy transfer."
+},
+{
+  "id": "R02-S09",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists studying a pond record these observations: Algae produce sugars through photosynthesis. Snails consume algae. Small fish consume snails. Herons consume small fish. Which proposed energy-transfer arrow is not supported by these observations?",
+  "answers": [
+    "Algae → Snail",
+    "Snail → Small fish",
+    "Small fish → Heron",
+    "Heron → Algae"
+  ],
+  "correctAnswer": 3,
+  "explanation": "Energy-transfer arrows must represent documented feeding relationships."
+},
+{
+  "id": "R02-S10",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "A student constructs this food chain: Grass → Rabbit ← Fox. The student explains that rabbits eat grass and foxes eat rabbits. Which correction is necessary?",
+  "answers": [
+    "Reverse the arrow between grass and rabbit.",
+    "Reverse the arrow between rabbit and fox.",
+    "Reverse both arrows.",
+    "No correction is necessary."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Energy-transfer arrows point toward the organism receiving energy through consumption."
+},
+
+{
+  "id": "R02-S11",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists construct the following food chain: Algae → Snail → Fish → Heron. Which statement is supported by this model?",
+  "answers": [
+    "The heron obtains energy directly from algae.",
+    "Energy is transferred from the snail to the fish when the fish consumes the snail.",
+    "The fish produces organic molecules that supply energy to the snail.",
+    "Energy is transferred from the heron to the fish when the heron eats it."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Food-chain arrows represent energy transfer from the organism being consumed to the consumer."
+},
+{
+  "id": "R02-S12",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Researchers observe a desert lizard eating beetles. They also observe beetles feeding on cactus tissue. Which additional observation would allow scientists to extend this food chain by one consumer?",
+  "answers": [
+    "A hawk captures and eats the lizard.",
+    "The lizard rests beneath a cactus.",
+    "Beetles shelter in the soil during the day.",
+    "The cactus produces flowers after rainfall."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Adding a consumer to a food chain requires evidence that it consumes an organism already in the chain."
+},
+{
+  "id": "R02-S13",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Consider the following food chain: Grass → Grasshopper → Frog → Snake. What is the original source of the energy transferred to the snake through this food chain?",
+  "answers": [
+    "The frog",
+    "The grasshopper",
+    "Sunlight captured by the grass",
+    "Nutrients absorbed from the soil"
+  ],
+  "correctAnswer": 2,
+  "explanation": "In photosynthesis-based food chains, energy enters the ecosystem when producers capture sunlight."
+},
+{
+  "id": "R02-S14",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "A student draws the food chain: Grass → Rabbit → Hawk. The student explains, \"The arrows show which organism is hunting the next organism.\" What is the best evaluation of this explanation?",
+  "answers": [
+    "It is correct because arrows point toward prey.",
+    "It is correct because rabbits hunt grass.",
+    "It is incorrect because arrows show energy transfer, not hunting behavior.",
+    "It is incorrect because food chains cannot include herbivores."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Food-chain arrows represent energy transfer, not the direction of hunting or movement."
+},
+{
+  "id": "R02-S15",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists record these feeding relationships in a pond: Algae are eaten by snails. Snails are eaten by small fish. Small fish are eaten by herons. Model A: Algae → Snail → Small fish → Heron. Model B: Algae → Snail → Heron → Small fish. Which statement best evaluates the models?",
+  "answers": [
+    "Both models are correct because they contain the same organisms.",
+    "Model A is correct because its arrows match the documented feeding relationships.",
+    "Model B is correct because herons are larger than small fish.",
+    "Neither model is correct because algae cannot be part of a food chain."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A food-chain model must accurately represent the observed feeding relationships and direction of energy transfer."
+},
+
+{
+  "id": "R02-S16",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Consider this food chain: Grass → Rabbit → Fox. Which statement best explains how energy reaches the fox?",
+  "answers": [
+    "The fox obtains energy directly from sunlight.",
+    "The rabbit creates energy that is transferred to the fox.",
+    "Energy captured by grass is transferred through the rabbit to the fox.",
+    "Energy moves from the fox to the rabbit and then to the grass."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Energy captured by producers is transferred to consumers through feeding relationships."
+},
+{
+  "id": "R02-A01",
+  "record": "02",
+  "difficulty": "advanced",
+  "question": "In a food chain, why is less energy available to organisms at higher trophic levels?",
+  "answers": [
+    "Organisms at higher trophic levels cannot perform cellular respiration.",
+    "Organisms use energy for life processes, and much of that energy is dissipated as heat.",
+    "Producers stop capturing energy when consumers begin feeding.",
+    "Energy flows backward through the food chain before reaching higher consumers."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Energy is used in life processes and dissipated as heat, leaving less available for transfer to the next trophic level."
+},
+{
+  "id": "R02-A02",
+  "record": "02",
+  "difficulty": "advanced",
+  "question": "Scientists estimate that producers in a grassland ecosystem store 10,000 units of energy. Approximately 10% of the energy at one trophic level is transferred to the next. How much energy would be available to primary consumers?",
+  "answers": [
+    "100 units",
+    "1,000 units",
+    "9,000 units",
+    "100,000 units"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Approximately 10% of the energy at one trophic level is transferred to the next."
+},
+{
+  "id": "R02-S19",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "A student claims that energy cycles through an ecosystem because decomposers return nutrients to the soil. Which statement best corrects this claim?",
+  "answers": [
+    "Energy and nutrients both cycle continuously through ecosystems.",
+    "Energy flows through ecosystems, while matter can be recycled.",
+    "Decomposers create new energy when they break down dead organisms.",
+    "Energy returns to producers when decomposers release nutrients."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Energy flows through ecosystems, while matter is recycled."
+},
+{
+  "id": "R02-A03",
+  "record": "02",
+  "difficulty": "advanced",
+  "question": "Scientists examine two food chains that begin with the same producer: Chain 1: Grass → Rabbit → Hawk. Chain 2: Grass → Grasshopper → Frog → Hawk. Assuming similar energy-transfer efficiencies, which statement is most likely correct?",
+  "answers": [
+    "More energy from the original producer is available to the hawk through Chain 1.",
+    "More energy from the original producer is available to the hawk through Chain 2.",
+    "Both chains transfer all the producer's energy to the hawk.",
+    "Energy availability is unrelated to the number of trophic transfers."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Energy decreases with each trophic transfer, so shorter food chains generally deliver more energy to their final consumers."
+},
+
+{
+  "id": "R02-S17",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists observe the following feeding relationships in a forest: Caterpillars eat oak leaves. Songbirds eat caterpillars. Hawks eat songbirds. Which arrow would not be supported by these observations?",
+  "answers": [
+    "Oak tree → Caterpillar",
+    "Caterpillar → Songbird",
+    "Songbird → Hawk",
+    "Hawk → Caterpillar"
+  ],
+  "correctAnswer": 3,
+  "explanation": "Food-chain arrows must represent feeding relationships supported by evidence."
+},
+{
+  "id": "R02-S18",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Researchers studying a freshwater ecosystem identify four organisms: aquatic plants, dragonfly nymphs, tadpoles, and bass. Their observations show that tadpoles graze on aquatic plants, dragonfly nymphs prey on tadpoles, and bass consume dragonfly nymphs. Which food chain correctly represents these observations?",
+  "answers": [
+    "Bass → Dragonfly nymph → Tadpole → Aquatic plants",
+    "Aquatic plants → Dragonfly nymph → Tadpole → Bass",
+    "Aquatic plants → Tadpole → Dragonfly nymph → Bass",
+    "Tadpole → Aquatic plants → Bass → Dragonfly nymph"
+  ],
+  "correctAnswer": 2,
+  "explanation": "A food chain follows the direction of energy transfer through observed feeding relationships."
+},
+{
+  "id": "R02-S20",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "A student proposes this food chain: Grass → Mouse → Snake. Which set of observations would provide the strongest evidence that the model is correct?",
+  "answers": [
+    "Mice live in grasslands, and snakes are often seen nearby.",
+    "Mice consume grass seeds, and snakes consume mice.",
+    "Snakes hide in grass, and mice use grass for shelter.",
+    "Grass grows in sunlight, and snakes are active during warm weather."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Feeding observations provide direct evidence for the energy-transfer pathways shown in a food chain."
+},
+{
+  "id": "R02-A04",
+  "record": "02",
+  "difficulty": "advanced",
+  "question": "Scientists estimate that producers in a grassland store 50,000 units of energy. Approximately 10% of the energy at each trophic level is transferred to the next. How much energy would be available to secondary consumers?",
+  "answers": [
+    "50 units",
+    "500 units",
+    "5,000 units",
+    "45,000 units"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Two transfers of approximately 10% each leave about 1% of the producers' energy available to secondary consumers."
+},
+{
+  "id": "R02-A05",
+  "record": "02",
+  "difficulty": "advanced",
+  "question": "A student constructs an energy pyramid with producers at the bottom, primary consumers above them, and secondary consumers at the top. The student labels the secondary consumers as having more available energy than the producers. Which statement best explains the error?",
+  "answers": [
+    "Energy increases as it moves toward higher trophic levels.",
+    "Secondary consumers produce all the energy needed by lower trophic levels.",
+    "Less energy is available at higher trophic levels because energy is dissipated during each transfer.",
+    "Energy pyramids show only the number of organisms, not energy availability."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Energy availability generally decreases at each successive trophic level."
+},
+
+{
+  "id": "R02-S21",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists studying a pond observe that snails consume algae and that turtles consume snails. Which conclusion is supported by these observations?",
+  "answers": [
+    "Energy is transferred directly from turtles to algae.",
+    "Algae obtain energy by consuming snails.",
+    "Energy stored in algae can reach turtles through snails.",
+    "Snails produce the energy used by both algae and turtles."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Energy can pass through multiple organisms as one consumer eats another."
+},
+{
+  "id": "R02-S22",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Researchers document the following relationships in a forest: beetles consume fallen leaves, shrews consume beetles, and owls consume shrews. A student constructs this model: Fallen leaves → Beetle → Owl → Shrew. Which change would make the model consistent with the observations?",
+  "answers": [
+    "Reverse every arrow in the model.",
+    "Switch the positions of the owl and shrew.",
+    "Remove the beetle because it consumes dead material.",
+    "Place the fallen leaves at the end of the chain."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Organisms must be arranged according to the documented direction of energy transfer."
+},
+{
+  "id": "R02-S23",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists have confirmed these feeding relationships: Grasshoppers eat grass. Frogs eat grasshoppers. Snakes eat frogs. A student adds a hawk to the end of the food chain. What additional evidence would best support this change?",
+  "answers": [
+    "Hawks and snakes live in the same ecosystem.",
+    "Hawks sometimes perch in trees near the grass.",
+    "Hawks are larger than frogs.",
+    "Hawks have been observed capturing and eating snakes."
+  ],
+  "correctAnswer": 3,
+  "explanation": "A new link in a food chain must be supported by evidence of consumption."
+},
+{
+  "id": "R02-S24",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Scientists observe two feeding relationships in a coastal ecosystem: Phytoplankton are eaten by zooplankton, which are eaten by small fish. Kelp is eaten by sea urchins, which are eaten by sea otters. Which statement correctly compares these food chains?",
+  "answers": [
+    "Both begin with organisms that capture energy through photosynthesis.",
+    "Both begin with carnivores that obtain energy from other animals.",
+    "Energy flows from small fish to phytoplankton and from sea otters to kelp.",
+    "Only the kelp food chain transfers energy between organisms."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Photosynthetic producers introduce energy into food chains that support consumers."
+},
+{
+  "id": "R02-S25",
+  "record": "02",
+  "difficulty": "standard",
+  "question": "Researchers observe that a caterpillar eats oak leaves, a spider eats caterpillars, and a songbird eats spiders. Three students propose different food chains: Model A: Oak → Caterpillar → Spider → Songbird. Model B: Oak → Spider → Caterpillar → Songbird. Model C: Songbird → Spider → Caterpillar → Oak. Which model correctly represents the direction of energy transfer?",
+  "answers": [
+    "Model A, because its arrows follow the observed feeding relationships.",
+    "Model B, because spiders are predators.",
+    "Model C, because the songbird is the highest-level consumer.",
+    "All three models, because they contain the same organisms."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Food-chain models must show energy moving from each food source to the organism that consumes it."
+},
+
+{
+  "id": "R03-S01",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Which statement is supported by this food web?",
+  "diagramId": "WEB-001",
+  "answers": [
+    "Grass transfers energy only to rabbits.",
+    "Grass transfers energy to both rabbits and grasshoppers.",
+    "Rabbits transfer energy directly to grasshoppers.",
+    "Foxes and frogs obtain energy directly from grass."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A food web can show multiple consumers obtaining energy from the same food source."
+},
+{
+  "id": "R03-S02",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Researchers document these feeding relationships: Mice eat grass seeds; rabbits eat grass; snakes eat mice; hawks eat both mice and snakes. Which set of arrows should appear in the food web?",
+  "answers": [
+    "Grass → Mouse;   Grass → Rabbit;   Mouse → Snake;   Mouse → Hawk;   Snake → Hawk",
+    "Grass → Mouse;   Rabbit → Grass;   Snake → Mouse;   Hawk → Snake",
+    "Mouse → Grass;   Rabbit → Grass;   Snake → Mouse;   Hawk → Mouse",
+    "Grass → Snake;   Mouse → Rabbit;   Rabbit → Hawk;   Snake → Hawk"
+  ],
+  "correctAnswer": 0,
+  "explanation": "Food-web arrows must represent every documented feeding relationship in the direction of energy transfer."
+},
+{
+  "id": "R03-S03",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "How many different food chains connect algae to fish in this food web?",
+  "diagramId": "WEB-002",
+  "answers": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Energy can travel through different feeding pathways within the same food web."
+},
+{
+  "id": "R03-S04",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "A student constructs a food web using these observations: Grasshoppers eat grass; mice eat grass seeds; frogs eat grasshoppers; snakes eat both mice and frogs. The model already includes: Grass → Grasshopper;   Grass → Mouse;   Grasshopper → Frog;   Mouse → Snake. Which additional arrow is needed to complete the food web?",
+  "answers": [
+    "Snake → Grass",
+    "Mouse → Frog",
+    "Frog → Snake",
+    "Snake → Grasshopper"
+  ],
+  "correctAnswer": 2,
+  "explanation": "A complete food web includes all documented feeding relationships, including consumers with multiple food sources."
+},
+{
+  "id": "R03-S05",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "A food web shows that caterpillars eat oak leaves and songbirds eat caterpillars. A student wants to add a direct arrow from the oak tree to the songbird. Which observation would best justify adding this arrow?",
+  "answers": [
+    "Songbirds build nests in oak trees.",
+    "Songbirds eat acorns produced by the oak tree.",
+    "Songbirds perch on oak branches while hunting insects.",
+    "Songbirds and caterpillars live in the same forest."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A direct arrow requires evidence that the consumer obtains organic matter from that food source."
+},
+
+{
+  "id": "R03-S06",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "According to this food web, which organism provides energy to the hawk?",
+  "diagramId": "WEB-003",
+  "answers": [
+    "Mouse only",
+    "Snake only",
+    "Both mouse and snake",
+    "Neither mouse nor snake"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Food webs can show a consumer obtaining energy from more than one food source."
+},
+{
+  "id": "R03-S07",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Researchers observe that a frog eats both grasshoppers and beetles, but a student's food web includes only: Grasshopper → Frog. What is missing from the model?",
+  "answers": [
+    "Beetle → Frog",
+    "Frog → Beetle",
+    "Frog → Grasshopper",
+    "Grasshopper → Beetle"
+  ],
+  "correctAnswer": 0,
+  "explanation": "A food web should include all documented food sources for each consumer."
+},
+{
+  "id": "R03-S08",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "How many different food chains connect grass to the hawk?",
+  "diagramId": "WEB-004",
+  "answers": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+  ],
+  "correctAnswer": 1,
+  "explanation": "A food web contains multiple food chains that can share organisms."
+},
+{
+  "id": "R03-S09",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists find that a bird eats both insects and berries. Which two arrows should appear in a food web containing the bird, insects, and a berry-producing shrub?",
+  "answers": [
+    "Bird → Insect; Bird → Shrub",
+    "Insect → Bird; Shrub → Bird",
+    "Insect → Shrub; Shrub → Bird",
+    "Shrub → Insect; Bird → Shrub"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Arrows point from each food source toward the organism that consumes it."
+},
+{
+  "id": "R03-S10",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Which statement is supported by this food web?",
+  "diagramId": "WEB-005",
+  "answers": [
+    "Herons obtain energy from both snails and fish.",
+    "Fish obtain energy directly from herons.",
+    "Snails obtain energy by consuming fish.",
+    "Algae obtain energy by consuming snails."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Food webs show how energy reaches consumers through multiple feeding relationships."
+},
+
+{
+  "id": "R03-S11",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe that caterpillars eat oak leaves; mice eat acorns; songbirds eat caterpillars; hawks eat both mice and songbirds. Which additional arrow is needed to make this food web complete?",
+  "diagramId": "WEB-006",
+  "answers": [
+    "Hawk → Mouse",
+    "Mouse → Songbird",
+    "Mouse → Hawk",
+    "Caterpillar → Hawk"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Hawks consume both mice and songbirds, so both feeding relationships must appear in the model."
+},
+{
+  "id": "R03-S12",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "A student adds an arrow from a mushroom to a rabbit in a food web. Which observation would best support this connection?",
+  "answers": [
+    "Rabbits and mushrooms live in the same forest.",
+    "Rabbits eat mushrooms.",
+    "Mushrooms grow near rabbit burrows.",
+    "Rabbits provide nutrients to mushrooms through their waste."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A feeding arrow requires evidence that the consumer eats the organism at the arrow's starting point."
+},
+{
+  "id": "R03-S13",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe that grasshoppers eat grass; frogs eat grasshoppers; snakes eat frogs and mice; mice eat grass seeds. Which model correctly represents all four feeding relationships?",
+  "answers": [
+    "Grass → Grasshopper → Frog → Snake; Grass → Mouse → Snake",
+    "Grass → Grasshopper → Frog → Snake; Mouse → Grass → Snake",
+    "Grass → Grasshopper → Snake → Frog; Grass → Mouse → Snake",
+    "Grass → Grasshopper → Frog → Mouse → Snake"
+  ],
+  "correctAnswer": 0,
+  "explanation": "A complete food web must represent every observed feeding relationship with arrows pointing toward the consumer."
+},
+{
+  "id": "R03-S14",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists record these feeding relationships: Zooplankton eat phytoplankton; small fish eat zooplankton; large fish eat small fish; large fish also eat zooplankton. How many arrows are needed to represent all these feeding relationships?",
+  "answers": [
+    "Two",
+    "Three",
+    "Four",
+    "Five"
+  ],
+  "correctAnswer": 2,
+  "explanation": "Each observed feeding relationship requires its own arrow, including multiple food sources for one consumer."
+},
+{
+  "id": "R03-S15",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "A student constructs a food web with these arrows: Grass → Rabbit; Rabbit → Fox; Rabbit → Hawk. Which observation would require adding another arrow?",
+  "answers": [
+    "Foxes and hawks hunt in the same field.",
+    "Rabbits sometimes hide from predators.",
+    "Foxes also eat grasshoppers.",
+    "Grass grows more quickly after rainfall."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Evidence of an additional food source requires another feeding connection in the food web."
+},
+
+{
+  "id": "R03-S16",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe these feeding relationships: Grasshoppers eat grass; frogs eat grasshoppers; snakes eat frogs; hawks eat snakes. A student's food web shows: Grass → Grasshopper → Frog → Hawk. Which organism is missing from the model?",
+  "answers": [
+    "Rabbit",
+    "Mouse",
+    "Snake",
+    "Beetle"
+  ],
+  "correctAnswer": 2,
+  "explanation": "The observations show that snakes connect frogs to hawks in this food chain."
+},
+{
+  "id": "R03-S17",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Consider these feeding relationships: Grass → Mouse;   Mouse → Snake;   Mouse → Hawk;   Snake → Hawk. Which statement correctly describes the hawk's position in this food web?",
+  "answers": [
+    "The hawk is always a secondary consumer.",
+    "The hawk is always a tertiary consumer.",
+    "The hawk can be both a secondary and tertiary consumer.",
+    "The hawk is a primary consumer because it eats mice."
+  ],
+  "correctAnswer": 2,
+  "explanation": "The hawk is a secondary consumer when eating mice and a tertiary consumer when eating snakes that ate mice."
+},
+{
+  "id": "R03-S18",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe that a bear eats berries, fish, and insects. Which set of arrows correctly represents these feeding relationships?",
+  "answers": [
+    "Bear → Berry bush; Bear → Fish; Bear → Insect",
+    "Berry bush → Bear; Fish → Bear; Insect → Bear",
+    "Berry bush → Fish; Fish → Insect; Insect → Bear",
+    "Fish → Berry bush; Insect → Fish; Bear → Insect"
+  ],
+  "correctAnswer": 1,
+  "explanation": "Each food source transfers energy to the bear, so all three arrows point toward the bear."
+},
+{
+  "id": "R03-S19",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Two students construct food webs using the same feeding observations. Model A includes every observed feeding relationship. Model B includes only the longest food chain. Which model better represents the ecosystem?",
+  "answers": [
+    "Model A, because it includes all observed energy-transfer pathways.",
+    "Model B, because longer food chains transfer more energy.",
+    "Model A, because food webs must contain more organisms than food chains.",
+    "Model B, because shorter food chains are not scientifically important."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Food webs represent interconnected feeding relationships, not just one pathway through an ecosystem."
+},
+{
+  "id": "R03-S20",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "A scientist records five feeding relationships in an ecosystem. A student's food web contains all five correct arrows but also includes two unsupported arrows. Which evaluation is most scientifically accurate?",
+  "answers": [
+    "The food web is complete and accurate because it contains all five observed relationships.",
+    "The food web is inaccurate because it includes feeding connections without evidence.",
+    "The food web is inaccurate because food webs cannot contain more than five arrows.",
+    "The food web is accurate as long as every organism appears at least once."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A scientifically accurate food web includes supported feeding relationships without adding unsupported connections."
+},
+
+{
+  "id": "R03-S21",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe these feeding relationships: Grass → Rabbit → Fox; Grass → Grasshopper → Frog → Snake; Rabbit → Snake. Why is a food web more useful than a single food chain for representing these observations?",
+  "answers": [
+    "It shows that energy moves in a cycle between organisms.",
+    "It shows multiple connected pathways through which energy transfers.",
+    "It shows that every organism consumes only one type of food.",
+    "It shows that all organisms occupy the same trophic level."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Food webs represent multiple interconnected pathways of energy transfer within an ecosystem."
+},
+{
+  "id": "R03-S22",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe that insects eat leaves, birds eat insects, and hawks eat birds. A student constructs this model: Leaves → Insects → Birds → Hawks. Which evaluation of the model is most accurate?",
+  "answers": [
+    "The model is incorrect because leaves are not living organisms.",
+    "The model is correct because arrows point toward organisms receiving energy.",
+    "The model is incorrect because hawks must eat producers directly.",
+    "The model is incorrect because insects cannot be primary consumers."
+  ],
+  "correctAnswer": 1,
+  "explanation": "The arrows correctly represent the observed feeding relationships and direction of energy transfer."
+},
+{
+  "id": "R03-S23",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists observe that a raccoon eats berries, insects, and mice. What does this evidence tell us about the raccoon's position in a food web?",
+  "answers": [
+    "The raccoon must always be a primary consumer.",
+    "The raccoon must always be a secondary consumer.",
+    "The raccoon can occupy more than one consumer level.",
+    "The raccoon is a producer because it eats berries."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Omnivores can occupy different consumer levels depending on which organisms they consume."
+},
+{
+  "id": "R03-S24",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "A food web shows: Grass → Grasshopper → Frog → Snake. Scientists later discover that snakes also eat mice, which consume grass seeds. Which revision best incorporates this new evidence?",
+  "answers": [
+    "Add Grass → Mouse → Snake.",
+    "Add Snake → Mouse → Grass.",
+    "Replace Frog → Snake with Mouse → Snake.",
+    "Remove Grasshopper → Frog and add Mouse → Frog."
+  ],
+  "correctAnswer": 0,
+  "explanation": "New feeding evidence should be added without removing previously supported connections."
+},
+{
+  "id": "R03-S25",
+  "record": "03",
+  "difficulty": "standard",
+  "question": "Scientists construct a food web using observations collected during one week. Which conclusion is most scientifically reasonable?",
+  "answers": [
+    "The food web must include every feeding relationship in the ecosystem.",
+    "The food web proves that organisms never change their diets.",
+    "The food web represents observed feeding relationships but may be incomplete.",
+    "The food web cannot be revised after it is constructed."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Scientific models are based on available evidence and can be revised as new observations are collected."
+},
+
+{
+  "id": "R03-A01",
+  "record": "03",
+  "difficulty": "advanced",
+  "question": "Scientists observe that a species of deer normally eats grasses and shrubs. During severe droughts, however, the deer also consume cactus tissue. Should the cactus-to-deer feeding relationship be included in a food web?",
+  "answers": [
+    "No, because food webs should include only an organism's preferred food sources.",
+    "Yes, because the relationship has been observed, even if it occurs only under certain conditions.",
+    "No, because temporary feeding relationships do not transfer energy.",
+    "Yes, but only if cactus becomes the deer's primary food source."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Food webs can include feeding relationships that occur only under particular environmental conditions."
+},
+{
+  "id": "R03-A02",
+  "record": "03",
+  "difficulty": "advanced",
+  "question": "A student constructs an urban food web showing rats, cockroaches, pigeons, and other organisms consuming discarded food from trash. The student argues that the food web does not need producers because its energy comes from garbage. Which response best evaluates this claim?",
+  "answers": [
+    "The student is correct because trash replaces producers in urban ecosystems.",
+    "The student is correct because decomposers can create energy from discarded food.",
+    "The student is incorrect because the organic matter in discarded food ultimately originated from producers.",
+    "The student is incorrect because organisms cannot obtain energy from discarded food."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Discarded food contains organic matter whose energy ultimately originated from producers, even when those producers are outside the urban ecosystem."
+},
+{
+  "id": "R03-A03",
+  "record": "03",
+  "difficulty": "advanced",
+  "question": "Parasites are often omitted from simplified food webs, even though they obtain energy from other organisms. Which trophic role would a parasite never occupy?",
+  "answers": [
+    "Primary consumer",
+    "Secondary consumer",
+    "Tertiary consumer",
+    "Producer"
+  ],
+  "correctAnswer": 3,
+  "explanation": "Parasites obtain organic matter from hosts rather than producing their own food through photosynthesis or chemosynthesis."
+},
+{
+  "id": "R03-A04",
+  "record": "03",
+  "difficulty": "advanced",
+  "question": "Researchers observe that a species of bird eats insects during spring and berries during autumn. A food web constructed using only spring observations shows: Insect → Bird. Which conclusion is most scientifically justified?",
+  "answers": [
+    "The model is incorrect because birds cannot eat both insects and berries.",
+    "The model accurately represents spring feeding observations but does not represent the bird's full annual diet.",
+    "The model proves that insects are the bird's only food source.",
+    "The model should replace Insect → Bird with Berry bush → Bird."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A food web reflects the evidence used to construct it and may not represent feeding relationships observed at other times."
+},
+{
+  "id": "R03-A05",
+  "record": "03",
+  "difficulty": "advanced",
+  "question": "Scientists observe these relationships in a pond: Algae are eaten by snails and insect larvae; snails are eaten by fish; insect larvae are eaten by fish and frogs; frogs are eaten by herons; fish are also eaten by herons. How many arrows are needed to represent every observed feeding relationship?",
+  "answers": [
+    "Five",
+    "Six",
+    "Seven",
+    "Eight"
+  ],
+  "correctAnswer": 2,
+  "explanation": "The observations describe seven feeding relationships, each requiring a separate arrow in the food web."
+},
+
+{
+  "id": "R04-S01",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "In a grassland food web, rabbits eat grass and foxes eat rabbits. If the rabbit population decreases significantly, what is the most likely effect on the fox population?",
+  "answers": [
+    "The fox population will increase because less grass is being eaten.",
+    "The fox population may decrease because less food is available.",
+    "The fox population will remain unchanged because foxes are predators.",
+    "The fox population will immediately disappear."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A decrease in prey availability can reduce the food available to predators, potentially causing their populations to decline."
+},
+{
+  "id": "R04-S02",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "In a meadow, grasshoppers feed on grasses, and frogs feed on grasshoppers. If the frog population decreases, what is the most likely effect on the grasses?",
+  "answers": [
+    "Grasses may decrease because more grasshoppers survive and consume them.",
+    "Grasses will increase because frogs no longer compete with them.",
+    "Grasses will remain unchanged because frogs do not eat grass.",
+    "Grasses will immediately disappear because frogs are necessary for photosynthesis."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Fewer frogs may allow grasshopper populations to increase, leading to greater consumption of grasses."
+},
+{
+  "id": "R04-S03",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A forest food web includes these relationships: Oak Tree → Mouse → Snake → Hawk. If the snake population decreases, which indirect effect is most likely?",
+  "answers": [
+    "The mouse population may increase, causing more oak seeds to be consumed.",
+    "The oak population will increase because snakes no longer eat oak seeds.",
+    "The mouse population will decrease because fewer snakes are available.",
+    "The hawk population will increase because snakes compete with hawks for sunlight."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Fewer snakes may allow mouse populations to increase, potentially increasing consumption of oak seeds."
+},
+{
+  "id": "R04-S04",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "Scientists predict that removing a predator from an ecosystem will increase the population of its prey. Why might the actual population change differ from their prediction?",
+  "answers": [
+    "Food webs always predict population changes with complete accuracy.",
+    "Predator populations never influence prey populations.",
+    "Other factors, such as disease, food availability, and competition, also affect populations.",
+    "Prey populations always remain constant when predators disappear."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Ecological predictions describe likely outcomes, but multiple interacting factors influence actual population changes."
+},
+{
+  "id": "R04-S05",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A pond food web includes these relationships: Algae → Snail → Fish; Algae → Insect Larvae → Fish. If the algae population decreases significantly, what is the most likely effect on the fish population?",
+  "answers": [
+    "The fish population will increase because snails and insect larvae have less food.",
+    "The fish population will remain unchanged because fish do not eat algae directly.",
+    "The fish population may decrease because both of its food sources depend on algae.",
+    "The fish population will immediately disappear because algae produce oxygen."
+  ],
+  "correctAnswer": 2,
+  "explanation": "A decrease in producers can reduce energy available to multiple consumers, indirectly affecting predators that depend on them."
+},
+{
+  "id": "R04-A01",
+  "record": "04",
+  "difficulty": "advanced",
+  "question": "An invasive fish species enters a pond and begins eating the same insect larvae as the native fish. What is the most likely effect on the native fish population?",
+  "answers": [
+    "It will increase because more predators create more food.",
+    "It will remain unchanged because the fish are different species.",
+    "It may decrease because competition for food has increased.",
+    "It will immediately become extinct."
+  ],
+  "correctAnswer": 2,
+  "explanation": "When species compete for a limited food source, increased competition can reduce resource availability and affect population sizes."
+},
+
+{
+  "id": "R04-S06",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A hawk eats both mice and rabbits. A disease causes the mouse population to decline, but the rabbit population remains stable. Why might the hawk population remain stable?",
+  "answers": [
+    "Hawks can obtain energy from rabbits when mice become less available.",
+    "Hawks can produce their own food when prey populations decline.",
+    "The decline in mice will automatically increase the rabbit population.",
+    "Hawks no longer need energy when one prey population decreases."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Predators with multiple food sources may be less affected by a decline in one prey population."
+},
+{
+  "id": "R04-S07",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A drought causes the grass population in a meadow to decrease. Grasshoppers eat the grass, and birds eat the grasshoppers. Which population change is most likely?",
+  "answers": [
+    "Grasshoppers and birds will both increase.",
+    "Grasshoppers may decrease, followed by a decrease in birds.",
+    "Grasshoppers will increase while birds decrease.",
+    "Birds will increase because less grass is available."
+  ],
+  "correctAnswer": 1,
+  "explanation": "A decrease in producers can reduce food availability for primary consumers and subsequently affect their predators."
+},
+{
+  "id": "R04-S08",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "In a forest, both squirrels and mice eat acorns. A disease causes the squirrel population to decrease significantly. What is one possible effect on the mouse population?",
+  "answers": [
+    "Mice may increase because less competition for acorns exists.",
+    "Mice will decrease because squirrels are their primary food source.",
+    "Mice will stop eating acorns because squirrels are absent.",
+    "Mice will immediately become producers."
+  ],
+  "correctAnswer": 0,
+  "explanation": "When two populations compete for the same resource, a decrease in one may increase resource availability for the other."
+},
+{
+  "id": "R04-S09",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A wetland is drained, causing a large decrease in aquatic plants. Snails eat these plants, and ducks eat the snails. Which prediction is best supported by the food web?",
+  "answers": [
+    "Duck populations may decrease because fewer snails can be supported.",
+    "Duck populations will increase because aquatic plants are no longer competing with them.",
+    "Snail populations will increase because their habitat has disappeared.",
+    "Duck populations will remain unchanged because they do not eat aquatic plants directly."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Habitat changes that reduce producers can indirectly affect higher-level consumers through changes in food availability."
+},
+{
+  "id": "R04-S10",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "Scientists observe that a rabbit population declines shortly after the fox population increases. During the same period, a disease spreads among the rabbits. What can scientists reasonably conclude?",
+  "answers": [
+    "The fox population increase must have caused the rabbit decline.",
+    "The disease must have caused the rabbit decline because predators cannot affect prey populations.",
+    "Both increased predation and disease may have contributed to the rabbit decline.",
+    "Neither predation nor disease can affect rabbit populations."
+  ],
+  "correctAnswer": 2,
+  "explanation": "Multiple factors can affect populations simultaneously. Additional evidence is needed to determine how much each factor contributed to the decline."
+},
+
+{
+  "id": "R04-S11",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A wildfire destroys much of the grass in a prairie. Over the next several years, grasses begin growing again. Which population change is most likely as the grass recovers?",
+  "answers": [
+    "Herbivore populations may increase as more food becomes available.",
+    "Herbivore populations will decrease because grasses compete with them for sunlight.",
+    "Predator populations will immediately disappear as grass returns.",
+    "Herbivores will stop consuming grass because the ecosystem has changed."
+  ],
+  "correctAnswer": 0,
+  "explanation": "As producers recover after a disturbance, more food becomes available to herbivores, potentially supporting larger populations."
+},
+{
+  "id": "R04-S12",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "In a forest, foxes eat both rabbits and mice. Rabbits and mice both eat seeds. If the fox population decreases, which outcome is most likely?",
+  "answers": [
+    "Rabbits and mice may both increase, causing greater seed consumption.",
+    "Rabbits will increase, but mice must decrease because they share a predator.",
+    "Seed consumption will decrease because fewer foxes are present.",
+    "Rabbits and mice will immediately become producers."
+  ],
+  "correctAnswer": 0,
+  "explanation": "A decline in a shared predator may allow multiple prey populations to increase, potentially increasing pressure on their shared food source."
+},
+{
+  "id": "R04-S13",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "In a coastal ecosystem, seabirds eat both fish and crabs. A disease causes the fish population to decrease significantly. Which change in feeding behavior is most likely?",
+  "answers": [
+    "Seabirds may consume more crabs as fish become less available.",
+    "Seabirds will begin producing their own food.",
+    "Seabirds will stop eating because fish are no longer available.",
+    "Seabirds must migrate immediately, even if crabs remain abundant."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Consumers with multiple food sources may shift their feeding behavior when one food source becomes less available."
+},
+{
+  "id": "R04-S14",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A new predator enters a grassland and begins eating grasshoppers. Grasshoppers feed on grasses. If the new predator becomes established, what is one possible indirect effect?",
+  "answers": [
+    "Grass populations may increase because fewer grasshoppers consume them.",
+    "Grass populations will decrease because predators consume sunlight.",
+    "Grasshopper populations will increase because more predators are present.",
+    "Grasses will stop photosynthesizing because the food web has changed."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Increased predation on herbivores may reduce grazing pressure, allowing producer populations to increase."
+},
+{
+  "id": "R04-S15",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "Scientists predict that increasing predator populations will reduce prey populations. Over four years, they collect these data: Year 1: 20 predators, 150 prey; Year 2: 30 predators, 120 prey; Year 3: 40 predators, 90 prey; Year 4: 50 predators, 60 prey. Which conclusion is best supported?",
+  "answers": [
+    "The data support the prediction, but do not prove predation caused the decline.",
+    "The data prove that predation is the only factor affecting prey populations.",
+    "Both predator and prey populations increased.",
+    "Prey populations are unaffected by predators."
+  ],
+  "correctAnswer": 0,
+  "explanation": "The trends support the prediction, but additional evidence is needed to establish causation."
+},
+
+{
+  "id": "R04-S16",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A severe winter reduces a rabbit population from 200 individuals to just 15. Foxes and hawks both depend on rabbits for food. Which outcome is most likely in the following months?",
+  "answers": [
+    "Both predator populations may decline because fewer rabbits are available.",
+    "Foxes will increase because hawks consume fewer rabbits.",
+    "Rabbits will immediately recover because predators need them for food.",
+    "Foxes and hawks will become producers to replace their lost food source."
+  ],
+  "correctAnswer": 0,
+  "explanation": "A sharp decline in a prey population can reduce food availability for multiple predators, potentially causing their populations to decrease."
+},
+{
+  "id": "R04-S17",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "In a pond, tadpoles and aquatic snails both feed on algae. A disease causes the snail population to decrease. If algae availability increases, what is one possible effect on the tadpole population?",
+  "answers": [
+    "Tadpoles may increase because more food is available.",
+    "Tadpoles will decrease because snails are no longer present.",
+    "Tadpoles will stop consuming algae because competition has decreased.",
+    "Tadpoles must become carnivores to survive."
+  ],
+  "correctAnswer": 0,
+  "explanation": "A decrease in one competitor may increase food availability for another species, potentially supporting population growth."
+},
+{
+  "id": "R04-S18",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A pond food web includes these relationships: Algae → Snail → Fish → Heron; Algae → Insect Larvae → Frog → Heron. A disease causes the fish population to decline significantly. Which prediction is best supported?",
+  "answers": [
+    "Herons may consume more frogs if fewer fish are available.",
+    "Frog populations must decrease because fish and frogs share a predator.",
+    "Snail populations must decrease because fewer fish consume them.",
+    "Algae populations will immediately disappear because fish are declining."
+  ],
+  "correctAnswer": 0,
+  "explanation": "When a predator has multiple food sources, a decline in one prey population may cause it to rely more heavily on another, potentially increasing predation pressure on that species."
+},
+{
+  "id": "R04-S19",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A lake has experienced excessive algae growth. Scientists propose introducing more fish that eat algae. What should scientists investigate before introducing the fish?",
+  "answers": [
+    "Whether the fish could affect other organisms through competition or predation.",
+    "Whether the fish can survive without obtaining energy.",
+    "Whether the fish will immediately eliminate every producer in the lake.",
+    "Whether adding fish will prevent all future environmental changes."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Introducing organisms can affect multiple feeding relationships. Scientists should consider possible effects on the wider food web before intervening."
+},
+{
+  "id": "R04-S20",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A forest food web includes these relationships: Oak trees → Caterpillars → Songbirds; Oak trees → Mice → Owls. A disease causes the caterpillar population to decrease significantly. Which prediction is best supported by the food web?",
+  "answers": [
+    "Songbirds may decrease, while mice may benefit from reduced competition for oak leaves.",
+    "Owls will decrease because they depend directly on caterpillars for food.",
+    "Oak trees will decrease because fewer caterpillars consume their leaves.",
+    "Mice will decrease because caterpillars are their primary food source."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Fewer caterpillars may reduce food availability for songbirds while leaving more plant resources available to other consumers."
+},
+{
+  "id": "R04-A02",
+  "record": "04",
+  "difficulty": "advanced",
+  "question": "A forest experiences a sharp decline in decomposer fungi. Dead leaves and other organic matter begin accumulating on the forest floor. What is one likely long-term effect on the forest ecosystem?",
+  "answers": [
+    "Soil nutrient availability may decrease, limiting plant growth.",
+    "Plants will grow faster because decomposers no longer consume sunlight.",
+    "Herbivores will become producers to replace the decomposers.",
+    "Nutrients will no longer be needed because dead matter remains in the forest."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Decomposers recycle nutrients from dead organic matter. A decline in decomposition can reduce nutrient availability for producers."
+},
+
+{
+  "id": "R04-S21",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A disease causes a sharp decline in a forest's mouse population. Owls rely primarily on mice for food. Why might the owl population decline several months after the mouse population decreases?",
+  "answers": [
+    "Owls may survive temporarily on limited food before reduced survival and reproduction affect their population.",
+    "Owls must immediately disappear whenever their prey populations decrease.",
+    "Owls can produce their own food until mouse populations recover.",
+    "Mouse populations control how quickly owls age."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Population responses may be delayed because changes in food availability can affect survival and reproduction over time."
+},
+{
+  "id": "R04-S22",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "Scientists introduce insect-eating birds to reduce a population of crop-damaging beetles. However, the birds also consume spiders that prey on the beetles. Why might the beetle population fail to decrease as expected?",
+  "answers": [
+    "Birds cannot affect insect populations through feeding relationships.",
+    "The birds may reduce spider populations, weakening another source of beetle predation.",
+    "Beetles will become producers when more predators enter the ecosystem.",
+    "Spiders will stop eating beetles because birds are present."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Introducing a predator can affect multiple feeding relationships. Reducing another predator may counteract the intended effect on a prey population."
+},
+{
+  "id": "R04-S23",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A stream restoration project increases aquatic plant growth. Insect larvae feed on these plants, and small fish feed on the larvae. Which observation would best support the prediction that restoration benefits the food web?",
+  "answers": [
+    "Aquatic plants increase, but insect larvae and fish populations are never measured.",
+    "Insect larvae and small fish populations increase as aquatic plant growth recovers.",
+    "Small fish disappear even though insect larvae become more abundant.",
+    "Aquatic plants are removed after insect larvae begin consuming them."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Increases in consumers following producer recovery would support the prediction that restoration improved food availability across feeding relationships."
+},
+{
+  "id": "R04-S24",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "Scientists predict that removing foxes will increase a rabbit population. After foxes are removed, however, the rabbit population decreases. Which explanation is most scientifically reasonable?",
+  "answers": [
+    "The food web must be incorrect because predators always control prey populations.",
+    "Other factors, such as disease or reduced food availability, may have outweighed the effects of removing foxes.",
+    "Rabbits must have become predators after the foxes disappeared.",
+    "Removing predators always causes prey populations to decrease."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Ecological predictions depend on multiple interacting factors. An unexpected result may indicate that other influences were stronger than the predicted effect."
+},
+{
+  "id": "R04-S25",
+  "record": "04",
+  "difficulty": "standard",
+  "question": "A pond contains several species of fish, insects, and snails that all feed on algae. Some fish also eat the insects and snails. A disease causes the algae population to collapse. Why could this change affect many different populations?",
+  "answers": [
+    "Algae provide energy to multiple consumers, so their decline can affect several connected feeding pathways.",
+    "Algae are predators that regulate every animal population in the pond.",
+    "Only organisms that eat algae directly can be affected by their decline.",
+    "All organisms in the pond will immediately become decomposers."
+  ],
+  "correctAnswer": 0,
+  "explanation": "When a producer supports several feeding pathways, its decline can affect both direct consumers and organisms that depend on those consumers."
+},
+
+{
+  "id": "R04-A03",
+  "record": "04",
+  "difficulty": "advanced",
+  "question": "In a forest, foxes eat both rabbits and mice. Owls also eat mice, while rabbits and mice both consume seeds. A disease causes the fox population to decline. Why is the effect on the mouse population difficult to predict?",
+  "answers": [
+    "Mice may face less predation from foxes but increased competition from rabbits.",
+    "Mice will increase because foxes are their only predators.",
+    "Mice will decrease because fewer foxes are available to control rabbits.",
+    "Mice will remain unchanged because owls still eat them."
+  ],
+  "correctAnswer": 0,
+  "explanation": "Fewer foxes may reduce predation on mice while allowing rabbit populations to increase, potentially increasing competition for seeds."
+},
+{
+  "id": "R04-A04",
+  "record": "04",
+  "difficulty": "advanced",
+  "question": "A lake contains algae, zooplankton that eat algae, small fish that eat zooplankton, and large fish that eat small fish. Scientists introduce additional large fish to reduce the small fish population. What unexpected effect might occur?",
+  "answers": [
+    "Algae may decrease because fewer small fish allow zooplankton populations to increase.",
+    "Algae will increase because large fish consume sunlight.",
+    "Zooplankton will decrease because fewer small fish are eating them.",
+    "Algae will remain unchanged because large fish do not consume algae directly."
+  ],
+  "correctAnswer": 0,
+  "explanation": "More large fish may reduce small fish populations, allowing zooplankton to increase and consume more algae."
+},
+{
+  "id": "R04-A05",
+  "record": "04",
+  "difficulty": "advanced",
+  "question": "Scientists predict that removing an invasive predator will allow a native fish population to recover. After the predator is removed, the native fish population continues to decline. Researchers discover that the invasive predator had also consumed a species that eats native fish eggs. Which explanation best accounts for the unexpected result?",
+  "answers": [
+    "Removing the invasive predator must have increased the native fish population.",
+    "The egg-eating species may have increased after predator removal, reducing native fish reproduction.",
+    "Native fish must have stopped reproducing because they no longer had predators.",
+    "The invasive predator could not have affected more than one species."
+  ],
+  "correctAnswer": 1,
+  "explanation": "Removing a predator can release other populations from predation. If an egg-eating species increases, native fish reproduction may decline despite the removal of their direct predator."
+}
+  ]
+}

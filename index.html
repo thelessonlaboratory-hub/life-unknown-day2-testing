@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Unknown | Day 2</title>
+  <link rel="stylesheet" href="day2.css">
+  <script src="day2.js" defer></script>
+</head>
+
+<body>
+
+
+<!-- ========================================
+     DAY 2 — RESEARCHER IDENTIFICATION
+     ======================================== -->
+
+<main id="day2Identification" class="identification-screen">
+
+  <div class="identification-layout">
+
+    <!-- LEFT PANEL — LABORATORY ENTRANCE -->
+    <section class="identification-door-panel">
+
+      <div class="identification-panel-label">
+        RESEARCH LABORATORY — ACCESS RESTRICTED
+      </div>
+
+      <img
+        class="identification-door-image"
+        src="assets/day2-laboratory-doors-locked.png"
+        alt="Locked double doors leading into the
+             research laboratory aboard the vessel."
+      >
+
+      <div class="identification-door-status">
+        ● IDENTIFICATION REQUIRED
+      </div>
+
+    </section>
+
+    <!-- RIGHT PANEL — IDENTIFICATION TERMINAL -->
+    <section class="identification-terminal"
+             aria-labelledby="identificationTitle">
+
+      <div class="identification-panel-label">
+        PERSONNEL IDENTIFICATION TERMINAL
+      </div>
+
+      <h1 id="identificationTitle">
+        Welcome Back, Researcher
+      </h1>
+
+      <p class="identification-instructions">
+        Please identify yourself before entering
+        the research laboratory.
+      </p>
+
+      <p class="identification-subheading">
+        SELECT YOUR RESEARCH RECORD
+      </p>
+
+      <div class="identification-options">
+
+        <!-- Saved A0 investigation -->
+        <label class="identification-option"
+               id="day2A0Option">
+
+          <input
+            type="radio"
+            name="day2Researcher"
+            value="a0"
+          >
+
+          <span class="identification-option-details">
+            <strong id="day2A0Name">
+              A0 Researcher
+            </strong>
+
+            <small>
+              A0 — FOUNDATIONAL INVESTIGATION
+            </small>
+          </span>
+
+        </label>
+
+        <!-- Saved A1 investigation -->
+        <label class="identification-option"
+               id="day2A1Option">
+
+          <input
+            type="radio"
+            name="day2Researcher"
+            value="a1"
+          >
+
+          <span class="identification-option-details">
+            <strong id="day2A1Name">
+              A1 Researcher
+            </strong>
+
+            <small>
+              A1 — ADVANCED INVESTIGATION
+            </small>
+          </span>
+
+        </label>
+
+        <!-- New researcher -->
+        <label class="identification-option"
+               id="day2NewOption">
+
+          <input
+            type="radio"
+            name="day2Researcher"
+            value="new"
+          >
+
+          <span class="identification-option-details">
+            <strong>
+              New Researcher
+            </strong>
+
+            <small>
+              NO DAY 1 RESEARCH RECORD
+            </small>
+          </span>
+
+        </label>
+
+      </div>
+
+      <!-- Name entry for new researchers -->
+      <div id="day2NewResearcherFields" hidden>
+
+        <label for="day2NewResearcherName">
+          ENTER YOUR RESEARCHER NAME
+        </label>
+
+        <input
+          type="text"
+          id="day2NewResearcherName"
+          maxlength="40"
+          autocomplete="off"
+          placeholder="Researcher name"
+        >
+
+      </div>
+
+      <div class="identification-data-source">
+        <strong>RESEARCH DATA SOURCE</strong>
+        <p id="day2DataSource">
+          Select a research record to continue.
+        </p>
+      </div>
+
+      <p id="day2IdentificationFeedback"
+         class="identification-feedback"
+         role="status"
+         aria-live="polite"></p>
+
+      <button
+        type="button"
+        id="day2EnterLaboratory"
+        class="transmission-button">
+        ENTER LABORATORY →
+      </button>
+
+      <button
+        type="button"
+        id="day2IdentificationSkip"
+        class="introduction-skip">
+        SKIP INTRODUCTION →
+      </button>
+
+    </section>
+
+  </div>
+
+</main>
+
+<!-- ========================================
+     DAY 2 — CREW WELCOME
+     ======================================== -->
+
+<main id="day2Welcome" class="transmission-screen" hidden>
+
+  <section class="transmission-panel"
+           aria-labelledby="day2WelcomeTitle">
+
+    <div class="transmission-artwork">
+      <img
+        src="assets/day2-crew-welcome.png"
+        alt="Dr. Xyla and Dr. Kaelo welcoming the researcher
+             back to the laboratory aboard the research vessel."
+      >
+
+      <div class="transmission-status">
+        ● CREW TRANSMISSION
+      </div>
+    </div>
+
+    <div class="transmission-division">
+      INTERSTELLAR ECOLOGICAL RESEARCH DIVISION
+    </div>
+
+    <h1 id="day2WelcomeTitle">
+      RESEARCH DAY TWO
+    </h1>
+
+    <div class="transmission-message">
+
+      <p>
+        Hello again,
+        <strong id="day2ResearcherName">Researcher</strong>!
+      </p>
+
+      <p>
+        We've received an urgent request for assistance
+        from the Expedition Scientific Archives!
+      </p>
+
+      <p>
+        If you can help them, we'll take care of the
+        organisms and prepare the laboratory for our
+        next research project.
+      </p>
+
+    </div>
+
+    <button
+      type="button"
+      id="day2WelcomeContinue"
+      class="transmission-button">
+      CONTINUE →
+    </button>
+
+    <button
+      type="button"
+      id="day2WelcomeSkip"
+      class="introduction-skip">
+      SKIP INTRODUCTION →
+    </button>
+
+  </section>
+
+</main>
+
+  <main id="quibIntroduction" class="transmission-screen" hidden>
+    <section class="transmission-panel"
+             aria-labelledby="transmission-title">
+
+      <div class="transmission-artwork">
+        <img
+          src="assets/archivist-quib-intro.png"
+          alt="Archivist Quib looking anxious in the
+               ship's archive, surrounded by
+               scrambled scientific records."
+        >
+        <div class="transmission-status">
+          ● INCOMING TRANSMISSION
+        </div>
+      </div>
+
+      <div class="transmission-division">
+        EXPEDITION SCIENTIFIC ARCHIVES
+      </div>
+
+      <h1 id="transmission-title">
+        ARCHIVIST QUIB
+      </h1>
+      
+<div class="transmission-message">
+  <p>
+    Oh, thank goodness you're here!
+  </p>
+
+  <p>
+    Our research vessel was struck by a small
+    asteroid! The impact damaged our ship's
+    data systems. Most of our research records
+    are intact, but several files from our
+    previous expedition to a planet called
+    <strong>Earth</strong> have become scrambled!
+  </p>
+
+  <p>
+    I've managed to recover four ecological
+    research files, but I can't be certain
+    that the information is correct.
+  </p>
+
+  <p>
+    As our expedition's lead biologist,
+    would you examine the recovered records
+    and verify their accuracy? I can't
+    return them to the scientific archives
+    until I know they're reliable!
+  </p>
+</div>
+
+      <button type="button"
+              id="beginEarthAssessment"
+              class="transmission-button">
+        EXAMINE EARTH RECORDS →
+      </button>
+
+    </section>
+  </main>
+
+
+<!-- ========================================
+     EARTH RESEARCH ARCHIVE
+     ======================================== -->
+
+
+<section id="earthArchive" class="archive-screen" hidden>
+
+  <!-- DAY 2 — EXPEDITION HEADER -->
+  <header class="day2-expedition-header">
+
+    <div class="day2-expedition-identity">
+      <span class="day2-expedition-emblem"
+            aria-hidden="true"></span>
+
+      <div class="day2-expedition-heading">
+        <div class="day2-expedition-title">
+          PLANET LATHONERTH
+        </div>
+
+        <div class="day2-expedition-subtitle">
+          EXPEDITION DAY 2 · TASK 1: PLANET EARTH · RECOVERED DATA
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  
+<div class="archive-console">
+
+<p class="archive-introduction">
+  Four ecological research files were damaged
+  when an asteroid struck our research vessel.
+  Examine each recovered file and verify the
+  scientific information.
+</p>
+
+    <div class="archive-grid">
+
+      <button class="archive-file" data-record="1">
+        <span class="archive-file-number">FILE 01</span>
+        
+<span class="archive-file-icon" aria-hidden="true">◇</span>
+
+        <strong>ORGANISM CLASSIFICATION</strong>
+        <span class="archive-file-description">
+          Ecological roles and relationships
+        </span>
+        <span class="archive-file-status">
+          ○ VERIFICATION PENDING
+        </span>
+      </button>
+
+      <button class="archive-file" data-record="2">
+        <span class="archive-file-number">FILE 02</span>
+        
+<span class="archive-file-icon" aria-hidden="true">◇</span>
+
+        <strong>ENERGY TRANSFER</strong>
+        <span class="archive-file-description">
+          Food chains and energy direction
+        </span>
+        <span class="archive-file-status">
+          ○ VERIFICATION PENDING
+        </span>
+      </button>
+
+      <button class="archive-file" data-record="3">
+        <span class="archive-file-number">FILE 03</span>
+        
+<span class="archive-file-icon" aria-hidden="true">◇</span>
+
+        <strong>FOOD WEB RECONSTRUCTION</strong>
+        <span class="archive-file-description">
+          Interconnected feeding relationships
+        </span>
+        <span class="archive-file-status">
+          ○ VERIFICATION PENDING
+        </span>
+      </button>
+
+      <button class="archive-file" data-record="4">
+        <span class="archive-file-number">FILE 04</span>
+        
+<span class="archive-file-icon" aria-hidden="true">◇</span>
+
+        <strong>POPULATION ANALYSIS</strong>
+        <span class="archive-file-description">
+          Predicting ecological consequences
+        </span>
+        <span class="archive-file-status">
+          ○ VERIFICATION PENDING
+        </span>
+      </button>
+
+    </div>
+
+    <div class="archive-progress">
+      <div class="archive-progress-label">
+        <strong>RECORDS SUBMITTED</strong>
+        <span id="archiveProgressCount">0 / 4</span>
+      </div>
+
+      <div class="archive-progress-track">
+        <div id="archiveProgressFill"></div>
+      </div>
+    </div>
+
+    <button id="submitArchive"
+            class="transmission-button"
+            disabled>
+      COMPLETE ALL FOUR RECORDS TO CONTINUE
+    </button>
+
+  </div>
+
+</section>
+
+<section id="record01Screen" class="record-screen" hidden>
+
+  <!-- DAY 2 — EXPEDITION HEADER -->
+  <header class="day2-expedition-header">
+
+    <div class="day2-expedition-identity">
+      <span class="day2-expedition-emblem"
+            aria-hidden="true"></span>
+
+      <div class="day2-expedition-heading">
+        <div class="day2-expedition-title">
+          PLANET LATHONERTH
+        </div>
+
+        <div class="day2-expedition-subtitle">
+          EXPEDITION DAY 2 · TASK 1: PLANET EARTH · RECOVERED DATA
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  
+<div class="record-header">
+
+  <div class="record-title-row">
+    <h1>FILE 01 · ORGANISM CLASSIFICATION</h1>
+
+    <p id="record01Progress">
+      0 / 7 organisms classified
+    </p>
+  </div>
+  
+<p class="record-instructions">
+  The asteroid impact corrupted the data in this
+  ecological record. Use your knowledge to
+  repair the file.
+</p>
+
+</div>
+
+
+<!-- FILE 01 — ARCHIVIST QUIB RESTORATION TRANSMISSION -->
+<div
+  id="record01QuibTransmission"
+  class="record01-quib-transmission"
+  hidden
+>
+  <img
+    src="assets/archivist-quib-curious.png"
+    alt="Archivist Quib delivering a transmission"
+    class="record01-quib-portrait"
+  >
+
+  <div class="record01-quib-message">
+
+    <div class="record01-quib-label">
+      INCOMING TRANSMISSION — ARCHIVIST QUIB
+    </div>
+
+    <p>
+      It appears that the damaged files are beginning to restore themselves! The system is recovering additional information about these organisms.
+    </p>
+
+    <p>
+      Initiate the restoration sequence to retrieve
+      the recovered records.
+    </p>
+
+    <button
+      id="record01RestoreButton"
+      class="transmission-button"
+      type="button"
+    >
+      RESTORE ORGANISM DATA →
+    </button>
+
+  </div>
+</div>
+
+
+  <div class="record-workspace">
+    <div class="record-diagram">
+      <div class="diagram-status">
+        <span>WOODLAND ECOSYSTEM</span>
+        <span id="record01Signal">IDENTITIES CORRUPTED</span>
+      </div>
+
+      <div class="organism-map">
+
+<!-- Earth record restoration transition -->
+<video
+  id="earthGlitchVideo"
+  class="earth-glitch-video"
+  src="assets/earth-restoration-glitch.mp4"
+  muted
+  playsinline
+  preload="auto"
+  aria-hidden="true"
+  hidden
+></video>
+
+
+<svg
+  class="food-web-arrows"
+  aria-label="Food web showing the direction of energy transfer">
+</svg>
+
+        <button class="organism-node" data-organism="G"
+                style="--x:50%;--y:12%;">G</button>
+
+        <button class="organism-node" data-organism="E"
+                style="--x:20%;--y:33%;">E</button>
+
+        <button class="organism-node" data-organism="F"
+                style="--x:50%;--y:33%;">F</button>
+
+        <button class="organism-node" data-organism="C"
+                style="--x:32%;--y:58%;">C</button>
+
+        <button class="organism-node" data-organism="D"
+                style="--x:72%;--y:58%;">D</button>
+    
+	<button class="organism-node" data-organism="A"
+        	style="--x:50%;--y:84%;">A</button>
+
+        <button class="organism-node" data-organism="B"
+                style="--x:80%;--y:84%;">B</button>
+      </div>
+    </div>
+
+    
+<aside id="record01Panel" class="classification-panel">
+
+  <h2>Organism Classification</h2>
+
+  <p id="record01PanelMessage">
+    Select an organism to examine its ecological role.
+  </p>
+
+  <div id="classificationQuestions" hidden>
+
+    <h3 id="selectedOrganismTitle"></h3>
+
+<fieldset class="classification-group">
+
+  <legend>
+    1. How does this organism obtain organic matter?
+  </legend>
+
+  <label>
+    <input type="radio"
+           name="ecologicalRole"
+           value="autotroph">
+    Autotroph
+  </label>
+
+  <label>
+    <input type="radio"
+           name="ecologicalRole"
+           value="heterotroph">
+    Heterotroph
+  </label>
+
+  <div id="heterotrophOptions" hidden>
+
+    <label for="feedingClassification">
+      Classify this heterotroph:
+    </label>
+
+    <select id="feedingClassification">
+      <option value="">Select a classification</option>
+      <option value="herbivore">Herbivore</option>
+      <option value="carnivore">Carnivore</option>
+      <option value="omnivore">Omnivore</option>
+    </select>
+
+  </div>
+
+</fieldset>
+
+
+<fieldset class="classification-group">
+
+  <legend>
+    2. Which trophic level(s) does this organism occupy?
+  </legend>
+
+  <p>Select all that apply.</p>
+
+  <label>
+    <input type="checkbox"
+           name="trophicLevel"
+           value="producer">
+    Producer
+  </label>
+
+  <label>
+    <input type="checkbox"
+           name="trophicLevel"
+           value="primary">
+    Primary consumer
+  </label>
+
+  <label>
+    <input type="checkbox"
+           name="trophicLevel"
+           value="secondary">
+    Secondary consumer
+  </label>
+
+  <label>
+    <input type="checkbox"
+           name="trophicLevel"
+           value="tertiary">
+    Tertiary consumer
+  </label>
+
+</fieldset>
+
+      
+    <button id="saveClassification" type="button">
+      SAVE CLASSIFICATION
+    </button>
+
+    <p id="classificationSavedMessage" role="status"></p>
+
+  </div>
+
+</aside>
+
+  </div>
+
+  <div class="record-footer">
+    <button id="record01Submit" disabled>
+      SUBMIT INITIAL ANALYSIS
+    </button>
+
+<button
+  id="record01Return"
+  type="button"
+  hidden
+>
+  ← RETURN TO EARTH RESEARCH ARCHIVE
+</button>
+
+  </div>
+</section>
+
+<!-- ========================================
+     FILE 02 — ENERGY TRANSFER
+     ======================================== -->
+
+<section id="record02Screen" class="record-screen" hidden>
+
+  <!-- Expedition header -->
+  <header class="day2-expedition-header">
+
+    <div class="day2-expedition-identity">
+      <span class="day2-expedition-emblem"
+            aria-hidden="true"></span>
+
+      <div class="day2-expedition-heading">
+        <div class="day2-expedition-title">
+          PLANET LATHONERTH
+        </div>
+
+        <div class="day2-expedition-subtitle">
+          EXPEDITION DAY 2 · TASK 1: PLANET EARTH · RECOVERED DATA
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="record-header">
+
+    <div class="record-title-row">
+      <h1>FILE 02 · ENERGY TRANSFER</h1>
+      <p id="record02Progress">ARCHIVAL ORIENTATION</p>
+    </div>
+
+    <p class="record-instructions">
+      Examine how energy moves between organisms.
+      Begin by investigating a recovered illustration
+      from Earth's ecological archives.
+    </p>
+
+  </div>
+
+<!-- ARCHIVIST QUIB — FILE 02 TRANSMISSION -->
+
+<div class="record02-quib-transmission">
+
+  <img
+    src="assets/archivist-quib-curious.png"
+    alt="Archivist Quib peering curiously over her glasses"
+    class="record02-quib-portrait"
+  >
+
+  <div class="record02-quib-message">
+    <div class="record02-quib-label">
+      INCOMING TRANSMISSION — ARCHIVIST QUIB
+    </div>
+
+    <p>
+      Hmm, there seems to be an illustration inside
+      of this file from Planet Earth.
+    </p>
+  </div>
+
+</div>
+
+  <!-- THE HAMBURGER INCIDENT -->
+  <div class="hamburger-workspace">
+
+    <div class="hamburger-heading">
+      <span>RECOVERED ILLUSTRATION · EARTH ARCHIVES</span>
+      <span id="hamburgerStatus">DIRECTION UNVERIFIED</span>
+    </div>
+
+    <div class="hamburger-illustration">
+
+      <img
+        id="hamburgerImage"
+        src="assets/hamburger-person.png"
+        alt="A person who has eaten a hamburger."
+      >
+
+    </div>
+
+    <div class="hamburger-energy-flow">
+
+      <span class="hamburger-organism-label">
+        PERSON
+      </span>
+
+      <button
+        id="hamburgerArrow"
+        class="hamburger-arrow"
+        type="button"
+        aria-label="Reverse the direction of energy transfer"
+        aria-pressed="false"
+      >
+        <span id="hamburgerArrowSymbol"
+              aria-hidden="true">←</span>
+      </button>
+
+      <span class="hamburger-organism-label">
+        HAMBURGER
+      </span>
+
+    </div>
+
+    <p id="hamburgerExplanation"
+       class="hamburger-explanation"
+       aria-live="polite">
+      Energy transfers from the hamburger to the person.
+    </p>
+
+    <p class="hamburger-instructions">
+      Select the arrow to reverse the direction
+      of energy transfer. Observe what happens
+      to the recovered illustration.
+    </p>
+
+    <button
+      id="hamburgerContinue"
+      type="button"
+      class="transmission-button"
+    >
+      CONTINUE TO ENERGY TRANSFER ANALYSIS →
+    </button>
+
+  </div>
+
+<!-- ========================================
+     FILE 02 — ACTIVITY 1: REPAIR THE RECORDS
+     ======================================== -->
+
+<div id="record02Activity1" class="record02-activity" hidden>
+
+  <div class="record02-activity-header">
+    <span>EARTH RESEARCH ARCHIVE · ACTIVITY 01</span>
+    <span id="record02ArrowProgress">0 / 6 RELATIONSHIPS ANALYZED</span>
+  </div>
+
+  <h2>Repair the Records</h2>
+  
+<p class="record02-activity-instructions">
+  The asteroid impact damaged the energy-transfer
+  arrows in two recovered food chains. Examine
+  the feeding evidence and select the correct
+  direction of energy transfer between each
+  pair of organisms.
+</p>
+
+  <!-- FOOD CHAIN 01 -->
+
+  <div class="record02-chain-card">
+
+    <h3>RECOVERED RECORD 01</h3>
+
+    <p class="record02-feeding-evidence">
+      <strong>Feeding evidence:</strong>
+      Grasshoppers eat grass. Frogs eat grasshoppers.
+      Snakes eat frogs.
+    </p>
+
+    <div class="record02-chain">
+
+      <div class="record02-organism">
+  <img src="assets/earth-grasses.png" alt="Grass">
+  <span>GRASS</span>
+</div>
+
+      <div class="record02-arrow-choice" data-chain="1" data-arrow="1">
+        <button type="button" data-direction="left" aria-label="Grass and grasshopper: energy flows left">←</button>
+        <button type="button" data-direction="right" aria-label="Grass and grasshopper: energy flows right">→</button>
+      </div>
+
+      <div class="record02-organism">
+  <img src="assets/earth-grasshopper.png" alt="Grasshopper">
+  <span>GRASSHOPPER</span>
+</div>
+
+      <div class="record02-arrow-choice" data-chain="1" data-arrow="2">
+        <button type="button" data-direction="left" aria-label="Grasshopper and frog: energy flows left">←</button>
+        <button type="button" data-direction="right" aria-label="Grasshopper and frog: energy flows right">→</button>
+      </div>
+
+      <div class="record02-organism">
+  <img src="assets/earth-frog.png" alt="Frog">
+  <span>FROG</span>
+</div>
+
+      <div class="record02-arrow-choice" data-chain="1" data-arrow="3">
+        <button type="button" data-direction="left" aria-label="Frog and snake: energy flows left">←</button>
+        <button type="button" data-direction="right" aria-label="Frog and snake: energy flows right">→</button>
+      </div>
+
+      <div class="record02-organism">
+  <img src="assets/earth-snake.png" alt="Snake">
+  <span>SNAKE</span>
+</div>
+
+    </div>
+  </div>
+
+  <!-- FOOD CHAIN 02 -->
+
+  <div class="record02-chain-card">
+
+    <h3>RECOVERED RECORD 02</h3>
+
+    <p class="record02-feeding-evidence">
+      <strong>Feeding evidence:</strong>
+      Caterpillars eat oak leaves. Songbirds eat
+      caterpillars. Hawks eat songbirds.
+    </p>
+
+    <div class="record02-chain">
+
+      <div class="record02-organism">
+  <img src="assets/earth-hawk.png" alt="Hawk">
+  <span>HAWK</span>
+</div>
+
+      <div class="record02-arrow-choice" data-chain="2" data-arrow="1">
+        <button type="button" data-direction="left" aria-label="Hawk and songbird: energy flows left">←</button>
+        <button type="button" data-direction="right" aria-label="Hawk and songbird: energy flows right">→</button>
+      </div>
+
+      <div class="record02-organism">
+  <img src="assets/earth-songbird.png" alt="Songbird">
+  <span>SONGBIRD</span>
+</div>
+
+      <div class="record02-arrow-choice" data-chain="2" data-arrow="2">
+        <button type="button" data-direction="left" aria-label="Songbird and caterpillar: energy flows left">←</button>
+        <button type="button" data-direction="right" aria-label="Songbird and caterpillar: energy flows right">→</button>
+      </div>
+
+      <div class="record02-organism">
+  <img src="assets/earth-caterpillar.png" alt="Caterpillar">
+  <span>CATERPILLAR</span>
+</div>
+
+      <div class="record02-arrow-choice" data-chain="2" data-arrow="3">
+        <button type="button" data-direction="left" aria-label="Caterpillar and oak leaves: energy flows left">←</button>
+        <button type="button" data-direction="right" aria-label="Caterpillar and oak leaves: energy flows right">→</button>
+      </div>
+
+      <div class="record02-organism">
+  <img src="assets/earth-oak.png" alt="Oak leaves">
+  <span>OAK LEAVES</span>
+</div>
+
+    </div>
+  </div>
+
+  <button
+    id="record02SubmitArrows"
+    class="transmission-button"
+    type="button"
+    disabled
+  >
+    SUBMIT REPAIRED RECORDS →
+  </button>
+
+</div>
+
+
+<!-- ========================================
+     FILE 02 — ACTIVITY 2: RECONSTRUCT FOOD CHAINS
+     ======================================== -->
+
+<div id="record02Activity2" class="record02-activity" hidden>
+
+  <div class="record02-activity-header">
+    <span>EARTH RESEARCH ARCHIVE · ACTIVITY 02</span>
+    <span id="record02SequenceProgress">
+      0 / 2 FOOD CHAINS RECONSTRUCTED
+    </span>
+  </div>
+
+  <h2>Reconstruct the Food Chains</h2>
+
+<p class="record02-activity-instructions">
+  The asteroid impact scrambled the organism
+  sequences in two recovered Earth food chains.
+  Arrange the organisms in the correct order of
+  energy transfer, beginning with the producer.
+  Select two organisms to swap their positions.
+</p>
+
+  <!-- DESERT ECOSYSTEM -->
+
+  <div class="record02-chain-card">
+
+    <h3>RECOVERED RECORD 03 · DESERT ECOSYSTEM</h3>
+
+    <div
+      class="record02-sequence"
+      data-ecosystem="desert"
+    >
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="hawk">
+  <img src="assets/earth-hawk.png" alt="">
+  <span>HAWK</span>
+</button>
+
+      <span class="record02-sequence-arrow">→</span>
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="grass">
+  <img src="assets/earth-grasses.png" alt="">
+  <span>GRASS</span>
+</button>
+
+      <span class="record02-sequence-arrow">→</span>
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="snake">
+  <img src="assets/earth-snake.png" alt="">
+  <span>SNAKE</span>
+</button>
+
+      <span class="record02-sequence-arrow">→</span>
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="mouse">
+  <img src="assets/earth-mouse.png" alt="">
+  <span>MOUSE</span>
+</button>
+
+    </div>
+
+    <p class="record02-sequence-help">
+      Select an organism to move.
+    </p>
+
+  </div>
+
+  <!-- MARINE ECOSYSTEM -->
+
+  <div class="record02-chain-card">
+
+    <h3>RECOVERED RECORD 04 · MARINE ECOSYSTEM</h3>
+
+    <div
+      class="record02-sequence"
+      data-ecosystem="marine"
+    >
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="tuna">
+  <img src="assets/earth-tuna.png" alt="">
+  <span>TUNA</span>
+</button>
+
+      <span class="record02-sequence-arrow">→</span>
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="phytoplankton">
+  <img src="assets/earth-phytoplankton.png" alt="">
+  <span>PHYTOPLANKTON</span>
+</button>
+
+      <span class="record02-sequence-arrow">→</span>
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="shark">
+  <img src="assets/earth-shark.png" alt="">
+  <span>SHARK</span>
+</button>
+
+      <span class="record02-sequence-arrow">→</span>
+
+      <button type="button" class="record02-sequence-organism"
+        data-organism="zooplankton">
+  <img src="assets/earth-zooplankton.png" alt="">
+  <span>ZOOPLANKTON</span>
+</button>
+
+    </div>
+
+    <p class="record02-sequence-help">
+      Select an organism to move.
+    </p>
+
+  </div>
+
+  <button
+    id="record02SubmitSequences"
+    class="transmission-button"
+    type="button"
+  >
+    SUBMIT RECONSTRUCTED FOOD CHAINS →
+  </button>
+
+<button
+  type="button"
+  id="record02ResetAll"
+  class="record02-reset-all"
+>
+  RESET FOOD CHAINS
+</button>
+
+
+</div>
+
+</section>
+
+
+<!-- ========================================
+     FILE 03 — FOOD WEB RECONSTRUCTION
+     ======================================== -->
+
+<section id="record03Screen" class="record-screen" hidden>
+
+  <header class="day2-expedition-header">
+    <div class="day2-expedition-identity">
+      <span class="day2-expedition-emblem"
+            aria-hidden="true"></span>
+
+      <div class="day2-expedition-heading">
+        <div class="day2-expedition-title">
+          PLANET LATHONERTH
+        </div>
+        <div class="day2-expedition-subtitle">
+          EXPEDITION DAY 2 · TASK 1: PLANET EARTH · RECOVERED DATA
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="record-header">
+    <div class="record-title-row">
+      <h1>FILE 03 · FOOD WEB RECONSTRUCTION</h1>
+      <p id="record03Progress">
+        0 / 8 ORGANISMS PLACED
+      </p>
+    </div>
+    
+<p class="record-instructions">
+  The asteroid impact scrambled the identities
+  of eight organisms in a recovered terrestrial
+  food web. Examine the feeding records and
+  reconstruct the ecosystem.
+</p>
+
+  </div>
+
+<!-- FILE 03 — ARCHIVIST QUIB RESTORATION TRANSMISSION -->
+<div
+  id="record03QuibTransmission"
+  class="record03-quib-transmission"
+  role="status"
+  aria-live="polite"
+  hidden
+>
+  <img
+    src="assets/archivist-quib-curious.png"
+    alt="Archivist Quib delivering an update from the scientific archives."
+    class="record03-quib-portrait"
+  >
+
+  <div class="record03-quib-message">
+    <div class="record03-quib-label">
+      INCOMING TRANSMISSION — ARCHIVIST QUIB
+    </div>
+
+    
+<p>
+  It appears that the damaged files are beginning
+  to restore themselves! The system is recovering
+  additional information about these organisms.
+</p>
+
+<button
+  id="record03RestoreButton"
+  class="transmission-button"
+  type="button"
+>
+  RESTORE ORGANISM DATA →
+</button>
+
+  </div>
+</div>
+
+  <div class="record-workspace" id="record03Workspace">
+
+    <div class="record03-card-bank">
+      <h2>Recovered Organism Cards</h2>
+      <p>
+        Select an organism card, then select an
+        empty position in the food web.
+      </p>
+
+      
+<div id="record03Cards" class="record03-cards">
+
+  <button type="button" class="record03-organism-card"
+          data-organism="A">A</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="B">B</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="C">C</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="D">D</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="E">E</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="F">F</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="G">G</button>
+
+  <button type="button" class="record03-organism-card"
+          data-organism="H">H</button>
+
+</div>
+
+<div class="record03-hint-area">
+
+  <button
+    id="record03Hint"
+    type="button"
+    class="record03-hint-button">
+    💡 NEED A STARTING POINT?
+  </button>
+
+  <p
+    id="record03HintMessage"
+    class="record03-hint-message"
+    role="status"
+    hidden>
+    One organism has been placed in its correct position.
+    Use the feeding records to reconstruct the rest
+    of the food web.
+  </p>
+
+</div>
+
+
+    </div>
+
+    <div class="record03-diagram-panel">
+      <h2>Reconstruct the Food Web</h2>
+      <p>
+        Use the feeding records to determine
+        where each organism belongs.
+        The arrows show the direction of
+        energy transfer.
+      </p>
+
+      
+<div id="record03Diagram" class="record03-diagram">
+
+<!-- FILE 03 — EARTH ORGANISM RESTORATION -->
+<video
+  id="record03GlitchVideo"
+  class="record03-glitch-video"
+  src="assets/earth-restoration-glitch.mp4"
+  muted
+  playsinline
+  preload="auto"
+  aria-hidden="true"
+  hidden
+></video>
+
+  <!-- Fixed energy-transfer arrows -->
+  <svg
+    id="record03Arrows"
+    class="record03-arrows"
+    aria-hidden="true">
+  </svg>
+
+
+  <button type="button" class="record03-slot"
+          data-position="1"
+          style="--x:33%; --y:15%;"
+          aria-label="Food web position 1"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="2"
+          style="--x:63%; --y:15%;"
+          aria-label="Food web position 2"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="3"
+          style="--x:17%; --y:48%;"
+          aria-label="Food web position 3"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="4"
+          style="--x:34%; --y:47%;"
+          aria-label="Food web position 4"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="5"
+          style="--x:55%; --y:48%;"
+          aria-label="Food web position 5"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="6"
+          style="--x:78%; --y:45%;"
+          aria-label="Food web position 6"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="7"
+          style="--x:28%; --y:79%;"
+          aria-label="Food web position 7"></button>
+
+  <button type="button" class="record03-slot"
+          data-position="8"
+          style="--x:53%; --y:88%;"
+          aria-label="Food web position 8"></button>
+
+</div>
+
+    </div>
+
+    <div class="record03-evidence-panel">
+      <h2>Recovered Feeding Records</h2>
+
+      
+<div id="record03FeedingTable" class="record03-feeding-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>ORGANISM</th>
+        <th>ORGANISMS THAT CONSUME IT</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr><td>A</td><td>B, F</td></tr>
+      <tr><td>B</td><td>Decomposers (not pictured)</td></tr>
+      <tr><td>C</td><td>G, H</td></tr>
+      <tr><td>D</td><td>F</td></tr>
+      <tr><td>E</td><td>A, C, D, H</td></tr>
+      <tr><td>F</td><td>Decomposers (not pictured)</td></tr>
+      <tr><td>G</td><td>B</td></tr>
+      <tr><td>H</td><td>B</td></tr>
+    </tbody>
+  </table>
+
+</div>
+
+    </div>
+
+  </div>
+
+  <div class="record-footer">
+    <button id="record03Submit"
+            type="button"
+            disabled>
+      SUBMIT INITIAL RECONSTRUCTION
+    </button>
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     FILE 04 — ECOLOGICAL PREDICTIONS
+     ======================================== -->
+
+<section id="record04Screen" class="record-screen" hidden>
+
+  <!-- Expedition header -->
+  <header class="day2-expedition-header">
+    <div class="day2-expedition-identity">
+      <span
+        class="day2-expedition-emblem"
+        aria-hidden="true">
+      </span>
+
+      <div class="day2-expedition-heading">
+        <div class="day2-expedition-title">
+          PLANET LATHONERTH
+        </div>
+
+        <div class="day2-expedition-subtitle">
+          EXPEDITION DAY 2 · TASK 1:
+          PLANET EARTH · RECOVERED DATA
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- FILE 04 — ARCHIVIST QUIB INTRODUCTION -->
+<div
+  id="record04QuibIntroduction"
+  class="record03-quib-transmission"
+>
+  <img
+    src="assets/archivist-quib-curious.png"
+    alt="Archivist Quib delivering instructions from the scientific archives."
+    class="record03-quib-portrait"
+  >
+
+  <div class="record03-quib-message">
+
+    <div class="record03-quib-label">
+      INCOMING TRANSMISSION — ARCHIVIST QUIB
+    </div>
+
+    <p>
+      The woodland food web has been restored,
+      but our ecological predictions are still missing!
+    </p></p>
+
+    <p>
+      First, trace two different pathways of energy
+      through the food web. Then, investigate what
+      might happen if certain populations disappear.
+    </p></p>
+
+    <p>
+      Remember, ecosystems are interconnected.
+      A change in one population can affect
+      organisms throughout the food web.
+    </p></p>
+
+    <p>
+      Record your predictions carefully.
+      We need to recover these final Earth records!
+    </p>
+
+    <button
+      type="button"
+      id="record04BeginAssessment"
+      class="transmission-button"
+    >
+      BEGIN POPULATION ANALYSIS →
+    </button>
+
+  </div>
+</div>
+
+  <!-- Activity 1 -->
+  <div id="record04Activity1">
+
+    <div class="record03-diagram-panel">
+      <h2>FILE 04 · Activity 1 · Trace the Energy</h2>
+
+      <p>
+        A food web contains many interconnected
+        food chains. Trace two different pathways
+        of energy transfer through the restored
+        woodland ecosystem.
+      </p>
+
+      
+<div id="record04FoodWeb" class="record03-diagram">
+
+  <svg
+    id="record04Arrows"
+    class="record03-arrows"
+    aria-hidden="true">
+  </svg>
+
+  <button type="button" class="record04-organism"
+        data-position="1"
+        style="--x:33%; --y:15%;">
+  <img src="assets/earth-snake.png" alt="">
+  <span>Snake</span>
+</button>
+
+  <button type="button" class="record04-organism"
+        data-position="2"
+        style="--x:63%; --y:15%;">
+  <img src="assets/earth-cougar.png" alt="">
+  <span>Cougar</span>
+</button>
+
+  <button type="button" class="record04-organism"
+        data-position="3"
+        style="--x:17%; --y:48%;">
+  <img src="assets/earth-shrew.png" alt="">
+  <span>Shrew</span>
+</button>
+
+  <button type="button" class="record04-organism"
+        data-position="4"
+        style="--x:34%; --y:47%;">
+  <img src="assets/earth-mouse.png" alt="">
+  <span>Mouse</span>
+</button>
+
+  <button type="button" class="record04-organism"
+        data-position="5"
+        style="--x:55%; --y:48%;">
+  <img src="assets/earth-rabbit.png" alt="">
+  <span>Rabbit</span>
+</button>
+
+  <button type="button" class="record04-organism"
+        data-position="6"
+        style="--x:78%; --y:45%;">
+  <img src="assets/earth-deer.png" alt="">
+  <span>Deer</span>
+</button>
+
+<button type="button" class="record04-organism"
+        data-position="7"
+        style="--x:28%; --y:79%;">
+  <img src="assets/earth-insects.png" alt="">
+  <span>Insects</span>
+</button>
+
+  <button type="button" class="record04-organism"
+        data-position="8"
+        style="--x:53%; --y:88%;">
+  <img src="assets/earth-grasses.png" alt="">
+  <span>Grasses</span>
+</button>
+
+</div>
+
+
+<!-- FILE 04 — FOOD CHAIN BUILDER -->
+<div id="record04ChainBuilder" class="record04-chain-builder">
+
+  <h3>Your Food Chain</h3>
+
+  <p class="record04-chain-instructions">
+    Select organisms in the order that energy flows,
+    beginning with a producer.
+  </p>
+
+  <div id="record04ChainDisplay"
+       class="record04-chain-display"
+       aria-live="polite">
+    <span class="record04-chain-placeholder">
+      Select a producer to begin.
+    </span>
+  </div>
+
+<button type="button"
+        id="record04SubmitChain"
+        class="record04-submit-button">
+  Submit Food Chain
+</button>
+
+<p id="record04ChainFeedback"
+   class="record04-chain-feedback"
+   role="status"
+   aria-live="polite"></p>
+
+
+<button
+  id="record04Continue"
+  class="record04-submit"
+  type="button"
+  hidden
+>
+  CONTINUE TO POPULATION ANALYSIS →
+</button>
+
+
+  <button type="button"
+          id="record04ClearChain"
+          class="record04-clear-button">
+    Clear Chain
+  </button>
+
+</div>
+
+
+    </div>
+
+  </div>
+
+
+<!-- ========================================
+     FILE 04 — ACTIVITY 2: PREDICT THE CONSEQUENCES
+     ======================================== -->
+
+<div id="record04Activity2" hidden>
+
+
+<div id="record04ReferenceWeb"
+     aria-label="Woodland food web reference">
+</div>
+
+  <div class="record03-diagram-panel">
+
+    <h2>FILE 04 · Activity 2 · Predict the Consequences</h2>
+
+    <p>
+      Ecological disturbances can affect populations
+      throughout a food web. Examine each disturbance
+      report and predict how populations might change.
+      For each prediction, evaluate how likely you
+      think that outcome is.
+    </p>
+
+    <!-- DISTURBANCE REPORT 01 -->
+
+    <div class="record04-disturbance-report"
+         data-report="snake">
+
+      <h3>Disturbance Report 01: Snake Population Disappears</h3>
+
+      <p>
+        The woodland ecosystem is a large, established
+        habitat with abundant grasses and relatively
+        stable populations. There have been no recent
+        major disturbances.
+      </p>
+
+      <p>
+        A disease has eliminated the snake population.
+        All other organisms remain present, and no other
+        major environmental changes have occurred.
+      </p>
+
+      <p>
+        Using the food web, predict how the disappearance
+        of snakes could affect the following populations
+        over the next several years.
+      </p>
+
+      <div class="record04-prediction-list">
+
+        <div class="record04-prediction-row" data-organism="mouse">
+          <h4>Mouse</h4>
+
+          <label for="record04SnakeMousePrediction">
+            Predicted population change
+          </label>
+          <select id="record04SnakeMousePrediction"
+                  class="record04-prediction">
+            <option value="">Select a prediction</option>
+            <option value="increase">Increase</option>
+            <option value="decrease">Decrease</option>
+            <option value="stable">No detectable change</option>
+            <option value="uncertain">Cannot predict from available evidence</option>
+          </select>
+
+          <label for="record04SnakeMouseLikelihood">
+            How likely is your prediction to occur?
+          </label>
+          <select id="record04SnakeMouseLikelihood"
+                  class="record04-likelihood">
+            <option value="">Select likelihood</option>
+            <option value="almost-certain">Almost certain</option>
+            <option value="very-likely">Very likely</option>
+            <option value="likely">Likely</option>
+            <option value="possible">Possible</option>
+          </select>
+        </div>
+
+        <div class="record04-prediction-row" data-organism="shrew">
+          <h4>Shrew</h4>
+
+          <label for="record04SnakeShrewPrediction">
+            Predicted population change
+          </label>
+          <select id="record04SnakeShrewPrediction"
+                  class="record04-prediction">
+            <option value="">Select a prediction</option>
+            <option value="increase">Increase</option>
+            <option value="decrease">Decrease</option>
+            <option value="stable">No detectable change</option>
+            <option value="uncertain">Cannot predict from available evidence</option>
+          </select>
+
+          <label for="record04SnakeShrewLikelihood">
+            How likely is your prediction to occur?
+          </label>
+          <select id="record04SnakeShrewLikelihood"
+                  class="record04-likelihood">
+            <option value="">Select likelihood</option>
+            <option value="almost-certain">Almost certain</option>
+            <option value="very-likely">Very likely</option>
+            <option value="likely">Likely</option>
+            <option value="possible">Possible</option>
+          </select>
+        </div>
+
+        <div class="record04-prediction-row" data-organism="grasses">
+          <h4>Grasses</h4>
+
+          <label for="record04SnakeGrassesPrediction">
+            Predicted population change
+          </label>
+          <select id="record04SnakeGrassesPrediction"
+                  class="record04-prediction">
+            <option value="">Select a prediction</option>
+            <option value="increase">Increase</option>
+            <option value="decrease">Decrease</option>
+            <option value="stable">No detectable change</option>
+            <option value="uncertain">Cannot predict from available evidence</option>
+          </select>
+
+          <label for="record04SnakeGrassesLikelihood">
+            How likely is your prediction to occur?
+          </label>
+          <select id="record04SnakeGrassesLikelihood"
+                  class="record04-likelihood">
+            <option value="">Select likelihood</option>
+            <option value="almost-certain">Almost certain</option>
+            <option value="very-likely">Very likely</option>
+            <option value="likely">Likely</option>
+            <option value="possible">Possible</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DISTURBANCE REPORT 02 -->
+
+    <div class="record04-disturbance-report"
+         data-report="deer">
+
+      <h3>Disturbance Report 02: Deer Population Disappears</h3>
+
+      <p>
+        A disease has eliminated the deer population
+        from this large, established woodland ecosystem.
+        Grasses remain abundant, and the other organisms
+        are initially unaffected by the disease.
+      </p>
+
+      <p>
+        During the following months, researchers observe
+        that cougars have begun hunting rabbits more frequently.
+      </p>
+
+      <p>
+        Predict how the disappearance of deer could affect
+        the following populations over the next one to two years.
+      </p>
+
+      <div class="record04-prediction-list">
+
+        <div class="record04-prediction-row" data-organism="cougar">
+          <h4>Cougars</h4>
+
+          <label for="record04DeerCougarPrediction">
+            Predicted population change
+          </label>
+          <select id="record04DeerCougarPrediction"
+                  class="record04-prediction">
+            <option value="">Select a prediction</option>
+            <option value="increase">Increase</option>
+            <option value="decrease">Decrease</option>
+            <option value="stable">No detectable change</option>
+            <option value="uncertain">Cannot predict from available evidence</option>
+          </select>
+
+          <label for="record04DeerCougarLikelihood">
+            How likely is your prediction to occur?
+          </label>
+          <select id="record04DeerCougarLikelihood"
+                  class="record04-likelihood">
+            <option value="">Select likelihood</option>
+            <option value="almost-certain">Almost certain</option>
+            <option value="very-likely">Very likely</option>
+            <option value="likely">Likely</option>
+            <option value="possible">Possible</option>
+          </select>
+        </div>
+
+        <div class="record04-prediction-row" data-organism="rabbit">
+          <h4>Rabbits</h4>
+
+          <label for="record04DeerRabbitPrediction">
+            Predicted population change
+          </label>
+          <select id="record04DeerRabbitPrediction"
+                  class="record04-prediction">
+            <option value="">Select a prediction</option>
+            <option value="increase">Increase</option>
+            <option value="decrease">Decrease</option>
+            <option value="stable">No detectable change</option>
+            <option value="uncertain">Cannot predict from available evidence</option>
+          </select>
+
+          <label for="record04DeerRabbitLikelihood">
+            How likely is your prediction to occur?
+          </label>
+          <select id="record04DeerRabbitLikelihood"
+                  class="record04-likelihood">
+            <option value="">Select likelihood</option>
+            <option value="almost-certain">Almost certain</option>
+            <option value="very-likely">Very likely</option>
+            <option value="likely">Likely</option>
+            <option value="possible">Possible</option>
+          </select>
+        </div>
+
+        <div class="record04-prediction-row" data-organism="grasses">
+          <h4>Grasses</h4>
+
+          <label for="record04DeerGrassesPrediction">
+            Predicted population change
+          </label>
+          <select id="record04DeerGrassesPrediction"
+                  class="record04-prediction">
+            <option value="">Select a prediction</option>
+            <option value="increase">Increase</option>
+            <option value="decrease">Decrease</option>
+            <option value="stable">No detectable change</option>
+            <option value="uncertain">Cannot predict from available evidence</option>
+          </select>
+
+          <label for="record04DeerGrassesLikelihood">
+            How likely is your prediction to occur?
+          </label>
+          <select id="record04DeerGrassesLikelihood"
+                  class="record04-likelihood">
+            <option value="">Select likelihood</option>
+            <option value="almost-certain">Almost certain</option>
+            <option value="very-likely">Very likely</option>
+            <option value="likely">Likely</option>
+            <option value="possible">Possible</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <button type="button"
+            id="record04SubmitPredictions"
+            class="transmission-button">
+      SUBMIT POPULATION PREDICTIONS →
+    </button>
+
+    <p id="record04PredictionFeedback"
+       role="status"
+       aria-live="polite"></p>
+
+  </div>
+
+</div>
+
+
+</section>
+
+<!-- DAY 2 — ARCHIVIST QUIB: SUCCESSFUL VERIFICATION -->
+<section id="quibSuccessScreen"
+         class="transmission-screen"
+         hidden>
+
+  <div class="transmission-layout">
+
+    <div class="transmission-portrait">
+      <img
+        src="assets/archivist-quib-success.png"
+        alt="Archivist Quib celebrating the successful verification of the Earth research records."
+      >
+    </div>
+
+    <div class="transmission-content">
+
+      <div class="transmission-label">
+        ARCHIVIST QUIB — INCOMING TRANSMISSION
+      </div>
+
+      <div class="transmission-message">
+        <p>Wonderful! You've done it!</p>
+
+        <p>
+          I've reviewed your analyses, and I'm pleased
+          to report that all four Earth research files
+          have been successfully verified! Your
+          understanding of ecological relationships
+          has helped us recover valuable scientific
+          information from our previous expedition.
+          I'll return these records to the archives
+          immediately.
+        </p>
+
+        <p>
+          Dr. Xyla and Dr. Kaelo have finished
+          preparing the laboratory for the next
+          portion of our investigation of Lathonerth,
+          and are waiting for you in order to proceed!
+        </p>
+
+        <p>
+          Thank you for your assistance,
+          <span id="quibSuccessResearcherName"></span>,
+          and good luck with this mission!
+        </p>
+      </div>
+
+      <button id="quibSuccessContinue"
+              class="transmission-button">
+        PROCEED TO LATHONERTH INVESTIGATION →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DAY 2 — ARCHIVIST QUIB: ASTEROID EMERGENCY -->
+<section id="quibAsteroidScreen"
+         class="transmission-screen"
+         hidden>
+
+  <div class="transmission-layout">
+
+    <div class="transmission-portrait">
+      <img
+        src="assets/archivist-quib-asteroid.png"
+        alt="Archivist Quib urgently operating the ship's controls as asteroids approach."
+      >
+    </div>
+
+    <div class="transmission-content">
+
+      <div class="transmission-label">
+        ARCHIVIST QUIB — INCOMING TRANSMISSION
+      </div>
+
+      <div class="transmission-message">
+        <p>
+          Thank you, <span id="quibAsteroidResearcherName"></span>! I've received your
+          analyses of the four Earth research files.
+        </p>
+
+        <p>
+          It looks like some of the recovered information
+          still needs verification, but I'm sure we can
+          work through—
+        </p>
+
+        <p>
+          <strong>WARNING! ASTEROID COLLISION ALERT!</strong>
+        </p>
+
+        <p>Oh no! Not again!</p>
+
+        <p>
+          We've entered an asteroid field! Several
+          asteroids are heading directly toward the
+          research vessel!
+        </p>
+
+        <p>
+          Our automated defense system was damaged
+          in the earlier collision, and we need someone
+          to operate the manual targeting controls!
+          Answer the questions correctly to target
+          and destroy the incoming asteroids!
+        </p>
+        
+<p>
+  Hurry,
+  <span id="quibAsteroidResearcherName2"></span>!
+  We're counting on you!
+</p>
+
+      </div>
+
+      <button id="quibAsteroidContinue"
+              class="transmission-button">
+        ACTIVATE ASTEROID DEFENSE SYSTEM →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DAY 2 — ASTEROID DEFENSE WORKSPACE -->
+<section id="asteroidDefenseScreen"
+         class="asteroid-defense-screen"
+         hidden>
+
+  <div class="asteroid-cockpit"
+     aria-label="Research vessel cockpit overlooking an asteroid field near Lathonerth.">
+<!-- ASTEROID ANSWER TARGETS -->
+<div id="asteroidLaser" class="asteroid-laser" aria-hidden="true"></div>
+
+<img
+  id="collisionAsteroid"
+  class="collision-asteroid"
+  src="assets/asteroid-1.png"
+  alt=""
+  aria-hidden="true"
+  hidden
+>
+
+<!-- Windshield damage after an asteroid collision -->
+<img
+  id="windshieldCrack"
+  class="windshield-crack"
+  src="assets/impact.png"
+  alt=""
+  aria-hidden="true"
+  hidden
+>
+
+<img
+  id="asteroidExplosion"
+  class="asteroid-explosion"
+  alt=""
+  aria-hidden="true"
+  hidden
+>
+<div class="asteroid-target-field">
+
+  
+<button class="asteroid-answer asteroid-position-1" type="button">
+  <img class="asteroid-answer-image"
+       src="assets/asteroid-1.png" alt="">
+  <span class="asteroid-answer-content">
+    <span class="asteroid-answer-letter">A</span>
+    <span class="asteroid-answer-text">The direction organisms move</span>
+  </span>
+</button>
+
+<button class="asteroid-answer asteroid-position-3" type="button">
+  <img class="asteroid-answer-image"
+       src="assets/asteroid-2.png" alt="">
+  <span class="asteroid-answer-content">
+    <span class="asteroid-answer-letter">B</span>
+    <span class="asteroid-answer-text">The direction energy flows</span>
+  </span>
+</button>
+
+<button class="asteroid-answer asteroid-position-6" type="button">
+  <img class="asteroid-answer-image"
+       src="assets/asteroid-3.png" alt="">
+  <span class="asteroid-answer-content">
+    <span class="asteroid-answer-letter">C</span>
+    <span class="asteroid-answer-text">The size of each population</span>
+  </span>
+</button>
+
+<button class="asteroid-answer asteroid-position-8" type="button">
+  <img class="asteroid-answer-image"
+       src="assets/asteroid-4.png" alt="">
+  <span class="asteroid-answer-content">
+    <span class="asteroid-answer-letter">D</span>
+    <span class="asteroid-answer-text">The amount of energy lost</span>
+  </span>
+</button>
+
+
+</div>
+
+<!-- LEFT CONSOLE — EMERGENCY TARGETING ASSIST -->
+<div class="asteroid-assist-console">
+
+  <div class="asteroid-assist-heading">
+    EMERGENCY TARGETING
+  </div>
+
+  <button
+    id="asteroidTargetingAssist"
+    class="asteroid-assist-button"
+    type="button"
+    disabled>
+    ELIMINATE FALSE TARGET
+  </button>
+
+  <div id="asteroidAssistStatus" class="asteroid-assist-status">
+    1 CHARGE AVAILABLE
+  </div>
+
+</div>
+
+  <!-- CENTRAL SCIENTIFIC QUESTION CONSOLE -->
+  <div class="asteroid-question-console">
+
+    <div class="asteroid-console-heading">
+      SCIENTIFIC TARGETING COMPUTER
+    </div>
+
+    <div id="asteroidQuestionText" class="asteroid-question-text">
+      In a food chain, what do arrows represent?
+    </div>
+
+    <div class="asteroid-console-instructions">
+      SELECT AN ASTEROID TO FIRE
+    </div>
+
+
+<!-- Emergency feedback after an incorrect answer -->
+<div id="asteroidImpactWarning" class="asteroid-impact-warning" hidden>
+
+  <div class="asteroid-impact-heading">
+    ⚠ IMPACT WARNING
+  </div>
+
+  <div class="asteroid-impact-status">
+    HULL DAMAGE DETECTED
+  </div>
+
+  <div id="asteroidImpactExplanation" class="asteroid-impact-explanation">
+    Arrows in a food chain indicate the direction of energy transfer.
+  </div>
+
+  <div id="asteroidImpactCorrect" class="asteroid-impact-correct">
+    CORRECT ANSWER: B
+  </div>
+
+<button
+  id="asteroidRepairButton"
+  class="asteroid-repair-button"
+  type="button"
+>
+  REPAIR SHIP DAMAGE
+</button>
+
+</div>
+
+
+  </div>
+<!-- RIGHT CONSOLE — RADAR AND MISSION PROGRESS -->
+<div class="asteroid-radar-console">
+
+  <div class="asteroid-radar-heading">
+    TARGETING RADAR
+  </div>
+
+  <div class="asteroid-radar-display">
+    <div class="asteroid-radar-ring radar-ring-outer"></div>
+    <div class="asteroid-radar-ring radar-ring-inner"></div>
+    <div class="asteroid-radar-crosshair"></div>
+
+    <span class="asteroid-radar-dot dot-a"></span>
+    <span class="asteroid-radar-dot dot-b"></span>
+    <span class="asteroid-radar-dot dot-c"></span>
+    <span class="asteroid-radar-dot dot-d"></span>
+
+    <span class="asteroid-radar-center"></span>
+  </div>
+
+  <div class="asteroid-mission-label">
+    MISSION PROGRESS
+  </div>
+
+  <div id="asteroidMissionProgress" class="asteroid-mission-progress">
+    QUESTION 1 / 5
+  </div>
+
+  <div class="asteroid-progress-track">
+    <div id="asteroidProgressFill" class="asteroid-progress-fill"></div>
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,4929 @@
+
+/* ========================================
+   LIFE UNKNOWN — DAY 2
+   ARCHIVIST QUIB'S INTRODUCTORY TRANSMISSION
+   ======================================== */
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #edf7ff;
+  background: #071321;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Full-screen research vessel interface */
+
+.transmission-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      #1b4264 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      #071321,
+      #10273d 65%,
+      #06111e
+    );
+}
+
+/* Transmission console */
+
+.transmission-panel {
+  width: 100%;
+  max-width: 760px;
+  padding: 32px 42px;
+  border: 1px solid #427da3;
+  border-radius: 18px;
+  background: linear-gradient(
+    160deg,
+    #142d46,
+    #091a2b
+  );
+  box-shadow: 0 0 45px rgba(39, 151, 223, 0.2);
+}
+
+/* Quib artwork */
+
+.transmission-artwork {
+  position: relative;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #101e30;
+}
+
+.transmission-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Incoming transmission indicator */
+
+.transmission-status {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 9px 14px;
+  border-radius: 30px;
+  background: rgba(12, 30, 50, 0.88);
+  color: #e3f5ff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+
+/* Expedition division */
+
+.transmission-division {
+  color: #7fdcf7;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Character heading */
+
+.transmission-panel h1 {
+  margin: 10px 0 22px;
+  color: #ffffff;
+  font-size: clamp(24px, 4vw, 36px);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Quib's dialogue */
+
+.transmission-message {
+  color: #e0edf7;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.transmission-message p {
+  margin: 0 0 16px;
+}
+
+.transmission-message strong {
+  color: #8de7ff;
+}
+
+/* Main action button */
+
+.transmission-button {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #87e9ff;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #37c6e8,
+    #1678b8
+  );
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.transmission-button:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+}
+
+.transmission-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+  .transmission-screen {
+    padding: 12px;
+  }
+
+  .transmission-panel {
+    padding: 22px 20px;
+  }
+
+  .transmission-status {
+    top: 10px;
+    right: 10px;
+    padding: 7px 10px;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+}
+
+
+/* ========================================
+   EARTH RESEARCH ARCHIVE
+   ======================================== */
+
+/* Keep the archive hidden until opened */
+
+.archive-screen[hidden] {
+  display: none !important;
+}
+
+.archive-screen {
+  min-height: 100vh;
+  padding: 45px 24px;
+  background:
+    radial-gradient(
+      ellipse at 50% 10%,
+      #214e70,
+      transparent 55%
+    ),
+    linear-gradient(145deg, #071321, #10273d 65%, #06111e);
+  color: #edf7ff;
+}
+
+.archive-console {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #427da3;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #142d46, #091a2b);
+  box-shadow: 0 0 45px rgba(39, 151, 223, 0.2);
+}
+
+.archive-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #315674;
+  color: #7fdcf7;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+.archive-console h1 {
+  margin: 26px 0 12px;
+  font-size: clamp(24px, 4vw, 34px);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.archive-introduction {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  color: #c2d9eb;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* Four selectable research files */
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.archive-file {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 220px;
+  padding: 24px;
+  border: 1px solid #38698b;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #183a57, #10273d);
+  color: #edf7ff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.archive-file:hover {
+  transform: translateY(-3px);
+  border-color: #59d7ff;
+  box-shadow: 0 0 22px rgba(45, 190, 244, 0.22);
+}
+
+.archive-file:focus-visible {
+  outline: 3px solid #87e9ff;
+  outline-offset: 3px;
+}
+
+.archive-file-number {
+  color: #8edaf4;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.archive-file-icon {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  color: #ffba69;
+  font-size: 30px;
+}
+
+.archive-file strong {
+  max-width: 85%;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.archive-file-description {
+  color: #b8d3e5;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.archive-file-status {
+  margin-top: auto;
+  padding: 8px 11px;
+  border: 1px solid #9a7241;
+  border-radius: 7px;
+  background: rgba(160, 103, 39, 0.14);
+  color: #ffd098;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Submission progress */
+
+.archive-progress {
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid #315674;
+  border-radius: 12px;
+  background: #0c2034;
+}
+
+.archive-progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #c9e9f9;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.archive-progress-track {
+  height: 12px;
+  overflow: hidden;
+  border: 1px solid #315674;
+  border-radius: 20px;
+  background: #071321;
+}
+
+#archiveProgressFill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #1688c7, #60e1e6);
+  transition: width 0.3s;
+}
+
+/* Locked submission button */
+
+#submitArchive:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+#submitArchive:disabled:hover {
+  transform: none;
+}
+
+/* Responsive layout */
+
+@media (max-width: 650px) {
+  .archive-screen {
+    padding: 15px 10px;
+  }
+
+  .archive-console {
+    padding: 20px 14px;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-file {
+    min-height: 190px;
+    padding: 20px;
+  }
+}
+
+
+/* Ensure hidden screens are never displayed */
+
+.transmission-screen[hidden] {
+  display: none !important;
+}
+
+
+/* EARTH RECORD 01 — IDENTITY RECOVERY */
+
+.record-screen[hidden] {
+  display: none !important;
+}
+
+.record-screen {
+  min-height: 100vh;
+  padding: 36px 5%;
+  background: #081625;
+  color: #e6f5ff;
+}
+
+.record-header {
+  max-width: 900px;
+  margin: 0 auto 28px;
+}
+
+.record-eyebrow {
+  color: #80d8e8;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+}
+
+.record-header h1 {
+  font-size: 2rem;
+  margin: 10px 0 16px;
+}
+
+.record-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.record-diagram,
+.classification-panel {
+  background: #10283d;
+  border: 1px solid #326078;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.diagram-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #9bdce8;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.organism-map {
+  position: relative;
+  height: 600px;
+}
+
+.organism-node {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border: 2px solid #e4b56e;
+  border-radius: 12px;
+  background: #193f57;
+  color: #ffdfaa;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.organism-node:hover,
+.organism-node:focus-visible {
+  background: #275b73;
+  box-shadow: 0 0 18px #70d6e880;
+}
+
+.classification-panel {
+  min-height: 300px;
+}
+
+.record-footer {
+  max-width: 1200px;
+  margin: 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#record01Submit {
+  padding: 14px 24px;
+  border-radius: 9px;
+  border: none;
+  background: #4bb8c7;
+  color: #081625;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#record01Submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+  .record-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .record-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Food web connections — drawn by JavaScript */
+
+.food-web-arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.organism-node {
+  z-index: 2;
+}
+
+
+/* RECORD 01 — CLASSIFICATION PANEL */
+
+#classificationQuestions[hidden] {
+  display: none !important;
+}
+
+#selectedOrganismTitle {
+  margin: 20px 0;
+  color: #80d8e8;
+  font-size: 1.3rem;
+}
+
+.classification-group {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #326078;
+  border-radius: 10px;
+}
+
+.classification-group legend {
+  padding: 0 6px;
+  color: #e6f5ff;
+  font-size: 0.95rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.classification-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  color: #c8e3f2;
+  cursor: pointer;
+}
+
+.classification-group input {
+  accent-color: #4bb8c7;
+  width: 18px;
+  height: 18px;
+}
+
+.classification-hint {
+  color: #8db6ca;
+  font-size: 0.85rem;
+}
+
+#saveClassification {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #4bb8c7;
+  color: #081625;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#saveClassification:hover {
+  background: #79dce8;
+}
+
+#classificationSavedMessage {
+  color: #8ce5c5;
+  font-size: 0.9rem;
+}
+
+.organism-node.classified {
+  border-color: #75e0b4;
+  box-shadow: 0 0 12px rgba(117, 224, 180, 0.3);
+}
+
+
+/* Conditional heterotroph classification */
+
+#heterotrophOptions[hidden] {
+  display: none !important;
+}
+
+#heterotrophOptions {
+  margin: 16px 0 0 24px;
+  padding: 14px;
+  border-left: 3px solid #4bb8c7;
+  background: rgba(75, 184, 199, 0.08);
+  border-radius: 0 8px 8px 0;
+}
+
+#heterotrophOptions label {
+  display: block;
+  margin: 0 0 10px;
+  color: #b9e6f0;
+  font-size: 0.9rem;
+}
+
+#feedingClassification {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #427da3;
+  border-radius: 8px;
+  background: #10283d;
+  color: #edf7ff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+
+/* ========================================
+   RECORD 01 — IDENTITY RESTORATION
+   ======================================== */
+
+.organism-node.restoring {
+  animation: identityGlitch 0.75s ease-in-out;
+  border-color: #80eaff;
+}
+
+@keyframes identityGlitch {
+  0%, 100% {
+    opacity: 1;
+    filter: none;
+  }
+
+  15% {
+    opacity: 0.35;
+    filter: brightness(2);
+  }
+
+  30% {
+    opacity: 1;
+    filter: hue-rotate(90deg);
+  }
+
+  45% {
+    opacity: 0.2;
+    filter: brightness(3);
+  }
+
+  65% {
+    opacity: 0.85;
+    filter: hue-rotate(180deg);
+  }
+
+  80% {
+    opacity: 0.4;
+    filter: brightness(2);
+  }
+}
+
+.organism-node.identity-restored {
+  width: 108px;
+  min-height: 64px;
+  height: auto;
+  padding: 10px 6px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  border-color: #80eaff;
+  color: #e6fbff;
+  background: #16485c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .organism-node.restoring {
+    animation: none;
+  }
+}
+
+/* Keep the currently selected organism highlighted */
+
+.organism-node.selected,
+.organism-node.selected.identity-restored {
+  border: 3px solid #ffe28a;
+  box-shadow:
+    0 0 0 4px rgba(255, 226, 138, 0.16),
+    0 0 24px rgba(255, 226, 138, 0.55);
+  background: #315c70;
+}
+
+/* Full-width analysis submission */
+
+.record-footer {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+#record01Progress {
+  text-align: center;
+}
+
+#record01Submit {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+}
+
+#record01Submit:not(:disabled):hover {
+  background: #79dce8;
+}
+
+
+/* ========================================
+   RECORD 01 — RESTORED ORGANISM ARTWORK
+   ======================================== */
+
+.organism-node.identity-restored {
+  width: 112px;
+  min-height: 112px;
+  height: 112px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.earth-organism-image {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.earth-organism-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: bold;
+  line-height: 1.15;
+  text-align: center;
+}
+
+
+/* ========================================
+   RECORD 01 — HOLOGRAPHIC DATA RESTORATION
+   ======================================== */
+
+/* Keep the scanning effect inside the food-web area. */
+.organism-map {
+  overflow: hidden;
+}
+
+/* Glowing scan line sweeping down the diagram. */
+.organism-map.scanning::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5px;
+  z-index: 5;
+  pointer-events: none;
+
+  background: #a5f5ff;
+  box-shadow:
+    0 0 12px #80eaff,
+    0 0 35px rgba(128, 234, 255, 0.7);
+
+  animation: restorationScan 2.6s linear forwards;
+}
+
+@keyframes restorationScan {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  5%, 90% {
+    opacity: 0.9;
+  }
+
+  to {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* Override the original short glitch animation. */
+.organism-node.restoring {
+  animation: hologramInterference 2.6s linear forwards;
+}
+
+@keyframes hologramInterference {
+  0%, 100% {
+    opacity: 1;
+    filter: none;
+  }
+
+  12%, 32%, 58% {
+    opacity: 0.2;
+    filter: brightness(2.5) hue-rotate(90deg);
+  }
+
+  20%, 45%, 75% {
+    opacity: 1;
+    filter: brightness(1.4);
+  }
+
+  85% {
+    opacity: 0.5;
+    filter: brightness(2);
+  }
+}
+
+/* Flickering images during recovery. */
+.organism-node.recovering-image .earth-organism-image {
+  opacity: 0;
+  animation: imageRecovery 1.4s steps(1, end) forwards;
+}
+
+@keyframes imageRecovery {
+  0%, 19%, 39%, 59% {
+    opacity: 0;
+  }
+
+  20%, 40%, 60%, 79% {
+    opacity: 1;
+  }
+
+  80%, 89% {
+    opacity: 0;
+  }
+
+  90%, 100% {
+    opacity: 1;
+  }
+}
+
+/* Accessibility: avoid flashing for reduced-motion users. */
+@media (prefers-reduced-motion: reduce) {
+  .organism-map.scanning::after {
+    animation: none;
+    display: none;
+  }
+
+  .organism-node.restoring,
+  .organism-node.recovering-image .earth-organism-image {
+    animation: none;
+  }
+}
+
+
+/* ========================================
+   RECORD 01 — VIDEO RESTORATION TRANSITION
+   ======================================== */
+
+.earth-glitch-video[hidden] {
+  display: none !important;
+}
+
+.earth-glitch-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+  pointer-events: none;
+  background: #081625;
+  border-radius: 12px;
+}
+
+
+/* ========================================
+   EARTH ARCHIVE — COMPLETED RECORDS
+   ======================================== */
+
+.archive-file.completed {
+  border-color: #69d9ad;
+  box-shadow: 0 0 16px rgba(105, 217, 173, 0.2);
+}
+
+.archive-file.completed::after {
+  content: "✓ ANALYSIS COMPLETE";
+  display: block;
+  margin-top: 12px;
+  color: #69d9ad;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   RECORD 01 — READ-ONLY ANSWER VISIBILITY
+   ======================================== */
+
+/* Keep disabled answers bright and readable. */
+#record01Screen input:disabled,
+#record01Screen select:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* Restore contrast to radio buttons and checkboxes. */
+#record01Screen input[type="radio"]:disabled,
+#record01Screen input[type="checkbox"]:disabled {
+  accent-color: #69d9ad;
+  filter: brightness(1.3);
+}
+
+/* Keep answer labels fully visible. */
+#record01Screen label:has(input:disabled) {
+  opacity: 1;
+  color: #ffffff;
+  cursor: default;
+}
+
+/* Maintain readable dropdown text. */
+#record01Screen select:disabled {
+  color: #ffffff;
+  background-color: #17374b;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* ========================================
+   RECORD 01 — RETURN TO ARCHIVE BUTTON
+   ======================================== */
+
+#record01Return {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 24px;
+
+  background: #123449;
+  color: #e8faff;
+  border: 2px solid #79dce8;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+
+  cursor: pointer;
+  transition: background 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+#record01Return:hover {
+  background: #20546a;
+  box-shadow: 0 0 18px rgba(121, 220, 232, 0.35);
+  transform: translateY(-2px);
+}
+
+#record01Return:focus-visible {
+  outline: 3px solid #a5f5ff;
+  outline-offset: 3px;
+}
+
+#record01Return[hidden] {
+  display: none !important;
+}
+
+
+/* ========================================
+   DAY 2 — INTRODUCTION NAVIGATION
+   ======================================== */
+
+.introduction-skip {
+  display: block;
+  margin: 18px auto 0;
+  padding: 10px 16px;
+
+  background: transparent;
+  border: none;
+  color: #719cbd;
+
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.introduction-skip:hover {
+  color: #b5ecff;
+  text-decoration: underline;
+}
+
+.introduction-skip:focus-visible {
+  outline: 2px solid #87e9ff;
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   DAY 2 — RESEARCHER IDENTIFICATION
+   ======================================== */
+
+.identification-screen {
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      #1b4264 0%,
+      transparent 55%
+    ),
+    linear-gradient(145deg, #071321, #10273d 65%, #06111e);
+}
+
+.identification-screen[hidden],
+#day2NewResearcherFields[hidden] {
+  display: none !important;
+}
+
+/* Two-panel layout */
+
+.identification-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.identification-door-panel,
+.identification-terminal {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #427da3;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #142d46, #091a2b);
+  box-shadow: 0 0 35px rgba(39, 151, 223, 0.12);
+}
+
+.identification-panel-label {
+  margin-bottom: 20px;
+  color: #8de7ff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* Laboratory doors */
+
+.identification-door-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.identification-door-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.identification-door-status {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #427da3;
+  border-radius: 8px;
+  background: #0b2032;
+  color: #8de7ff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Identification terminal */
+
+.identification-terminal h1 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(23px, 3vw, 32px);
+}
+
+.identification-instructions {
+  margin: 0 0 28px;
+  color: #d3e5f2;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.identification-subheading {
+  margin-bottom: 14px;
+  color: #8de7ff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.identification-options {
+  display: grid;
+  gap: 12px;
+}
+
+.identification-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #365a76;
+  border-radius: 10px;
+  background: #0b2032;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.identification-option:hover {
+  border-color: #8de7ff;
+  background: #15364f;
+}
+
+.identification-option:has(input:checked) {
+  border-color: #8de7ff;
+  background: #1a4661;
+  box-shadow: 0 0 12px rgba(55, 198, 232, 0.18);
+}
+
+.identification-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #37c6e8;
+  flex-shrink: 0;
+}
+
+.identification-option-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.identification-option-details strong {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.identification-option-details small {
+  color: #a8c4d6;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+}
+
+/* New researcher name entry */
+
+#day2NewResearcherFields {
+  margin-top: 20px;
+}
+
+#day2NewResearcherFields label {
+  display: block;
+  margin-bottom: 10px;
+  color: #8de7ff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#day2NewResearcherName {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #427da3;
+  border-radius: 8px;
+  background: #071a2b;
+  color: #ffffff;
+  font: inherit;
+}
+
+#day2NewResearcherName:focus {
+  outline: 2px solid #8de7ff;
+  outline-offset: 2px;
+}
+
+/* Research data indicator */
+
+.identification-data-source {
+  margin-top: 22px;
+  padding: 16px;
+  border: 1px solid #365a76;
+  border-radius: 10px;
+  background: #0b2032;
+}
+
+.identification-data-source strong {
+  color: #8de7ff;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.identification-data-source p {
+  margin: 8px 0 0;
+  color: #c4dbe9;
+  font-size: 13px;
+}
+
+.identification-feedback {
+  color: #ffbd80;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.identification-feedback:empty {
+  display: none;
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+  .identification-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .identification-door-image {
+    max-height: 360px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 600px) {
+  .identification-screen {
+    padding: 12px;
+  }
+
+  .identification-door-panel,
+  .identification-terminal {
+    padding: 18px;
+  }
+}
+
+.identification-option[hidden] {
+  display: none !important;
+}
+
+
+/* ========================================
+   DAY 2 — EXPEDITION HEADER
+   ======================================== */
+
+.day2-expedition-header {
+  width: 100%;
+  padding: 16px 24px;
+  border-bottom: 2px solid #18bfff;
+  background: linear-gradient(
+    110deg,
+    #071321,
+    #122d50
+  );
+}
+
+.day2-expedition-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.day2-expedition-emblem {
+  display: block;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 3px solid #1bcaff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #071321;
+  background: #1bcaff;
+}
+
+
+/* Exact typography from the Day 1 expedition header */
+
+.day2-expedition-title {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #8fd8ff;
+}
+
+.day2-expedition-subtitle {
+  display: block;
+  margin-top: 3px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  color: #9ec4e2;
+}
+
+@media (max-width: 600px) {
+  .day2-expedition-header {
+    padding: 14px;
+  }
+
+  .day2-expedition-title {
+  font-size: 16px;
+}
+
+.day2-expedition-subtitle {
+  font-size: 8px;
+}
+}
+
+/* Keep the expedition header above the archive workstation. */
+
+#earthArchive.archive-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+
+/* ========================================
+   DAY 2 — WIDER EARTH RESEARCH ARCHIVE
+   ======================================== */
+
+/* Give the archive the spacious layout of Day 1. */
+
+#earthArchive .archive-console {
+  width: calc(100% - 32px);
+  max-width: 1500px;
+  margin: 16px auto 24px;
+}
+
+/* Keep the four research files in two columns. */
+
+#earthArchive .archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Preserve a readable layout on smaller screens. */
+
+@media (max-width: 700px) {
+  #earthArchive .archive-console {
+    width: calc(100% - 24px);
+    margin: 12px auto 20px;
+  }
+
+  #earthArchive .archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   DAY 2 — RESEARCH FILE CARD REDESIGN
+   ======================================== */
+
+#earthArchive .archive-file {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 190px;
+  padding: 22px 24px;
+  border: 2px solid #b8d1e9;
+  border-radius: 14px;
+  background: #f2f6fb;
+  color: #152744;
+  text-align: left;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+#earthArchive .archive-file:hover {
+  border-color: #31a9e7;
+  background: #ffffff;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35),
+              0 0 18px rgba(49, 198, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+#earthArchive .archive-file:focus-visible {
+  outline: 3px solid #31c6ff;
+  outline-offset: 4px;
+}
+
+#earthArchive .archive-file-number {
+  color: #376c9a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+#earthArchive .archive-file-icon {
+  display: block;
+  margin: 14px 0 10px;
+  color: #c69a52;
+  line-height: 1;
+}
+
+#earthArchive .archive-file-icon svg {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+#earthArchive .archive-file strong {
+  color: #102e50;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+#earthArchive .archive-file-description {
+  margin-top: 8px;
+  color: #49637d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#earthArchive .archive-file-status {
+  margin-top: auto;
+  padding-top: 16px;
+  color: #95651e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+@media (max-width: 600px) {
+  #earthArchive .archive-file {
+    min-height: 175px;
+    padding: 18px;
+  }
+}
+
+#earthArchive .archive-console {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+/* ========================================
+   EARTH ARCHIVE — SIMPLIFIED INTRODUCTION
+   ======================================== */
+
+#earthArchive .archive-introduction {
+  max-width: 850px;
+  margin: 8px auto 30px;
+  color: #e6f3ff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+}
+
+
+/* Restore the original futuristic gold diamonds */
+
+#earthArchive .archive-file-icon {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  margin: 0;
+  color: #c69a52;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+/* ========================================
+   DAY 2 — SUBMITTED RESEARCH RECORDS
+   ======================================== */
+
+#earthArchive .archive-file.submitted {
+  border-color: #77caa0;
+  background: #f0faf4;
+}
+
+#earthArchive .archive-file.submitted .archive-file-icon {
+  color: #208a59;
+  font-size: 28px;
+}
+
+#earthArchive .archive-file.submitted .archive-file-status {
+  color: #208a59;
+}
+
+
+/* ========================================
+   RECORD 01 — EXPEDITION HEADER
+   ======================================== */
+
+#record01Screen {
+  padding-top: 0;
+}
+
+#record01Screen > .day2-expedition-header {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+
+/* ========================================
+   RECORD 01 — COMPACT TASK HEADER
+   ======================================== */
+
+#record01Screen .record-header {
+  max-width: 1400px;
+  margin: 0 auto 18px;
+}
+
+#record01Screen .record-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#record01Screen .record-title-row h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+#record01Screen #record01Progress {
+  margin: 0;
+  flex-shrink: 0;
+  color: #80dcff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#record01Screen .record-instructions {
+  margin: 10px 0 0;
+  color: #c9dfef;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  #record01Screen .record-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #record01Screen .record-title-row h1 {
+    font-size: 18px;
+  }
+}
+
+
+/* ========================================
+   RECORD 01 — FULL-WIDTH TASK HEADING
+   ======================================== */
+
+#record01Screen .record-header {
+  width: calc(100% - 48px);
+  max-width: 1500px;
+  margin: 0 auto 18px;
+}
+
+#record01Screen .record-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+#record01Screen .record-title-row h1 {
+  margin: 0;
+}
+
+#record01Screen #record01Progress {
+  margin: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  #record01Screen .record-header {
+    width: calc(100% - 24px);
+  }
+}
+
+/* ========================================
+   RECORD 01 — EXPANDED WORKSPACE
+   ======================================== */
+
+#record01Screen .record-workspace {
+  width: calc(100% - 48px);
+  max-width: 1500px;
+  grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+
+#record01Screen .record-footer {
+  width: calc(100% - 48px);
+  max-width: 1500px;
+}
+
+@media (max-width: 760px) {
+  #record01Screen .record-workspace,
+  #record01Screen .record-footer {
+    width: calc(100% - 24px);
+  }
+
+  #record01Screen .record-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   RECORD 01 — LIGHT FOOD-WEB WORKSTATION
+   ======================================== */
+
+/* Light background for the food-web panel */
+
+#record01Screen .record-diagram {
+  background: #f2f6fb;
+  border: 2px solid #b8d1e9;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35);
+}
+
+/* Darker labels for readability */
+
+#record01Screen .diagram-status {
+  color: #376c9a;
+  font-weight: 800;
+}
+
+/* Initial lettered organism nodes */
+
+#record01Screen .organism-node {
+  background: #e1eff8;
+  border-color: #c69a52;
+  color: #173c58;
+}
+
+/* Hover state */
+
+#record01Screen .organism-node:hover,
+#record01Screen .organism-node:focus-visible {
+  background: #cce8f5;
+}
+
+/* Selected organism */
+
+#record01Screen .organism-node.selected,
+#record01Screen .organism-node.selected.identity-restored {
+  background: #fff3cc;
+  border: 3px solid #d5a43e;
+  box-shadow:
+    0 0 0 4px rgba(213, 164, 62, 0.16),
+    0 0 20px rgba(213, 164, 62, 0.35);
+}
+
+/* Restored organism nodes */
+
+#record01Screen .organism-node.identity-restored {
+  background: #ffffff;
+  border-color: #3288ad;
+  color: #173c58;
+  box-shadow: 0 2px 10px rgba(23, 60, 88, 0.12);
+}
+
+/* Selected restored organism */
+
+#record01Screen .organism-node.identity-restored.selected {
+  background: #fff3cc;
+  border-color: #d5a43e;
+  box-shadow:
+    0 0 0 4px rgba(213, 164, 62, 0.16),
+    0 0 20px rgba(213, 164, 62, 0.35);
+}
+
+/* Dark text beneath restored organism artwork */
+
+#record01Screen .earth-organism-label {
+  color: #173c58;
+}
+
+
+/* ========================================
+   RECORD 01 — COMPLETED ORGANISM INDICATOR
+   ======================================== */
+
+/* Organisms whose classifications have been saved */
+
+#record01Screen .organism-node.classified {
+  background: #b9ebcc;
+  border: 2px solid #238653;
+  color: #145333;
+  box-shadow: 0 0 12px rgba(35, 134, 83, 0.22);
+}
+
+/* Maintain the green background when hovering */
+
+#record01Screen .organism-node.classified:hover {
+  background: #a1dfb8;
+}
+
+/* Completed organism that is currently selected */
+
+#record01Screen .organism-node.classified.selected {
+  background: #b9ebcc;
+  border: 3px solid #d5a43e;
+  color: #145333;
+  box-shadow:
+    0 0 0 4px rgba(213, 164, 62, 0.16),
+    0 0 20px rgba(213, 164, 62, 0.35);
+}
+
+/* Keep completed organisms green after identity restoration */
+
+#record01Screen .organism-node.identity-restored.classified {
+  background: #b9ebcc;
+  border-color: #238653;
+}
+
+/* Completed, restored organism that is selected */
+
+#record01Screen .organism-node.identity-restored.classified.selected {
+  background: #b9ebcc;
+  border: 3px solid #d5a43e;
+}
+
+
+/* ========================================
+   FILE 02 — THE HAMBURGER INCIDENT
+   ======================================== */
+
+/* Match the File 01 expedition layout */
+
+#record02Screen {
+  padding: 0 0 36px;
+}
+
+#record02Screen > .day2-expedition-header {
+  margin-bottom: 24px;
+}
+
+#record02Screen .record-header {
+  width: calc(100% - 48px);
+  max-width: 1500px;
+  margin: 0 auto 18px;
+}
+
+#record02Screen .record-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#record02Screen .record-title-row h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+#record02Progress {
+  margin: 0;
+  color: #80dcff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#record02Screen .record-instructions {
+  margin: 10px 0 0;
+  color: #c9dfef;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Main recovered illustration workspace */
+
+.hamburger-workspace {
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  border: 2px solid #b8d1e9;
+  border-radius: 16px;
+  background: #f2f6fb;
+  color: #173c58;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35);
+}
+
+.hamburger-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #c7d9e7;
+  color: #376c9a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#hamburgerStatus {
+  color: #95651e;
+}
+
+/* Illustration area */
+
+.hamburger-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  margin: 20px auto;
+  padding: 12px;
+  border: 1px solid #d5e2ed;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+#hamburgerImage {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  max-height: 290px;
+  object-fit: contain;
+}
+
+/* Interactive energy-transfer arrow */
+
+.hamburger-energy-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 18px auto;
+}
+
+.hamburger-organism-label {
+  min-width: 110px;
+  color: #173c58;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.hamburger-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 64px;
+  border: 2px solid #238653;
+  border-radius: 12px;
+  background: #d7f4e2;
+  color: #168452;
+  font-family: inherit;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hamburger-arrow:hover {
+  transform: scale(1.05);
+}
+
+.hamburger-arrow:focus-visible {
+  outline: 3px solid #31a9e7;
+  outline-offset: 4px;
+}
+
+/* Reversed arrow — hamburger eats person */
+
+.hamburger-arrow.reversed {
+  border-color: #c43d3d;
+  background: #ffe0e0;
+  color: #c43d3d;
+}
+
+/* Explanation and instructions */
+
+.hamburger-explanation {
+  margin: 16px 0 8px;
+  color: #176a46;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.hamburger-explanation.reversed {
+  color: #b73535;
+}
+
+.hamburger-instructions {
+  margin: 12px auto;
+  color: #49637d;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Continue button */
+
+#hamburgerContinue {
+  max-width: 700px;
+  margin: 24px auto 0;
+}
+
+/* Smaller screens */
+
+@media (max-width: 700px) {
+  #record02Screen .record-header,
+  .hamburger-workspace {
+    width: calc(100% - 24px);
+  }
+
+  #record02Screen .record-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #record02Screen .record-title-row h1 {
+    font-size: 18px;
+  }
+
+  .hamburger-workspace {
+    padding: 18px 14px;
+  }
+
+  .hamburger-energy-flow {
+    gap: 8px;
+  }
+
+  .hamburger-organism-label {
+    min-width: 0;
+    font-size: 11px;
+  }
+
+  .hamburger-arrow {
+    width: 90px;
+    height: 56px;
+    font-size: 42px;
+    flex-shrink: 0;
+  }
+}
+
+/* ========================================
+   FILE 02 — ARCHIVIST QUIB TRANSMISSION
+   ======================================== */
+
+.record02-quib-transmission {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: 0 auto 20px;
+}
+
+.record02-quib-portrait {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.record02-quib-message {
+  flex: 1;
+  padding: 18px 24px;
+  border: 1px solid #56c8ef;
+  border-radius: 14px;
+  background: #12314c;
+  box-shadow: 0 0 14px rgba(50, 180, 235, 0.12);
+}
+
+.record02-quib-label {
+  margin-bottom: 8px;
+  color: #80eaff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.record02-quib-message p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .record02-quib-transmission {
+    width: calc(100% - 24px);
+    gap: 10px;
+  }
+
+  .record02-quib-portrait {
+    width: 85px;
+    height: 85px;
+  }
+
+  .record02-quib-message {
+    padding: 12px 14px;
+  }
+
+  .record02-quib-message p {
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================
+   FILE 02 — LAYOUT REFINEMENTS
+   ======================================== */
+
+/* Larger Quib, overlapping the workspace */
+
+.record02-quib-transmission {
+  position: relative;
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  min-height: 235px;
+  margin: 0 auto -85px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.record02-quib-portrait {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: -12px -20px 0 -100px;
+  z-index: 3;
+}
+
+.record02-quib-message {
+  position: relative;
+  flex: 1;
+  margin-top: 18px;
+  padding: 24px 28px;
+  min-height: 125px;
+  border: 1px solid #56c8ef;
+  border-radius: 14px;
+  background: #12314c;
+  z-index: 2;
+}
+
+.record02-quib-label {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.record02-quib-message p {
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+/* Keep the illustration workspace behind Quib */
+
+#record02Screen .hamburger-workspace {
+  position: relative;
+  z-index: 1;
+  padding-top: 28px;
+}
+
+/* Fixed-size illustration panel to prevent jumping */
+
+#record02Screen .hamburger-illustration {
+  height: 320px;
+  min-height: 320px;
+  max-height: 320px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+#record02Screen #hamburgerImage {
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  max-height: 290px;
+  object-fit: contain;
+}
+
+/* Bigger, bolder energy arrows */
+
+#record02Screen .hamburger-arrow {
+  width: 150px;
+  height: 76px;
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+  font-size: 76px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0;
+}
+
+/* Preserve alignment between arrow states */
+
+#record02Screen .hamburger-energy-flow {
+  min-height: 80px;
+}
+
+#record02Screen .hamburger-explanation {
+  min-height: 28px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+
+  .record02-quib-transmission {
+    width: calc(100% - 24px);
+    min-height: 150px;
+    margin-bottom: -35px;
+  }
+
+  .record02-quib-portrait {
+    width: 145px;
+    height: 145px;
+    margin: 0 -10px 0 -20px;
+  }
+
+  .record02-quib-message {
+    margin-top: 8px;
+    padding: 12px;
+    min-height: 90px;
+  }
+
+  .record02-quib-label {
+    font-size: 10px;
+  }
+
+  .record02-quib-message p {
+    font-size: 14px;
+  }
+
+  #record02Screen .hamburger-illustration {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+  #record02Screen .hamburger-arrow {
+    width: 100px;
+    height: 60px;
+    font-size: 56px;
+  }
+}
+
+/* ========================================
+   FILE 02 — ACTIVITY 1: REPAIR THE RECORDS
+   ======================================== */
+
+#record02Activity1 {
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 28px 32px;
+  background: #f2f6fb;
+  color: #173c58;
+  border: 2px solid #b8d1e9;
+  border-radius: 16px;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35);
+}
+
+.record02-activity-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #c7d9e7;
+  color: #376c9a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#record02Activity1 h2 {
+  margin: 22px 0 10px;
+  color: #173c58;
+  font-size: 26px;
+}
+
+.record02-activity-instructions {
+  margin: 0 0 24px;
+  color: #49637d;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Individual recovered food-chain cards */
+
+.record02-chain-card {
+  margin: 22px 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #d5e2ed;
+  border-radius: 12px;
+}
+
+.record02-chain-card h3 {
+  margin: 0 0 12px;
+  color: #376c9a;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.record02-feeding-evidence {
+  margin: 0 0 24px;
+  color: #49637d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Food-chain layout */
+
+.record02-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 18px 8px;
+  background: #eaf1f8;
+  border-radius: 10px;
+}
+
+.record02-organism {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  min-height: 64px;
+  padding: 12px;
+  background: #ffffff;
+  color: #173c58;
+  border: 2px solid #b8d1e9;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Two vertically stacked directional arrows */
+
+.record02-arrow-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.record02-arrow-choice button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  padding: 0;
+  background: #ffffff;
+  color: #49637d;
+  border: 2px solid #b8d1e9;
+  border-radius: 7px;
+  font-family: Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.record02-arrow-choice button:hover {
+  background: #e2f3fc;
+  border-color: #56a9d6;
+  transform: scale(1.05);
+}
+
+/* Blue indicates selection, NOT correctness */
+
+.record02-arrow-choice button.selected {
+  background: #d6efff;
+  color: #126b9e;
+  border-color: #1688cb;
+  box-shadow: 0 0 0 2px rgba(22, 136, 203, 0.15);
+}
+
+.record02-arrow-choice button:focus-visible {
+  outline: 3px solid #1688cb;
+  outline-offset: 3px;
+}
+
+/* Submission button */
+
+#record02SubmitArrows {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 28px auto 0;
+}
+
+#record02SubmitArrows:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 700px) {
+  #record02Activity1 {
+    width: calc(100% - 24px);
+    padding: 18px 14px;
+  }
+
+  #record02Activity1 h2 {
+    font-size: 22px;
+  }
+
+  .record02-chain-card {
+    padding: 14px;
+  }
+
+  .record02-chain {
+    gap: 6px;
+  }
+
+  .record02-organism {
+    min-width: 75px;
+    min-height: 54px;
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .record02-arrow-choice button {
+    width: 46px;
+    height: 34px;
+    font-size: 28px;
+  }
+}
+
+
+/* Ensure hidden File 02 sections stay hidden */
+
+#record02Screen [hidden] {
+  display: none !important;
+}
+
+/* ==========================================
+   FILE 02 — ACTIVITY 2: FOOD CHAIN RECONSTRUCTION
+   ========================================== */
+
+.record02-sequence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 18px;
+}
+
+.record02-sequence-organism {
+  background: #172b42;
+  border: 2px solid #55718d;
+  border-radius: 10px;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 15px 12px;
+  min-height: 56px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.record02-sequence-organism:hover:not(:disabled) {
+  background: #244562;
+  border-color: #83c9f5;
+}
+
+.record02-sequence-organism.selected {
+  background: #175b87;
+  border-color: #62c5ff;
+  box-shadow: 0 0 0 3px rgba(98, 197, 255, 0.2);
+}
+
+.record02-sequence-organism:focus-visible {
+  outline: 3px solid #83c9f5;
+  outline-offset: 3px;
+}
+
+.record02-sequence-organism:disabled {
+  cursor: default;
+}
+
+.record02-sequence-arrow {
+  color: #85d5f8;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.record02-sequence-help {
+  text-align: center;
+  color: #a9c5dc;
+  font-size: 0.85rem;
+  margin: 12px 0;
+}
+
+.record02-sequence-reset {
+  display: block;
+  margin: 12px auto 0;
+  padding: 9px 16px;
+  background: transparent;
+  color: #a9c5dc;
+  border: 1px solid #55718d;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.record02-sequence-reset:hover:not(:disabled) {
+  background: #244562;
+  color: white;
+}
+
+.record02-sequence-reset:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (max-width: 650px) {
+  .record02-sequence {
+    gap: 7px;
+  }
+
+  .record02-sequence-organism {
+    font-size: 0.7rem;
+    padding: 12px 8px;
+    min-height: 48px;
+  }
+
+  .record02-sequence-arrow {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ==========================================
+   FILE 02 — ACTIVITY 2: FOOD CHAIN RECONSTRUCTION
+   ========================================== */
+
+.record02-sequence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 18px;
+}
+
+.record02-sequence-organism {
+  background: #172b42;
+  border: 2px solid #55718d;
+  border-radius: 10px;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 15px 12px;
+  min-height: 56px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.record02-sequence-organism:hover:not(:disabled) {
+  background: #244562;
+  border-color: #83c9f5;
+}
+
+.record02-sequence-organism.selected {
+  background: #175b87;
+  border-color: #62c5ff;
+  box-shadow: 0 0 0 3px rgba(98, 197, 255, 0.2);
+}
+
+.record02-sequence-organism:focus-visible {
+  outline: 3px solid #83c9f5;
+  outline-offset: 3px;
+}
+
+.record02-sequence-organism:disabled {
+  cursor: default;
+}
+
+.record02-sequence-arrow {
+  color: #85d5f8;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.record02-sequence-help {
+  text-align: center;
+  color: #a9c5dc;
+  font-size: 0.85rem;
+  margin: 12px 0;
+}
+
+.record02-sequence-reset {
+  display: block;
+  margin: 12px auto 0;
+  padding: 9px 16px;
+  background: transparent;
+  color: #a9c5dc;
+  border: 1px solid #55718d;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.record02-sequence-reset:hover:not(:disabled) {
+  background: #244562;
+  color: white;
+}
+
+.record02-sequence-reset:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (max-width: 650px) {
+  .record02-sequence {
+    gap: 7px;
+  }
+
+  .record02-sequence-organism {
+    font-size: 0.7rem;
+    padding: 12px 8px;
+    min-height: 48px;
+  }
+
+  .record02-sequence-arrow {
+    font-size: 1.1rem;
+  }
+}
+
+/* File 02 — Food chain organism images */
+
+.record02-organism {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.record02-organism img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+.record02-organism span {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* File 02 — Activity 2 organism illustrations */
+
+.record02-sequence-organism {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.record02-sequence-organism img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+}
+
+.record02-sequence-organism span {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* File 02 — Selected organism for swapping */
+
+.record02-sequence-organism.selected {
+  outline: 3px solid #55d9ff;
+  outline-offset: 3px;
+  box-shadow: 0 0 14px rgba(85, 217, 255, 0.45);
+}
+
+
+/* ========================================
+   FILE 02 — ACTIVITY 2 VISUAL POLISH
+   ======================================== */
+
+/* Main activity workspace */
+
+#record02Activity2 {
+  width: calc(100% - 48px);
+  max-width: 1500px;
+  margin: 24px auto;
+  padding: 28px 32px;
+  background: #f2f6fb;
+  color: #173c58;
+  border: 2px solid #b8d1e9;
+  border-radius: 16px;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35);
+}
+
+/* Activity heading */
+
+#record02Activity2 h2 {
+  margin: 0 0 12px;
+  color: #173c58;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+/* Instructions */
+
+#record02Activity2 .record02-activity-instructions {
+  color: #38536d;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Individual food-chain panels */
+
+#record02Activity2 .record02-chain-card {
+  background: #ffffff;
+  border: 2px solid #c7d9e7;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 20px 0;
+}
+
+/* Food-chain headings */
+
+#record02Activity2 .record02-chain-card h3 {
+  color: #24577d;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Organism cards */
+
+#record02Activity2 .record02-sequence-organism {
+  min-width: 112px;
+  min-height: 145px;
+  padding: 12px 10px;
+  background: #172b42;
+  border: 2px solid #55718d;
+  color: #ffffff;
+}
+
+/* Keep organism artwork consistent */
+
+#record02Activity2 .record02-sequence-organism img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* Organism labels */
+
+#record02Activity2 .record02-sequence-organism span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Energy-transfer arrows */
+
+#record02Activity2 .record02-sequence-arrow {
+  color: #2186b8;
+  font-size: 26px;
+}
+
+/* Instruction below each food chain */
+
+#record02Activity2 .record02-sequence-help {
+  color: #38536d;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Reset buttons */
+
+#record02Activity2 .record02-sequence-reset {
+  padding: 11px 20px;
+  background: #e1eff8;
+  color: #173c58;
+  border: 2px solid #83b4d1;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* Reset button hover */
+
+#record02Activity2 .record02-sequence-reset:hover:not(:disabled) {
+  background: #cce8f5;
+  color: #102e50;
+  border-color: #2186b8;
+}
+
+/* Disabled reset buttons remain readable */
+
+#record02Activity2 .record02-sequence-reset:disabled {
+  opacity: 0.75;
+  color: #38536d;
+  cursor: default;
+}
+
+/* Keep submitted organism cards readable */
+
+#record02Activity2 .record02-sequence-organism:disabled {
+  opacity: 1;
+  color: #ffffff;
+  cursor: default;
+}
+
+/* Selected organism */
+
+#record02Activity2 .record02-sequence-organism.selected {
+  background: #175b87;
+  border-color: #55d9ff;
+  outline: 3px solid #55d9ff;
+  outline-offset: 3px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+  #record02Activity2 {
+    width: calc(100% - 24px);
+    padding: 18px 14px;
+  }
+
+  #record02Activity2 .record02-chain-card {
+    padding: 16px 10px;
+  }
+
+  #record02Activity2 .record02-sequence-organism {
+    min-width: 90px;
+    min-height: 125px;
+  }
+
+  #record02Activity2 .record02-sequence-organism img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* File 02 — Marine organism card sizing */
+
+#record02Activity2 .record02-sequence-organism {
+  width: 125px;
+  min-width: 125px;
+  box-sizing: border-box;
+}
+
+#record02Activity2 .record02-sequence-organism span {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+#record02Activity2 .record02-sequence-organism img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+
+/* ========================================
+   FILE 03 — FOOD WEB DIAGRAM
+   ======================================== */
+
+.record03-diagram {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 340px;
+  background: #f3f8fb;
+  border: 2px solid #247a96;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+
+.record03-slot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 12%;
+  aspect-ratio: 1;
+  border: 2px dashed #247a96;
+  border-radius: 10px;
+  background: white;
+  color: #123449;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.record03-slot:hover {
+  background: #e2f4fa;
+  border-style: solid;
+}
+
+.record03-slot:focus-visible {
+  outline: 3px solid #19c5ee;
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   FILE 03 — FULL-WIDTH WORKSPACE
+   ======================================== */
+
+#record03Workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#record03Workspace .record03-evidence-panel {
+  order: 1;
+}
+
+#record03Workspace .record03-card-bank {
+  order: 2;
+}
+
+#record03Workspace .record03-diagram-panel {
+  order: 3;
+  width: 100%;
+  min-width: 0;
+}
+
+#record03Diagram {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 0;
+  margin: 20px auto 0;
+}
+
+#record03Diagram .record03-slot {
+  width: 10%;
+}
+
+/* FILE 03 — FIXED ENERGY-TRANSFER ARROWS */
+
+.record03-arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#record03Diagram .record03-slot {
+  z-index: 2;
+}
+
+
+/* ========================================
+   FILE 03 — RECOVERED FEEDING RECORDS
+   ======================================== */
+
+.record03-feeding-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+.record03-feeding-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #10263b;
+  border: 1px solid #247a96;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.record03-feeding-table th {
+  background: #17425b;
+  color: #9ce9ff;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.85rem;
+  letter-spacing: 0.07em;
+}
+
+.record03-feeding-table td {
+  padding: 12px 18px;
+  color: #f2f8fc;
+  border-top: 1px solid #29465b;
+}
+
+.record03-feeding-table tbody tr:nth-child(even) {
+  background: #152e43;
+}
+
+.record03-feeding-table td:first-child {
+  font-weight: 700;
+  color: #73dcff;
+  width: 25%;
+}
+
+
+/* ========================================
+   FILE 03 — ORGANISM CARD BANK
+   ======================================== */
+
+.record03-cards {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.record03-organism-card {
+  min-height: 82px;
+  border: 2px solid #247a96;
+  border-radius: 10px;
+  background: #17354c;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.record03-organism-card:hover {
+  background: #22516d;
+}
+
+.record03-organism-card.selected {
+  background: #185f79;
+  border-color: #56ddff;
+  box-shadow: 0 0 0 3px rgba(86, 221, 255, 0.2);
+}
+
+.record03-organism-card.placed {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 650px) {
+  .record03-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+
+/* FILE 03 — FILLED FOOD WEB POSITIONS */
+
+#record03Diagram .record03-slot.filled {
+  background: #d9f3fc;
+  border: 2px solid #247a96;
+  color: #123449;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   FILE 03 — COMPACT EVIDENCE + CARD LAYOUT
+   ======================================== */
+
+#record03Workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 28px;
+  row-gap: 32px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Feeding records on the left */
+#record03Workspace .record03-evidence-panel {
+  grid-column: 1;
+  grid-row: 1;
+  order: initial;
+  min-width: 0;
+}
+
+/* Organism cards on the right */
+#record03Workspace .record03-card-bank {
+  grid-column: 2;
+  grid-row: 1;
+  order: initial;
+  min-width: 0;
+}
+
+/* Full-width diagram below */
+#record03Workspace .record03-diagram-panel {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  order: initial;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Two columns of organism cards */
+#record03Workspace .record03-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Keep the evidence table compact */
+#record03Workspace .record03-feeding-table th {
+  padding: 10px 12px;
+}
+
+#record03Workspace .record03-feeding-table td {
+  padding: 9px 12px;
+}
+
+/* Preserve full-width food web */
+#record03Diagram {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 0;
+}
+
+/* Stack panels on smaller screens */
+@media (max-width: 800px) {
+  #record03Workspace {
+    grid-template-columns: 1fr;
+  }
+
+  #record03Workspace .record03-evidence-panel {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #record03Workspace .record03-card-bank {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #record03Workspace .record03-diagram-panel {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #record03Workspace .record03-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+
+/* ========================================
+   FILE 03 — COMPACT HEADER AND PANELS
+   ======================================== */
+
+/* Reduce the vertical space above the activity */
+#record03Screen .record-header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+#record03Screen .record-title-row {
+  margin-bottom: 6px;
+}
+
+#record03Screen .record-title-row h1 {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+#record03Progress {
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+#record03Screen .record-instructions {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 4px 0 0;
+}
+
+/* Tighten the space between headings and content */
+#record03Workspace {
+  row-gap: 18px;
+}
+
+#record03Workspace h2 {
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+}
+
+#record03Workspace .record03-card-bank p {
+  font-size: 0.9rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+/* Reduce the card bank height */
+#record03Workspace .record03-cards {
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#record03Workspace .record03-organism-card {
+  min-height: 67px;
+  font-size: 1.4rem;
+}
+
+/* Slightly tighten the table */
+#record03Workspace .record03-feeding-table {
+  margin-top: 10px;
+}
+
+#record03Workspace .record03-feeding-table th {
+  padding: 8px 12px;
+}
+
+#record03Workspace .record03-feeding-table td {
+  padding: 8px 12px;
+}
+
+/* Reduce space before the diagram */
+#record03Workspace .record03-diagram-panel p {
+  margin: 0 0 8px;
+}
+
+#record03Diagram {
+  margin-top: 10px;
+}
+
+
+/* ========================================
+   FILE 03 — OPTIONAL STARTING HINT
+   ======================================== */
+
+.record03-hint-area {
+  margin-top: 12px;
+}
+
+.record03-hint-button {
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  color: #73dcff;
+  border: 1px solid #247a96;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.record03-hint-button:hover {
+  background: #17354c;
+}
+
+.record03-hint-message {
+  margin: 10px 0 0;
+  color: #9ce9ff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+
+/* FILE 03 — BALANCE TABLE AND CARD BANK */
+
+#record03Workspace .record03-feeding-table th {
+  padding: 12px 14px;
+  font-size: 0.9rem;
+}
+
+#record03Workspace .record03-feeding-table td {
+  padding: 8.5px 14px;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+
+/* FILE 03 — SELECTED FOOD WEB ORGANISM */
+
+#record03Diagram .record03-slot.selected {
+  background: #b8ecfc;
+  border: 3px solid #009ed0;
+  box-shadow: 0 0 0 4px rgba(0, 158, 208, 0.2);
+}
+
+#record03Diagram .record03-slot.filled {
+  cursor: pointer;
+}
+
+#record03Diagram .record03-slot.filled:hover {
+  background: #c6effb;
+}
+
+
+/* ========================================
+   FILE 03 — RESTORED ORGANISM IDENTITIES
+   ======================================== */
+
+.record03-restored-organism {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.record03-restored-image {
+  display: block;
+  width: 100%;
+  max-width: 85px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.record03-restored-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+/* Give restored cards enough room for illustrations. */
+#record03Cards .record03-organism-card:has(
+  .record03-restored-image
+) {
+  min-height: 115px;
+  padding: 8px;
+}
+
+/* Keep illustrated organisms contained in food-web slots. */
+#record03Diagram .record03-slot:has(
+  .record03-restored-image
+) {
+  padding: 5px;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   FILE 03 — SUBMISSION BUTTON
+   ======================================== */
+
+#record03Submit {
+  display: block;
+  width: 100%;
+  min-height: 58px;
+  margin-top: 28px;
+  padding: 16px 24px;
+
+  background: #167fa3;
+  border: 2px solid #55d9ff;
+  border-radius: 10px;
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-align: center;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Ready to submit */
+#record03Submit:not(:disabled):hover {
+  background: #2198bd;
+  box-shadow: 0 0 16px rgba(85, 217, 255, 0.3);
+}
+
+/* Waiting for all eight organisms */
+#record03Submit:disabled {
+  background: #24475c;
+  border-color: #42667a;
+  color: #c2d4df;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* Initial reconstruction successfully recorded */
+#record03Submit:disabled:not(:empty) {
+  opacity: 1;
+}
+
+
+/* ========================================
+   FILE 03 — QUIB TRANSMISSION
+   Match File 02's overlapping layout
+   ======================================== */
+
+.record03-quib-transmission {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  min-height: 235px;
+  margin: 0 auto -85px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.record03-quib-transmission[hidden] {
+  display: none;
+}
+
+.record03-quib-portrait {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: -12px -20px 0 -100px;
+  z-index: 3;
+}
+
+.record03-quib-message {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  margin-top: 18px;
+margin-left: 20px;
+  padding: 24px 28px;
+  min-height: 125px;
+  border: 1px solid #56c8ef;
+  border-radius: 14px;
+  background: #12314c;
+  box-shadow: 0 0 14px rgba(50, 180, 235, 0.12);
+  z-index: 2;
+}
+
+.record03-quib-label {
+  color: #8de7ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.record03-quib-message p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* Keep File 03's workspace behind Quib */
+
+#record03Screen #record03Workspace {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+  .record03-quib-transmission {
+    width: calc(100% - 24px);
+    min-height: 150px;
+    margin-bottom: -35px;
+  }
+
+  .record03-quib-portrait {
+    width: 145px;
+    height: 145px;
+    margin: 0 -10px 0 -20px;
+  }
+
+  .record03-quib-message {
+    margin-top: 8px;
+    padding: 12px;
+    min-height: 90px;
+  }
+
+  .record03-quib-label {
+    font-size: 10px;
+  }
+
+  .record03-quib-message p {
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================
+   FILE 03 — FOOD WEB RESTORATION GLITCH
+   ======================================== */
+
+#record03Diagram {
+  position: relative;
+}
+
+.record03-glitch-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 20;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.record03-glitch-video[hidden] {
+  display: none;
+}
+
+/* FILE 03 — RESTORATION BUTTON */
+
+#record03RestoreButton {
+  display: block;
+  width: fit-content;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 14px;
+  pointer-events: auto;
+}
+
+
+/* ========================================
+   FILE 01 — QUIB RESTORATION TRANSMISSION
+   ======================================== */
+
+#record01QuibTransmission {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  width: calc(100% - 48px);
+  min-height: 235px;
+  margin: 0 auto -85px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  z-index: 2;
+}
+
+#record01QuibTransmission[hidden] {
+  display: none;
+}
+
+#record01QuibTransmission .record01-quib-portrait {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: -12px -20px 0 -65px;
+  z-index: 3;
+}
+
+.record01-quib-message {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  margin-top: 12px;
+margin-left: 20px;
+  padding: 20px 20px;
+  min-height: 90px;
+  border: 1px solid #56c8ef;
+  border-radius: 11px;
+  background: #12314c;
+  box-shadow: 0 0 14px rgba(50, 180, 235, 0.12);
+  z-index: 2;
+}
+
+.record01-quib-label {
+  color: #8de7ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.record01-quib-message p {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+#record01RestoreButton {
+  display: block;
+  width: fit-content;
+  margin-top: 18px;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+/* Keep the workspace beneath Quib's portrait. */
+#record01Screen .record-workspace {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  #record01QuibTransmission {
+    width: calc(100% - 24px);
+    min-height: 150px;
+    margin-bottom: -35px;
+  }
+
+  #record01QuibTransmission .record01-quib-portrait {
+    width: 145px;
+    height: 145px;
+    margin: 0 -10px 0 -20px;
+  }
+
+  .record01-quib-message {
+    margin-top: 8px;
+    padding: 12px;
+    min-height: 90px;
+  }
+
+  .record01-quib-label {
+    font-size: 10px;
+  }
+
+  .record01-quib-message p {
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================
+   FILE 04 — RESTORED FOOD WEB
+   ======================================== */
+
+#record04FoodWeb .record04-organism {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 12%;
+  aspect-ratio: 1;
+  border: 2px solid #247a96;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #123449;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#record04FoodWeb .record04-organism:hover {
+  background: #e2f4fa;
+}
+
+#record04FoodWeb .record04-organism:focus-visible {
+  outline: 3px solid #19c5ee;
+  outline-offset: 3px;
+}
+
+
+/* FILE 04 — ORGANISM ILLUSTRATIONS */
+
+#record04FoodWeb .record04-organism {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+}
+
+#record04FoodWeb .record04-organism img {
+  display: block;
+  width: 100%;
+  height: 75%;
+  object-fit: contain;
+  min-height: 0;
+}
+
+#record04FoodWeb .record04-organism span {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* FILE 04 — COMPACT FOOD WEB */
+
+#record04FoodWeb {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+/* FILE 04 — FOOD CHAIN BUILDER */
+
+.record04-chain-builder {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 2px solid #247a96;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.record04-chain-builder h3 {
+  margin: 0 0 6px;
+  color: #123449;
+}
+
+.record04-chain-instructions {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.record04-chain-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 10px;
+  background: #eef7fa;
+  border-radius: 8px;
+}
+
+.record04-chain-placeholder {
+  color: #56717f;
+  font-style: italic;
+}
+
+.record04-clear-button {
+  margin-top: 12px;
+  padding: 9px 20px;
+  border: 2px solid #247a96;
+  border-radius: 8px;
+  background: white;
+  color: #123449;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.record04-clear-button:hover {
+  background: #e2f4fa;
+}
+
+
+/* FILE 04 — FOOD CHAIN BUILDER TEXT CONTRAST */
+
+#record04ChainBuilder,
+#record04ChainBuilder h3,
+#record04ChainBuilder p,
+#record04ChainBuilder strong,
+#record04ChainBuilder span {
+  color: #123449;
+}
+
+#record04ChainBuilder .record04-chain-placeholder {
+  color: #486474;
+}
+
+
+/* FILE 04 — SUBMIT FOOD CHAIN */
+
+#record04SubmitChain {
+  margin-top: 12px;
+  margin-right: 10px;
+  padding: 10px 22px;
+  background: #247a96;
+  color: #ffffff;
+  border: 2px solid #247a96;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#record04SubmitChain:hover {
+  background: #185e78;
+}
+
+#record04ChainFeedback {
+  color: #123449;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 12px 0 0;
+}
+
+#record04ChainFeedback:empty {
+  display: none;
+}
+/* FILE 04 — Full-width Quib transmission */
+#record04QuibIntroduction {
+  width: 100%;
+  max-width: none;
+}
+
+#record04QuibIntroduction .record03-quib-message {
+  flex: 1;
+  min-width: 0;
+}
+/* FILE 04 — Quib message typography */
+#record04QuibIntroduction .record03-quib-message p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+/* FILE 04 — Introduction and activity visibility */
+#record04QuibIntroduction[hidden],
+#record04Activity1[hidden] {
+  display: none !important;
+}
+/* FILE 04 — Enable Quib's introduction button */
+#record04BeginAssessment {
+  pointer-events: auto;
+}
+
+/* ========================================
+   FILE 04 — ACTIVITY 2: POPULATION PREDICTIONS
+   ======================================== */
+
+/* Keep Activity 2 hidden until the simulation opens it. */
+#record04Activity2[hidden] {
+  display: none !important;
+}
+
+/* Main assessment panel */
+#record04Activity2 .record03-diagram-panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #f2f6fb;
+  border: 2px solid #b8d1e9;
+  border-radius: 16px;
+  color: #173c58;
+  box-shadow: 0 5px 0 rgba(4, 15, 30, 0.35);
+}
+
+#record04Activity2 h2 {
+  color: #123449;
+  margin-top: 0;
+}
+
+/* Separate the two ecological disturbance reports. */
+#record04Activity2 .record04-disturbance {
+  margin: 24px 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 2px solid #b8d1e9;
+  border-left: 5px solid #247a96;
+  border-radius: 12px;
+}
+
+#record04Activity2 .record04-disturbance h3 {
+  margin: 0 0 12px;
+  color: #123449;
+  font-size: 19px;
+}
+
+#record04Activity2 .record04-disturbance p {
+  color: #36546b;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Prediction tables */
+#record04Activity2 table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+}
+
+#record04Activity2 th,
+#record04Activity2 td {
+  padding: 12px;
+  border-bottom: 1px solid #d5e2ed;
+  text-align: left;
+  color: #173c58;
+}
+
+#record04Activity2 th {
+  background: #e1eff8;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Population direction and confidence dropdowns */
+#record04Activity2 select {
+  width: 100%;
+  min-width: 130px;
+  padding: 10px;
+  background: #ffffff;
+  border: 2px solid #a6c4d8;
+  border-radius: 8px;
+  color: #123449;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#record04Activity2 select:focus-visible {
+  outline: 3px solid #31a9e7;
+  outline-offset: 2px;
+}
+
+/* Final prediction submission */
+#record04SubmitPredictions {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px 22px;
+  background: #247a96;
+  border: 2px solid #247a96;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+#record04SubmitPredictions:hover {
+  background: #185e78;
+}
+
+#record04PredictionFeedback {
+  color: #173c58;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Allow the prediction tables to scroll on small screens. */
+@media (max-width: 700px) {
+  #record04Activity2 .record03-diagram-panel {
+    padding: 16px;
+  }
+
+  #record04Activity2 .record04-disturbance {
+    padding: 14px;
+    overflow-x: auto;
+  }
+}
+
+/* FILE 04 — CONTINUE TO POPULATION ANALYSIS */
+
+#record04Continue {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 28px;
+  background: #247a96;
+  border: 2px solid #247a96;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(4, 15, 30, 0.3);
+}
+
+#record04Continue:hover {
+  background: #185e78;
+}
+
+#record04Continue[hidden] {
+  display: none !important;
+}
+/* ========================================
+   FILE 04 — ACTIVITY 2: FIXED FOOD WEB
+   AND SCROLLABLE PREDICTIONS
+   ======================================== */
+
+#record04Activity2:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100dvh - 24px);
+  min-height: 420px;
+  overflow: hidden;
+}
+
+/* Stationary food-web reference */
+#record04ReferenceWeb {
+  flex: 0 0 48%;
+  min-height: 0;
+  padding: 10px;
+  background: #f2f6fb;
+  border: 2px solid #b8d1e9;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Only the questions scroll */
+#record04Activity2 > .record03-diagram-panel {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Make room for the reference diagram */
+@media (max-height: 650px) {
+  #record04Activity2:not([hidden]) {
+    height: calc(100dvh - 12px);
+  }
+
+  #record04ReferenceWeb {
+    flex-basis: 40%;
+  }
+}
+
+
+/* ========================================
+   FILE 04 — ACTIVITY 2: FIXED FOOD WEB
+   AND SCROLLABLE PREDICTIONS
+   ======================================== */
+
+#record04Activity2:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100dvh - 24px);
+  min-height: 420px;
+  overflow: hidden;
+}
+
+/* Stationary food-web reference */
+#record04ReferenceWeb {
+  flex: 0 0 48%;
+  min-height: 0;
+  padding: 10px;
+  background: #f2f6fb;
+  border: 2px solid #b8d1e9;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Only the questions scroll */
+#record04Activity2 > .record03-diagram-panel {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Make room for the reference diagram */
+@media (max-height: 650px) {
+  #record04Activity2:not([hidden]) {
+    height: calc(100dvh - 12px);
+  }
+
+  #record04ReferenceWeb {
+    flex-basis: 40%;
+  }
+}
+
+
+/* ========================================
+   FILE 04 — ACTIVITY 2 REFERENCE FOOD WEB
+   ======================================== */
+
+/* Center the copied diagram inside its panel. */
+#record04ReferenceWeb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Preserve the diagram's proportions. */
+#record04ReferenceWeb .record03-diagram {
+  position: relative;
+  width: min(100%, 560px);
+  max-height: 100%;
+  aspect-ratio: 1.6 / 1;
+  margin: 0 auto;
+  flex-shrink: 1;
+}
+
+/* Position organisms using their existing coordinates. */
+#record04ReferenceWeb .record04-organism {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 12%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px;
+  border: 2px solid #247a96;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #123449;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Keep disabled organism cards fully visible. */
+#record04ReferenceWeb .record04-organism:disabled {
+  opacity: 1;
+  color: #123449;
+  cursor: default;
+}
+
+/* Organism illustrations */
+#record04ReferenceWeb .record04-organism img {
+  display: block;
+  width: 100%;
+  height: 75%;
+  object-fit: contain;
+  min-height: 0;
+}
+
+/* Organism labels */
+#record04ReferenceWeb .record04-organism span {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Preserve the feeding arrows behind the organisms. */
+#record04ReferenceWeb .record03-arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* File 02 — Secondary reset button */
+
+#record02ResetAll {
+  display: block;
+  width: fit-content;
+  margin: 12px auto 0;
+  padding: 7px 14px;
+
+  background: transparent;
+  border: 1px solid #8b9ca5;
+  border-radius: 6px;
+
+  color: #526b78;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+}
+
+#record02ResetAll:hover:not(:disabled) {
+  background: #eaf1f4;
+  border-color: #526b78;
+}
+
+#record02ResetAll:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* File 04 — Highlight organisms selected for a food chain */
+
+#record04FoodWeb .record04-organism.chain-selected {
+  background-color: #d9f2e6;
+  border-color: #238765;
+  box-shadow: 0 0 0 3px rgba(35, 135, 101, 0.22);
+}
+
+/* File 04 — Illustrated food chain */
+
+.record04-chain-mini-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  gap: 5px;
+
+  padding: 8px;
+  min-width: 75px;
+
+  background: #edf7f4;
+  border: 1px solid #7ab8a5;
+  border-radius: 8px;
+
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.record04-chain-mini-card img {
+  display: block;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+/* FILE 04 — Simplified Activity 1 completion screen */
+
+#record04ChainBuilder.chains-complete h3,
+#record04ChainBuilder.chains-complete .record04-chain-instructions,
+#record04ChainBuilder.chains-complete #record04ChainDisplay,
+#record04ChainBuilder.chains-complete #record04SubmitChain,
+#record04ChainBuilder.chains-complete #record04ClearChain {
+  display: none;
+}
+
+/* ========================================
+   DAY 2 — QUIB POST-ARCHIVE TRANSMISSIONS
+   ======================================== */
+
+#quibSuccessScreen .transmission-layout,
+#quibAsteroidScreen .transmission-layout {
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 32px 42px;
+  border: 1px solid #427da3;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #142d46, #091a2b);
+  box-shadow: 0 0 45px rgba(39, 151, 223, 0.2);
+}
+
+#quibSuccessScreen .transmission-portrait,
+#quibAsteroidScreen .transmission-portrait {
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #101e30;
+}
+
+#quibSuccessScreen .transmission-portrait img,
+#quibAsteroidScreen .transmission-portrait img {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+}
+
+#quibSuccessScreen .transmission-content,
+#quibAsteroidScreen .transmission-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+#quibSuccessScreen .transmission-label,
+#quibAsteroidScreen .transmission-label {
+  margin-bottom: 20px;
+  color: #8de7ff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #quibSuccessScreen .transmission-layout,
+  #quibAsteroidScreen .transmission-layout {
+    padding: 22px 20px;
+  }
+}
+/* ========================================
+   DAY 2 — ASTEROID DEFENSE COCKPIT
+   ======================================== */
+
+.asteroid-defense-screen[hidden] {
+  display: none !important;
+}
+
+.asteroid-defense-screen {
+  min-height: 100vh;
+  padding: 20px;
+  background: #071321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.asteroid-cockpit {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  aspect-ratio: 16 / 9;
+
+  background-image: url("assets/asteroid-review-background.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========================================
+   ASTEROID DEFENSE — QUESTION CONSOLE
+   ======================================== */
+
+.asteroid-question-console {
+  position: absolute;
+
+  /* Align with the illustrated center monitor */
+  left: 30%;
+  top: 68%;
+  width: 40%;
+  height: 18%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1% 2%;
+  box-sizing: border-box;
+
+  color: #e9f8ff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.asteroid-console-heading {
+  color: #59dcff;
+  font-size: clamp(9px, 1vw, 15px);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.asteroid-question-text {
+  font-size: clamp(12px, 1.4vw, 21px);
+  font-weight: bold;
+  line-height: 1.3;
+  text-shadow: 0 2px 5px #00101d;
+}
+
+.asteroid-console-instructions {
+  color: #ffcf79;
+  font-size: clamp(9px, 0.85vw, 13px);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   ASTEROID DEFENSE — RADAR CONSOLE
+   Horizontal layout
+   ======================================== */
+
+.asteroid-radar-console {
+  position: absolute;
+  left: 76%;
+  top: 70%;
+  width: 19%;
+  height: 18%;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 22% 22% 22% 22%;
+  align-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 1%;
+
+  color: #e9f8ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Mission progress — left side */
+
+.asteroid-mission-label {
+  grid-column: 1;
+  grid-row: 1;
+
+  color: #59dcff;
+  font-size: clamp(8px, 0.75vw, 11px);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.asteroid-mission-progress {
+  grid-column: 1;
+  grid-row: 2;
+
+  color: #ffffff;
+  font-size: clamp(10px, 0.9vw, 14px);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.asteroid-progress-track {
+  grid-column: 1;
+  grid-row: 3;
+
+  width: 90%;
+  height: 6px;
+  justify-self: center;
+
+  background: #06253d;
+  border: 1px solid #347d9d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.asteroid-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #59dcff;
+  transition: width 0.4s ease;
+}
+
+/* Radar — right side */
+
+.asteroid-radar-heading {
+  display: none;
+}
+
+.asteroid-radar-display {
+  position: relative;
+
+  grid-column: 2;
+  grid-row: 1 / 5;
+
+  width: 90%;
+  aspect-ratio: 1;
+  justify-self: center;
+
+  border: 1px solid #35bde8;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.asteroid-radar-ring {
+  position: absolute;
+  inset: 15%;
+  border: 1px solid rgba(89, 220, 255, 0.35);
+  border-radius: 50%;
+}
+
+.radar-ring-inner {
+  inset: 32%;
+}
+
+.asteroid-radar-crosshair {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      transparent 49%,
+      rgba(89, 220, 255, 0.35) 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 49%,
+      rgba(89, 220, 255, 0.35) 50%,
+      transparent 51%
+    );
+}
+
+.asteroid-radar-dot {
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffcf79;
+  box-shadow: 0 0 5px #ffcf79;
+}
+
+.dot-a { left: 25%; top: 28%; }
+.dot-b { left: 68%; top: 23%; }
+.dot-c { left: 35%; top: 72%; }
+.dot-d { left: 75%; top: 65%; }
+
+.asteroid-radar-center {
+  position: absolute;
+  left: 46%;
+  top: 46%;
+  width: 8%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #59dcff;
+  box-shadow: 0 0 6px #59dcff;
+}
+
+/* ========================================
+   ASTEROID DEFENSE — LEFT ASSIST CONSOLE
+   ======================================== */
+
+.asteroid-assist-console {
+  position: absolute;
+  left: 5%;
+  top: 70%;
+  width: 19%;
+  height: 18%;
+
+transform: perspective(600px) rotateY(-7deg);
+transform-origin: center center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+
+  box-sizing: border-box;
+  padding: 1%;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.asteroid-assist-heading {
+  color: #59dcff;
+  font-size: clamp(9px, 0.85vw, 13px);
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+}
+
+.asteroid-assist-button {
+  width: 95%;
+  padding: 4% 2%;
+
+  background: rgba(18, 82, 117, 0.85);
+  border: 1px solid #59dcff;
+  border-radius: 7px;
+
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: clamp(9px, 0.85vw, 13px);
+  font-weight: bold;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.asteroid-assist-button:not(:disabled):hover {
+  background: #176d98;
+  box-shadow: 0 0 12px rgba(89, 220, 255, 0.55);
+}
+
+.asteroid-assist-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.asteroid-assist-status {
+  color: #ffcf79;
+  font-size: clamp(9px, 0.8vw, 12px);
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+
+/* ========================================
+   ASTEROID DEFENSE — ANSWER TARGETS
+   ======================================== */
+
+.asteroid-target-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.asteroid-answer {
+  position: absolute;
+  width: 18%;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  cursor: crosshair;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.asteroid-answer-letter {
+  color: #ffcf79;
+  font-size: clamp(13px, 1.5vw, 23px);
+  font-weight: bold;
+}
+
+.asteroid-answer-text {
+  font-size: clamp(10px, 1vw, 16px);
+  font-weight: bold;
+  line-height: 1.25;
+  text-shadow: 0 2px 4px #000;
+}
+
+
+/* Illustrated asteroid artwork */
+
+.asteroid-answer-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Keep answer text centered over the asteroid */
+
+.asteroid-answer-content {
+  position: relative;
+  z-index: 2;
+
+  width: 78%;
+  height: 65%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  pointer-events: none;
+}
+
+/* ASTEROID DEFENSE — EIGHT POSSIBLE POSITIONS */
+
+
+/* ASTEROID DEFENSE — EIGHT POSSIBLE POSITIONS */
+
+/* Upper row */
+.asteroid-position-1 { left: 10%; top: 6%; }
+.asteroid-position-2 { left: 32%; top: 7%; }
+.asteroid-position-3 { left: 54%; top: 6%; }
+.asteroid-position-4 { left: 72%; top: 10%; }
+
+/* Lower row — staggered */
+.asteroid-position-5 { left: 15%; top: 31%; }
+.asteroid-position-6 { left: 37%; top: 32%; }
+.asteroid-position-7 { left: 59%; top: 34%; }
+.asteroid-position-8 { left: 76%; top: 33%; }
+
+/* ==========================================
+   ASTEROID DEFENSE — LASER BEAM
+   ========================================== */
+
+.asteroid-laser {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 5px;
+
+  background: #8ffaff;
+  border-radius: 999px;
+
+  box-shadow:
+    0 0 7px 3px #00eaff,
+    0 0 18px 6px rgba(0, 234, 255, 0.75),
+    0 0 32px 9px rgba(0, 160, 255, 0.35);
+
+  transform-origin: left center;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 5;
+}
+
+.asteroid-laser.firing {
+  animation: asteroidLaserFire 450ms ease-out forwards;
+}
+
+@keyframes asteroidLaserFire {
+  0% {
+    opacity: 0;
+    scale: 0 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+    scale: 1 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 1 1;
+  }
+}
+
+
+/* ==========================================
+   ASTEROID DEFENSE — EXPLOSION
+   ========================================== */
+
+.asteroid-explosion[hidden] {
+  display: none !important;
+}
+
+.asteroid-explosion {
+  position: absolute;
+  width: 32%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 7;
+}
+
+/* ==========================================
+   ASTEROID COLLISION — SEPARATE ASTEROID
+   ========================================== */
+
+.collision-asteroid[hidden] {
+  display: none !important;
+}
+
+.collision-asteroid {
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  max-width: 12%;
+  max-height: 12%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* Collision asteroid flies toward the cockpit */
+
+.collision-asteroid.flying {
+  animation: collisionAsteroidFlight 850ms ease-in forwards;
+}
+
+@keyframes collisionAsteroidFlight {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    transform:
+      translate(
+        calc(-50% + var(--flight-x)),
+        calc(-50% + var(--flight-y))
+      )
+      scale(2);
+  }
+}
+
+/* ==========================================
+   ASTEROID COLLISION — WINDSHIELD DAMAGE
+   ========================================== */
+
+.windshield-crack[hidden] {
+  display: none !important;
+}
+
+.windshield-crack {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 32%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 8;
+}
+
+
+/* ==========================================
+   ASTEROID COLLISION — COCKPIT SHAKE
+   ========================================== */
+
+.asteroid-cockpit.shaking {
+  animation: cockpitImpactShake 450ms ease-out;
+}
+
+@keyframes cockpitImpactShake {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  12% {
+    transform: translate(-9px, 5px);
+  }
+
+  25% {
+    transform: translate(7px, -5px);
+  }
+
+  40% {
+    transform: translate(-5px, 3px);
+  }
+
+  55% {
+    transform: translate(4px, -2px);
+  }
+
+  75% {
+    transform: translate(-2px, 1px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* ==========================================
+   ASTEROID DEFENSE — IMPACT WARNING
+   ========================================== */
+
+.asteroid-impact-warning[hidden] {
+  display: none !important;
+}
+
+.asteroid-impact-warning {
+  color: #ffffff;
+position: relative;
+top: -10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.asteroid-impact-heading {
+  color: #ff7770;
+  font-size: clamp(12px, 1.3vw, 19px);
+  font-weight: bold;
+}
+
+.asteroid-impact-status {
+  color: #ffb3a9;
+  font-size: clamp(9px, 0.85vw, 13px);
+  font-weight: bold;
+}
+
+.asteroid-impact-explanation {
+  font-size: clamp(10px, 0.95vw, 14px);
+  line-height: 1.3;
+}
+
+.asteroid-impact-correct {
+  color: #ffd17b;
+  font-size: clamp(11px, 1.05vw, 16px);
+  font-weight: bold;
+}
+.asteroid-console-instructions[hidden] {
+  display: none !important;
+}
+
+/* Hide normal console content during emergencies. */
+
+.asteroid-console-heading[hidden],
+.asteroid-question-text[hidden] {
+  display: none !important;
+}
+
+/* ==========================================
+   ASTEROID DEFENSE — REPAIR BUTTON
+   ========================================== */
+
+.asteroid-repair-button {
+  margin-top: 5px;
+  padding: 7px 18px;
+
+  background: linear-gradient(
+    180deg,
+    #124b70,
+    #082b49
+  );
+
+  border: 2px solid #32d8ff;
+  border-radius: 7px;
+
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: clamp(10px, 0.9vw, 14px);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 8px rgba(50, 216, 255, 0.35),
+    inset 0 0 6px rgba(50, 216, 255, 0.12);
+
+  transition:
+    background 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.asteroid-repair-button:hover {
+  background: #17618c;
+
+  box-shadow:
+    0 0 13px rgba(50, 216, 255, 0.65),
+    inset 0 0 8px rgba(50, 216, 255, 0.2);
+}
+
+.asteroid-repair-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
