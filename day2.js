@@ -1,4 +1,3 @@
-
 /* ========================================
    LIFE UNKNOWN — DAY 2
    SCREEN NAVIGATION
@@ -319,6 +318,54 @@ function getOrCreateAsteroidAssignment() {
   return assignment;
 }
 
+function evaluateAsteroidMission() {
+  const assignment = day2ResearchRecord.asteroidAssignment;
+  const answers = day2ResearchRecord.asteroidAnswers || [];
+
+  const results = {};
+
+  // Identify the assigned review categories.
+  const assignedRecords = [
+    ...new Set(assignment.map(question => question.record))
+  ];
+
+  // Evaluate proficiency separately for each category.
+  assignedRecords.forEach(recordId => {
+
+    const recordAnswers = answers.filter(
+      answer => answer.record === recordId
+    );
+
+    const correctCount = recordAnswers.filter(
+      answer => answer.correct === true
+    ).length;
+
+    results[recordId] = {
+      correct: correctCount,
+      total: 5,
+      proficient: correctCount >= 4
+    };
+
+  });
+
+  // Determine whether additional support is needed.
+  const allProficient = assignedRecords.every(
+    recordId => results[recordId].proficient
+  );
+
+  // Save mission results and student pathway.
+  day2ResearchRecord.asteroidResults = results;
+  day2ResearchRecord.studentPathway =
+    allProficient ? "B" : "C";
+
+  saveDay2ResearchRecord();
+
+  console.log("Asteroid mission results:", results);
+  console.log(
+    "Student pathway:",
+    day2ResearchRecord.studentPathway
+  );
+}
 function advanceAsteroidQuestion() {
   const assignment = day2ResearchRecord.asteroidAssignment;
   const answers = day2ResearchRecord.asteroidAnswers || [];
@@ -329,13 +376,20 @@ function advanceAsteroidQuestion() {
       !answers.some(answer => answer.questionIndex === index)
   );
 
-  // Check whether the mission is complete.
-  if (nextIndex === -1) {
-    asteroidShotInProgress = true;
-    asteroidInstructions.textContent = "MISSION COMPLETE";
-    console.log("Asteroid mission complete!");
-    return;
-  }
+
+if (nextIndex === -1) {
+  asteroidShotInProgress = true;
+
+  document.getElementById(
+    "asteroidProgressFill"
+  ).style.width = "100%";
+
+  asteroidInstructions.textContent = "MISSION COMPLETE";
+
+  evaluateAsteroidMission();
+
+  return;
+}
 
   // Restore all four asteroid targets.
   asteroidAnswerButtons.forEach(button => {
