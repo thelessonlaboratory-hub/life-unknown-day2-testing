@@ -586,6 +586,40 @@ function fireAsteroidLaser(target) {
       const isCorrect =
         index === currentAsteroidQuestion.correctAnswer;
 
+      // Initialize the researcher's asteroid answer history.
+      if (!Array.isArray(day2ResearchRecord.asteroidAnswers)) {
+        day2ResearchRecord.asteroidAnswers = [];
+      }
+
+      // Record each question only once.
+      const questionIndex =
+        day2ResearchRecord.asteroidAssignment.indexOf(
+          currentAsteroidQuestion
+        );
+
+      if (questionIndex < 0) return;
+
+      const alreadyAnswered =
+        day2ResearchRecord.asteroidAnswers.some(
+          answer => answer.questionIndex === questionIndex
+        );
+
+      if (!alreadyAnswered) {
+        day2ResearchRecord.asteroidAnswers.push({
+          questionIndex: questionIndex,
+          record: currentAsteroidQuestion.record,
+          selectedAnswer: index,
+          correct: isCorrect
+        });
+
+        saveDay2ResearchRecord();
+      }
+
+      console.log(
+        "Asteroid answer history:",
+        day2ResearchRecord.asteroidAnswers
+      );
+
       const selectedLetter = ["A", "B", "C", "D"][index];
 
       asteroidInstructions.textContent =
