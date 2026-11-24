@@ -635,10 +635,18 @@ if (asteroidContinueButton && asteroidDefenseScreen) {
 
     asteroidDefenseScreen.hidden = false;
 
-// Randomize asteroid locations and illustrations.
-randomizeAsteroidTargets();
+    // Retrieve this researcher's assigned review questions.
+    const assignment = getOrCreateAsteroidAssignment();
 
-window.scrollTo(0, 0);
+    // Display the first assigned question.
+    if (assignment.length > 0) {
+      displayAsteroidQuestion(assignment[0]);
+    }
+
+    // Randomize asteroid locations and illustrations.
+    randomizeAsteroidTargets();
+
+    window.scrollTo(0, 0);
 
   });
 }
