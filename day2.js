@@ -319,6 +319,39 @@ function getOrCreateAsteroidAssignment() {
   return assignment;
 }
 
+function advanceAsteroidQuestion() {
+  const assignment = day2ResearchRecord.asteroidAssignment;
+  const answers = day2ResearchRecord.asteroidAnswers || [];
+
+  // Find the next unanswered question.
+  const nextIndex = assignment.findIndex(
+    (question, index) =>
+      !answers.some(answer => answer.questionIndex === index)
+  );
+
+  // Check whether the mission is complete.
+  if (nextIndex === -1) {
+    asteroidShotInProgress = true;
+    asteroidInstructions.textContent = "MISSION COMPLETE";
+    console.log("Asteroid mission complete!");
+    return;
+  }
+
+  // Restore all four asteroid targets.
+  asteroidAnswerButtons.forEach(button => {
+    button.style.visibility = "visible";
+  });
+
+  // Prepare the next question.
+  displayAsteroidQuestion(assignment[nextIndex]);
+  randomizeAsteroidTargets();
+
+  asteroidInstructions.textContent =
+    "SELECT THE CORRECT TARGET";
+
+  asteroidShotInProgress = false;
+}
+
   function displayAsteroidQuestion(question) {
     currentAsteroidQuestion = question;
 
@@ -413,11 +446,12 @@ explosion.onload = () => {
 
    // Remove the explosion after the impact sequence.
    clearTimeout(asteroidExplosionTimer);
+ 
+asteroidExplosionTimer = setTimeout(() => {
+  explosion.hidden = true;
+  advanceAsteroidQuestion();
+}, 1200);
 
-   asteroidExplosionTimer = setTimeout(() => {
-     explosion.hidden = true;
-     asteroidShotInProgress = false;
-   }, 1200);
  }
 
 
