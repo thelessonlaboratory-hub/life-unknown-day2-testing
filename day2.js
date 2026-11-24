@@ -579,6 +579,48 @@ impactWarning.hidden = false;
 
 }
 
+// ==========================================
+// DAY 2 — ASTEROID DAMAGE REPAIR
+// ==========================================
+
+const asteroidRepairButton = document.getElementById(
+  "asteroidRepairButton"
+);
+
+asteroidRepairButton.addEventListener("click", () => {
+
+  const cockpit = document.querySelector(
+    "#asteroidDefenseScreen .asteroid-cockpit"
+  );
+
+  const crack = document.getElementById("windshieldCrack");
+
+  // Repair the windshield and clear damage effects.
+  crack.hidden = true;
+  crack.classList.remove("appearing");
+  cockpit.classList.remove("shaking");
+
+  // Dismiss the emergency feedback.
+  document.getElementById(
+    "asteroidImpactWarning"
+  ).hidden = true;
+
+  // Restore the scientific targeting console.
+  cockpit.querySelector(
+    ".asteroid-console-heading"
+  ).hidden = false;
+
+  document.getElementById(
+    "asteroidQuestionText"
+  ).hidden = false;
+
+  asteroidInstructions.hidden = false;
+
+  // Continue to the next assigned question.
+  advanceAsteroidQuestion();
+
+});
+
 function fireAsteroidLaser(target) {
   const cockpit = document.querySelector(
     "#asteroidDefenseScreen .asteroid-cockpit"
