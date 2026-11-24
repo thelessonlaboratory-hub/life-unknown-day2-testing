@@ -552,9 +552,23 @@ if (impactWarning && targetingInstructions) {
   if (questionText) questionText.hidden = true;
 
   targetingInstructions.hidden = true;
+  
+// Display the scientific explanation for this question.
+document.getElementById(
+  "asteroidImpactExplanation"
+).textContent = currentAsteroidQuestion.explanation;
 
-  // Display emergency feedback.
-  impactWarning.hidden = false;
+// Identify the correct answer.
+const correctIndex = currentAsteroidQuestion.correctAnswer;
+const correctLetter = ["A", "B", "C", "D"][correctIndex];
+const correctText = currentAsteroidQuestion.answers[correctIndex];
+
+document.getElementById(
+  "asteroidImpactCorrect"
+).textContent = `CORRECT ANSWER: ${correctLetter} — ${correctText}`;
+
+// Display emergency feedback.
+impactWarning.hidden = false;
 }
 
   crack.classList.remove("appearing");
