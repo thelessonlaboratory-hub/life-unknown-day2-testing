@@ -353,6 +353,27 @@ function advanceAsteroidQuestion() {
 }
 
   function displayAsteroidQuestion(question) {
+     
+  // Update mission progress.
+  const totalQuestions =
+    day2ResearchRecord.asteroidAssignment.length;
+
+  const completedQuestions =
+    (day2ResearchRecord.asteroidAnswers || []).length;
+
+  const questionNumber =
+    day2ResearchRecord.asteroidAssignment.indexOf(question) + 1;
+
+  document.getElementById(
+    "asteroidMissionProgress"
+  ).textContent =
+    `QUESTION ${questionNumber} / ${totalQuestions}`;
+
+  document.getElementById(
+    "asteroidProgressFill"
+  ).style.width =
+    `${(completedQuestions / totalQuestions) * 100}%`;
+
     currentAsteroidQuestion = question;
 
     const questionDisplay =
